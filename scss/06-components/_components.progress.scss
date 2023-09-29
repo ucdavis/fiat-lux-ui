@@ -1,0 +1,112 @@
+/* ==========================================================================
+   #PROGRESS BARS & TRACKERS
+   ========================================================================== */
+
+// Custom Properties ----------------------------------------------------------
+
+@property --progress-value {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
+
+// Basics ---------------------------------------------------------------------
+
+.progress-bar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+
+  /* to center the percentage value */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    counter-reset: percentage var(--progress-value);
+    content: counter(percentage) '%';
+  }
+
+  &.c-progress-bar--large {
+    font-size: $font-size-progress;
+    width: 7.5rem;
+    height: 7.5rem;
+    margin: 1.25rem auto;
+  }
+}
+
+// States 0% to 99%: Dynamically Generated ------------------------------------
+
+@for $i from 0 through 99 {
+  .progress--#{$i} {
+    background:
+            radial-gradient(closest-side, white 90%, transparent 80% 100%),
+            conic-gradient($color-success calc(var(--progress-value) * 1%), $color-gray-10 0);
+    animation: progress-animation--#{$i} 2s 1 forwards;
+  }
+
+  .progress--#{$i}::before {
+    animation: progress-animation--#{$i} 2s 1 forwards;
+  }
+
+  @keyframes progress-animation--#{$i} {
+    to { --progress-value: #{$i}; }
+  }
+}
+
+// State 100%: Special case with specific animation ---------------------------
+
+.progress--100 {
+  background:
+      radial-gradient(closest-side, white 90%, transparent 80% 100%),
+      conic-gradient($color-success calc(var(--progress-value) * 1%), $color-gray-10 0);
+  animation: progress-animation--100 2s 1 forwards;
+}
+
+.progress--100::before {
+  animation: progress-animation--100 2s 1 forwards;
+}
+
+@keyframes progress-animation--100 {
+  to { --progress-value: 100; }
+
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  88% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  99% {
+    font-weight: unset;
+  }
+
+  100% {
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    font-weight: $weight-extrabold;
+  }
+}

@@ -1,0 +1,209 @@
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+
+/**
+ * Inline
+ */
+
+.c-form--inline {
+  display: flex;
+}
+
+/* Group */
+
+.c-form-group {
+  &:not(:last-child) {
+    margin-bottom: 1.6rem;
+  }
+}
+
+/**
+ * Checkbox or Radio Button
+ */
+
+.c-form-group--check {
+  label {
+    display: block;
+    font-weight: $weight-normal;
+    margin-bottom: 0;
+  }
+
+  label + label {
+    margin-top: $base-spacing-unit-small;
+  }
+
+  input:not([type=text],[type=file], [type=form]) {
+    accent-color: $color-primary-80;
+
+    border-radius: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+
+    transition: 0.2s all linear;
+
+    position: relative;
+    top: 5px;
+  }
+}
+
+/**
+ * Inline
+ */
+
+.c-form-group--inline {
+  legend {
+    margin-bottom: 0;
+  }
+
+  label {
+    display: inline-block;
+  }
+
+  label:not(:last-child) {
+    margin-right: $base-spacing-unit-small;
+  }
+}
+
+/**
+ * Flat
+ */
+
+.c-form-group--flat {
+  margin-bottom: 0;
+}
+
+/* Group */
+
+.c-form-group {
+  flex: 1;
+
+  input {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  + .c-btn {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+}
+
+/* Control */
+
+.c-form-control {
+  border: $base-border-width-small solid $color-gray-20;
+  border-radius: $base-border-radius;
+  box-shadow: $base-box-shadow-inset;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  height: calc(#{$base-font-size} * #{$base-line-height} + (#{$base-border-width-small} * 2) + (#{$base-spacing-unit-xs} * 2));
+  line-height: $base-line-height;
+  padding: $base-spacing-unit-xs $base-spacing-unit-small;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  width: 100%;
+
+  &:focus,
+  &:hover {
+    background-color: $color-primary-20;
+    border-color: $color-primary-70;
+    box-shadow: $base-box-blue-highlight;
+    outline: 0;
+  }
+
+  &[disabled] {
+    background-color: $color-gray-10;
+    box-shadow: none;
+  }
+
+  &[disabled]:focus,
+  &[disabled]:hover {
+    border-color: $color-gray-20;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+
+  /**
+   * Error
+   */
+
+  &.is-error {
+    background-color: lighten($color-double-decker, 57.5%);
+    border-color: $color-error;
+    box-shadow: $base-box-shadow-error;
+    color: $color-double-decker;
+  }
+}
+
+/**
+ * File
+ */
+
+.c-form-control--file {
+  border: 0;
+  box-shadow: none;
+  height: auto;
+  padding: 0;
+  width: auto;
+
+  &:focus,
+  &:hover {
+    background-color: $color-white;
+    box-shadow: none;
+  }
+
+  /**
+   * Error
+   */
+
+  &.is-error {
+    box-shadow: none;
+  }
+}
+
+/**
+ * Textarea
+ */
+
+.c-form-control--textarea {
+  height: auto;
+  resize: vertical;
+}
+
+/* Help */
+
+.c-form-help {
+  color: $color-gray-50;
+  font-size: 0.75rem; /* 14 / 19 */
+  margin-top: $base-spacing-unit-xs;
+
+  /**
+   * Error
+   */
+
+  &.is-error {
+    color: $color-error;
+  }
+}
+
+@media all and (min-width: $bp-medium) {
+  /**
+   * Inline
+   */
+
+  .c-form--inline {
+
+    /* Group */
+
+    .c-form-group {
+      flex: auto;
+    }
+  }
+}
+
+@media all and (min-width: $bp-large) {
+  .c-form-group {
+    //margin-bottom: $base-spacing-unit;
+  }
+}

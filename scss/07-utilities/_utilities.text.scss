@@ -1,0 +1,74 @@
+/* ==========================================================================
+   #TEXT
+   ========================================================================== */
+
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-capitalize {
+  text-transform: capitalize;
+}
+
+.u-text-weight-normal {
+  font-weight: $weight-normal;
+}
+
+.u-text-weight-bold {
+   font-weight: $weight-bold;
+ }
+
+.u-text-weight-semibold {
+  font-weight: $weight-semibold;
+}
+
+.u-text-weight-extrabold {
+  font-weight: $weight-extrabold;
+}
+
+.u-text-is-disabled {
+  color: $color-gray-50;
+  box-shadow: none;
+  transition: $base-transition-default;
+
+  &:focus,
+  &:hover {
+    box-shadow: none;
+    cursor: not-allowed;
+    text-decoration: line-through;
+  }
+}
+
+.u-text-is-grayed-out {
+  color: $color-gray-50;
+}
+
+.u-text-required {
+  color: $color-error;
+  font-weight: $weight-bold;
+}
+
+.u-text-optional {
+  color: $color-gray-50;
+  font-weight: $weight-bold;
+}
+
+.u-text-disable-selection {
+  user-select: none;
+}
+
+.u-text-success {
+  color: $color-success;
+}
+
+.u-text-success--dark {
+  color: $color-success-dark;
+}
+
+.u-text-error {
+  color: $color-error;
+}
+
+.u-text-error--dark {
+  color: $color-error-dark;
+}

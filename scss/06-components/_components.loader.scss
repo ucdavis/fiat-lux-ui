@@ -1,0 +1,74 @@
+/* ==========================================================================
+   #LOADER
+   ========================================================================== */
+
+/* Dark Version */
+@mixin dark() {
+  border: 6px solid $color-white;
+  border-color: $color-white transparent $color-white transparent;
+}
+
+.c-lds-dual-ring, .c-lds-dual-inner-ring {
+  width: $icon-size-loader;
+  height: $icon-size-loader;
+
+  &:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    border: 6px solid $color-primary;
+    border-color: $color-primary transparent $color-primary transparent;
+  }
+}
+
+.c-lds-dual-ring {
+  display: inline-block;
+
+  &:after {
+    width: $icon-size-loader-inner;
+    height: $icon-size-loader-inner;
+    margin: $icon-size-loader-margin;
+    animation: c-lds-dual-ring 1.2s linear infinite;
+  }
+
+  &.c-lds-dual-ring--dark {
+    &:after {
+      @include dark();
+    }
+
+    .c-lds-dual-inner-ring {
+      &:after {
+        @include dark();
+      }
+    }
+  }
+}
+
+.c-lds-dual-inner-ring {
+  position: absolute;
+
+  &:after {
+    width: $icon-size-loader-inside-inner;
+    height: $icon-size-loader-inside-inner;
+    margin: $icon-size-loader-inside-margin;
+    animation: c-lds-dual-inner-ring 1.2s linear infinite reverse;
+  }
+}
+
+@keyframes c-lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes c-lds-dual-inner-ring {
+  0% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(410deg);
+  }
+}

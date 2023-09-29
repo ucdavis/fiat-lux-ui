@@ -1,0 +1,165 @@
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+
+/* Link Buttons */
+
+a,
+a:hover,
+a:visited {
+  &.c-btn {
+    color: $color-primary;
+    padding: 0 1rem;
+    text-decoration: none;
+  }
+}
+
+/* Standard Buttons */
+
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15ch;
+  min-height: 2.5rem;
+  cursor: pointer;
+  border: 0.01rem solid $color-button-border;
+  background-color: $color-button;
+  font-weight: $weight-bold;
+  transition: $base-transition-default;
+
+  &:before {
+    color: transparent;
+    background-color: transparent;
+    content: "\f054";
+    font-family: $font-icons;
+    font-size: $icon-font-size-button;
+    font-weight: $weight-extrabold;
+    opacity: 0;
+    transition: $base-transition-default;
+    transform: translateX(-200%);
+    width: 0;
+  }
+
+  &:focus,
+  &:hover {
+    border-color: $color-primary-2;
+    box-shadow: $base-box-shadow;
+    color: $color-primary;
+
+    padding-right: 0.5rem;
+    padding-left: 1rem;
+
+    &:before {
+      color: $color-primary;
+      opacity: 1;
+      transform: translateX(-45%);
+      width: 0.75rem;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  /* Icon */
+
+  .c-btn__icon {
+    margin-right: $base-spacing-unit-xs;
+  }
+
+  /**
+   * Disabled
+   */
+
+  &[disabled] {
+    background-color: $color-gray-10;
+    border-color: $color-gray-10;
+    color: $color-gray-50;
+    cursor: not-allowed;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  &[disabled]:focus,
+  &[disabled]:hover {
+    background-color: $color-gray-10;
+    box-shadow: none;
+    padding-right: unset;
+    padding-left: unset;
+    transform: translateY(0);
+  }
+}
+
+/**
+ * Primary
+ */
+
+.c-btn--primary {
+  background-color: $color-primary;
+  border-color: $color-primary;
+  color: $color-white;
+
+  &:focus,
+  &:hover {
+    background-color: $color-primary-light;
+    color: $color-primary-2;
+
+    &:before {
+      color: $color-white;
+    }
+  }
+}
+
+/**
+ * Secondary
+ */
+
+.c-btn--primary-2 {
+  background-color: $color-primary-2;
+  border-color: $color-primary-2;
+  color: $color-primary;
+
+  &:focus,
+  &:hover {
+    background-color: $color-white;
+    color: $color-primary;
+
+    &::before {
+      color: $color-primary;
+    }
+  }
+}
+
+/**
+ * Block
+ */
+
+.c-btn--block {
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Small
+ */
+
+.c-btn--small {
+  min-height: unset;
+  min-width: unset;
+  padding: $base-spacing-unit-xs $base-spacing-unit-small;
+
+  &:before {
+    content: none;
+  }
+
+  &:focus,
+  &:hover,
+  &[disabled]:focus,
+  &[disabled]:hover {
+    padding: $base-spacing-unit-xs $base-spacing-unit-small;
+  }
+}
+

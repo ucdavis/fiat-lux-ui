@@ -1,0 +1,348 @@
+/* ==========================================================================
+   #PANELS
+   ========================================================================= */
+@mixin panel-spacing-table() {
+  padding: $base-spacing-unit-small;
+}
+
+@mixin panel-spacing() {
+  padding: $base-spacing-unit-small $base-spacing-unit-medium;
+}
+
+@mixin panel-spacing__action() {
+  margin-top: $base-spacing-unit-factor-xs + rem;
+  padding: $base-spacing-unit-small;
+}
+
+.c-panel {
+  background-color: $color-white;
+  border-radius: $base-border-radius-small;
+  border: $base-border-width solid $color-primary;
+  box-shadow: $base-box-shadow;
+  margin-bottom: $base-spacing-unit;
+  position: relative;
+
+  .c-panel__header {
+    background-color: $color-primary-90;
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: $weight-bold;
+
+    .c-panel__title {
+      color: $color-white;
+      @include panel-spacing();
+
+    }
+
+    .c-panel__actions {
+      .c-panel__action {
+      @include panel-spacing__action();
+        color: $color-white;
+        cursor: pointer;
+        transition: $base-transition-default;
+
+        &:hover {
+          color: $color-gray-10;
+        }
+
+        /* DROPDOWN */
+        &.c-panel__action--dropdown {
+          &:hover {
+            .c-dropdown.c-dropdown-menu {
+              z-index: 1;
+              @include fade-in;
+
+              > div,
+                a {
+                  text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .c-panel__tableheader {
+    background-color: $color-primary-90;
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 1.1875rem;
+    font-weight: $weight-bold;
+
+    .c-panel__title {
+      color: $color-white;
+      @include panel-spacing-table();
+
+    }
+
+    .c-panel__actions {
+      .c-panel__action {
+        @include panel-spacing-table();
+        color: $color-white;
+        cursor: pointer;
+        transition: $base-transition-default;
+
+        &:hover {
+          color: $color-gray-10;
+        }
+      }
+    }
+  }
+
+  .c-panel__subheader {
+    background-color: $color-primary;
+    font-weight: $weight-bold;
+    color: $color-white;
+
+    .c-panel__row {
+      display: flex;
+    }
+
+    .c-panel__column {
+      @include panel-spacing-table();
+    }
+
+  }
+
+    .c-panel__row {
+      display: flex;
+
+      &:nth-child(even) {
+        background-color: $color-gray-10;
+      }
+
+      .c-panel__column {
+        @include panel-spacing-table();
+      }
+    }
+
+  .c-panel__body, .c-panel__footer {
+    @include fade-in-panel;
+  }
+
+  .c-panel__body {
+    @include panel-spacing();
+  }
+
+  .c-panel__footer {
+    @include panel-spacing();
+  }
+
+  /* STATEFUL */
+  &.c-panel--stateful {
+    display: flex;
+    flex-direction: row;
+
+    .c-panel__state {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: $color-primary;
+      background-color: $color-gray-10;
+      border-right: $color-primary solid $base-border-width-small;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      text-transform: uppercase;
+      font-weight: $weight-bold;
+      cursor: default;
+
+      > .c-panel__state-icon,
+      > .c-panel__state-text {
+        align-self: start;
+        min-width: 2.25rem;
+        padding: 0.65rem 0.25rem;
+      }
+
+      > .c-panel__state-icon {
+        display:inline-block;
+        font-size: $icon-font-size-state;
+        vertical-align: bottom;
+      }
+
+      &.c-panel__state--icon-only {
+
+        > .c-panel__state-text {
+          display: none; // if accidentally included
+        }
+      }
+
+      &:not(.c-panel__state--icon-only) {
+        > .c-panel__state-icon {
+          display: none; // Revealed on collapse
+        }
+      }
+
+      &:after {
+        content: "";
+        width: $base-spacing-unit-small;
+        background-color: $color-gray-20;
+      }
+
+      &.c-panel__state--information {
+        color: $color-information-dark;
+        background-color: $color-information-light;
+
+        &:after {
+          background-color: $color-information;
+        }
+      }
+
+      &.c-panel__state--warning {
+        color: $color-warning-dark;
+        background-color: $color-warning-light;
+
+        &:after {
+          background-color: $color-warning;
+        }
+      }
+
+      &.c-panel__state--success {
+        color: $color-success-dark;
+        background-color: $color-success-light;
+
+        &:after {
+          background-color: $color-success;
+        }
+      }
+
+      &.c-panel__state--error {
+        color: $color-error-dark;
+        background-color: $color-error-light;
+
+        &:after {
+          background-color: $color-error;
+        }
+      }
+    }
+
+    .c-panel__content {
+      width: -moz-available;
+      width: -webkit-fill-available;
+      width: 100%;
+    }
+  }
+
+  /* EXPAND/COLLAPSE */
+  &.c-panel--collapsed {
+
+    &.c-panel--stateful {
+
+      .c-panel__state {
+        > .c-panel__state-icon {
+          display: flex;
+          align-items: center;
+        }
+
+        > .c-panel__state-text {
+          display: none;
+        }
+      }
+    }
+
+    .c-panel__header {
+      .c-panel__actions {
+        .c-panel__action {
+          &._js-c-panels__action--expand-collapse {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+    .c-panel__body, .c-panel__footer {
+      @include fade-out-panel;
+    }
+  }
+
+  /* DELETE */
+  &.c-panel__delete {
+    .c-panel__header {
+      .c-panel__actions {
+        .c-panel__action {
+          &._js-c-panels__action--delete {
+            
+          }
+        }
+      }
+    }
+  }
+
+  /* TABLES */
+  .c-panel__tablecontent {
+
+    .c-panel__subheader {
+      justify-content: start;
+
+      .c-panel__column {
+        text-transform: uppercase;
+      }
+    }
+
+    .c-panel__row {
+      justify-content: start;
+
+      .c-panel__column {
+        min-width: 12.5rem;
+
+        &.c-panel__column--sm {
+          min-width: 10rem;
+        }
+
+        &.c-panel__column--md {
+          min-width: 15rem;
+        }
+
+        &.c-panel__column--lg {
+          min-width: 20rem;
+        }
+
+        .c-panel__mobile-subheader {
+          display: none;
+        }
+      }
+    }
+
+    // For tables with an immense amount of data columns
+    &.c-panel__tablecontent--always-mobile {
+      .c-panel__subheader {
+        display: none;
+      }
+
+      .c-panel__row {
+        flex-direction: column;
+
+        .c-panel__column {
+
+          > .c-panel__mobile-subheader {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: $bp-large) {
+  .c-panel:not(.c-panel__tablecontent--always-mobile) {
+    /* MOBILE TABLES */
+    .c-panel__tablecontent {
+
+      .c-panel__subheader {
+        display: none;
+      }
+
+      .c-panel__row {
+        flex-direction: column;
+
+        .c-panel__column {
+
+          > .c-panel__mobile-subheader {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

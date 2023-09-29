@@ -1,0 +1,129 @@
+/* ==========================================================================
+   #STEPS
+   ========================================================================== */
+.c-step {
+   display: inline-block;
+   margin: 1.625rem 0;
+
+   .c-step__circle, .c-step__name, .c-step__detail, .c-step__status {
+      margin: 0.421rem 0;
+    }
+    
+   .c-step__icon {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .c-step__circle {
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         width: $icon-size-step;
+         height: $icon-size-step;
+         border-radius: 50%;
+         background-color: $color-gray-30; 
+
+         .c-step__circle--icon {
+            color: $color-white;
+            display: inline-block;
+            font-size: $icon-font-size-step;
+            vertical-align: bottom;
+         }
+      
+         &.c-step__circle--complete {
+            background-color: $color-success;
+         }
+      
+         &.c-step__circle--progress {
+            background-color: $color-white;
+            border: 0.188rem solid $color-information;
+
+            .c-step__circle--icon {
+               color: $color-information;
+               font-size: $icon-size-step-inner;
+            }
+         }
+      
+         &.c-step__circle--denied {
+            background-color: $color-error;
+         }
+      }
+      
+      .c-step__bar {
+         width: 15rem;
+         height: 0.25rem;
+         margin: 0 2rem;
+         border-radius: 1rem;
+         background-color: $color-gray-30; 
+
+         &.c-step__bar--complete {
+            background-color: $color-success;
+         }
+      
+         &.c-step__bar--progress {
+            background-color: $color-information;
+            background: linear-gradient(to right, $color-information 50%, $color-gray-30 50%);
+         }
+      }
+
+   }
+   .c-step__info {
+      display: flex;
+      align-items: flex-start; 
+      flex-direction: column;
+
+      .c-step__name {
+         font-size: $font-size-l-1;
+      }
+      
+      .c-step__detail {
+         width: 15.5rem;
+      }
+      
+      .c-step__status {
+         font-weight: $weight-bold;
+         padding: 0.031rem 1rem;
+         border-radius: 1rem; 
+         background-color: $color-gray-10; 
+         color: $color-gray-70;
+      
+         &.c-step__status--complete {
+            background-color: lighten($color-success, 45%);
+            color: $color-success;
+         }
+      
+         &.c-step__status--progress {
+            background-color: lighten($color-information, 50%);;
+            color: $color-information;
+         }
+      
+         &.c-step__status--denied {
+            background-color: lighten($color-error, 35%);;
+            color: $color-error;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: $bp-medium) {
+   .c-step {
+      margin: 0 1.625rem;
+      display: flex;
+      gap: 3rem;
+
+      .c-step__icon {
+         flex-direction: column;
+   
+         .c-step__bar {
+            width: 0.25rem;
+            height: 8rem;
+            margin: 2rem 0;
+
+            &.c-step__bar--progress {
+               background: linear-gradient(to bottom, $color-information 50%, $color-gray-30 50%);
+            }
+         }
+      }
+   }  
+}

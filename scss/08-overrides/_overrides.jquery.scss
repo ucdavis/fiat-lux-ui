@@ -1,0 +1,342 @@
+/* ==========================================================================
+   #JQUERY AND JQUERY UI // TODO Deprecate
+   ========================================================================== */
+
+// DROPDOWN =================================================================
+
+.ui-selectmenu {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath stroke='%23022851' d='M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right .7rem top 50%, 0 0;
+  background-size: 1rem auto, 100%;
+
+  height: unset !important;
+
+  .ui-selectmenu-status {
+
+    border: $base-border-width-small solid $color-gray-20;
+    border-radius: $base-border-radius;
+    box-shadow: $base-box-shadow-inset;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    height: calc(#{$base-font-size} * #{$base-line-height} + (#{$base-border-width-small} * 2) + (#{$base-spacing-unit-xs} * 2));
+    line-height: $base-line-height;
+    padding: $base-spacing-unit-xs $base-spacing-unit-small;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    width: 100%;
+
+    color: $color-black;
+
+    &:focus,
+    &:hover {
+      //background-color: $color-primary-20;
+      border-color: $color-primary-70;
+      box-shadow: $base-box-blue-highlight;
+      outline: 0;
+    }
+  }
+}
+
+.ui-selectmenu-menu {
+  border: $base-border-width-small solid $color-gray-20;
+  border-radius: $base-border-radius;
+  box-shadow: $base-box-shadow-inset;
+
+  &.ui-selectmenu-open {
+    li {
+
+      a {
+        color: $color-black;
+        padding: 0.25rem 1rem 0;
+
+        &:hover {
+          background-color: #1967d2;
+          border-color: #1967d2;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}
+
+// MULTI-SELECT =============================================================
+
+.ui-multiselect {
+  text-align: left;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15ch;
+  min-height: 2.5rem;
+  cursor: pointer;
+  border: 0.01rem solid $color-button-border;
+  background-color: $color-button;
+  font-weight: $weight-bold;
+  transition: $base-transition-default;
+
+  &:focus,
+  &:hover {
+    border-color: $color-primary-2;
+    box-shadow: $base-box-shadow;
+    color: $color-primary;
+
+    padding-right: 0.5rem;
+    padding-left: 1rem;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  /* Icon */
+
+  .c-btn__icon {
+    margin-right: $base-spacing-unit-xs;
+  }
+
+  /**
+   * Disabled
+   */
+
+  &[disabled] {
+    background-color: $color-gray-10;
+    border-color: $color-gray-10;
+    color: $color-gray-50;
+    cursor: not-allowed;
+
+    &:before {
+      content: none;
+    }
+  }
+
+  &[disabled]:focus,
+  &[disabled]:hover {
+    background-color: $color-gray-10;
+    box-shadow: none;
+    padding-right: unset;
+    padding-left: unset;
+    transform: translateY(0);
+  }
+}
+
+.ui-multiselect span.ui-icon {
+  float: right;
+}
+
+.ui-multiselect-single .ui-multiselect-checkboxes {
+
+}
+
+.ui-multiselect-single .ui-multiselect-checkboxes input {
+  position: absolute !important;
+  top: auto !important;
+  left: -9999px;
+}
+
+.ui-multiselect-header {
+  //margin: 1rem;
+  display: inline-flex;
+  width: 100%;
+}
+
+.ui-multiselect-header ul {
+  //font-size: 0.9em;
+}
+
+.ui-multiselect-header ul {
+
+}
+
+.ui-multiselect-header ul li {
+  float: left;
+  //padding: 0 10px 0 0;
+  list-style: none;
+  margin-right: auto;
+}
+
+.ui-multiselect-header a {
+  text-decoration: none;
+}
+
+.ui-multiselect-header a:hover {
+  text-decoration: underline;
+}
+
+.ui-multiselect-header span.ui-icon {
+  float: left;
+}
+
+.ui-multiselect-header li.ui-multiselect-close {
+  float: right;
+  text-align: right;
+  padding-right: 0;
+}
+
+.ui-multiselect-menu {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  text-align: left;
+
+  // CUSTOM
+  background-color: $color-gray-10;
+  border: $base-border-width solid $color-gray-20;
+}
+
+.ui-multiselect-menu .ui-widget-header,
+.ui-multiselect-menu .ui-multiselect-checkboxes {
+  padding: 0.5rem;
+}
+
+.ui-multiselect-menu .ui-widget-header {
+  border-bottom: $base-border-width-small solid $color-gray-40;
+  border-radius: $base-border-radius;
+  background-color: $color-primary-80;
+
+  a {
+    color: $color-white;
+  }
+}
+
+.ui-multiselect-checkboxes {
+  //position: relative /* fixes bug in IE6/7 */;
+  overflow-y: auto;
+  margin: 0;
+}
+
+.ui-multiselect-checkboxes label {
+  cursor: default;
+  display: block;
+  border: 0.1rem solid transparent;
+}
+
+.ui-multiselect-checkboxes li {
+  //clear: both;
+  //font-size: 0.9em;
+  //padding-right: 3px;
+}
+
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label,
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-content label {
+  font-weight: bold;
+  font-size: $base-font-size;
+}
+.ui-multiselect-checkboxes label input,
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label input,
+.ui-multiselect-checkboxes.ui-multiselect-optgroup-selectable.ui-multiselect-optgroup-collapsible li.ui-multiselect-optgroup-content label input {
+  margin-left: 0.5rem;
+  accent-color: $color-primary-80;
+
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+
+  transition: 0.2s all linear;
+
+  position: relative;
+  top: 0.2rem;
+}
+
+/* remove label borders in IE6 because IE6 does not support transparency */
+* html .ui-multiselect-checkboxes label {
+  border: none
+}
+
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-content label {
+  padding-left: 0.25rem;
+}
+
+.ui-multiselect-checkboxes.ui-multiselect-optgroup-selectable.ui-multiselect-optgroup-collapsible li.ui-multiselect-optgroup-content label {
+  padding-left: 2rem;
+}
+
+.ui-multiselect-checkboxes a.ui-multiselect-optgroup-collapse {
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-image: url(/resources-core/img/icon/minus-solid.svg); // CUSTOM
+  background-position: 0 center;
+  display: none;
+  padding-left: 1rem;
+  margin-right: 0.1rem;
+}
+
+.ui-multiselect-checkboxes.ui-multiselect-optgroup-collapsible a.ui-multiselect-optgroup-collapse {
+  display: inline;
+}
+
+.ui-multiselect-checkboxes .ui-multiselect-optgroup-collapsed a.ui-multiselect-optgroup-collapse {
+  background-image: url(/resources-core/img/icon/plus-solid.svg); // CUSTOM
+}
+
+// MULTI-SELECT: FILTER =====================================================
+.ui-multiselect-hasfilter ul {
+  //position: relative; /*top:2px*/
+}
+
+.ui-multiselect-filter {
+  //float: left;
+  //margin-right: 10px;
+  //font-size: 11px
+  width: 100%;
+}
+
+.ui-multiselect-filter input {
+  //width: 100px;
+  //font-size: 10px;
+  //margin-left: 5px;
+  //height: 15px;
+  //padding: 2px;
+  //border: 1px solid #292929;
+  //-webkit-appearance: textfield;
+  //-webkit-box-sizing: content-box;
+  //border-radius: 3px;
+
+  border: $base-border-width-small solid $color-gray-20;
+  border-radius: $base-border-radius;
+  box-shadow: $base-box-shadow-inset;
+  display: block;
+  font-family: inherit;
+  font-size: $base-font-size;
+  height: calc(#{$base-font-size} * #{$base-line-height} + (#{$base-border-width-small} * 2) + (#{$base-spacing-unit-xs} * 2));
+  line-height: $base-line-height;
+  padding: $base-spacing-unit-xs $base-spacing-unit-small;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  width: 100%;
+
+  &:focus,
+  &:hover {
+    background-color: $color-primary-20;
+    border-color: $color-primary-70;
+    box-shadow: $base-box-blue-highlight;
+    outline: 0;
+  }
+
+  &[disabled] {
+    background-color: $color-gray-10;
+    box-shadow: none;
+  }
+
+  &[disabled]:focus,
+  &[disabled]:hover {
+    border-color: $color-gray-20;
+    box-shadow: none;
+    cursor: not-allowed;
+  }
+}
+
+.ui-multiselect-filtered-out {
+  display: none !important;
+}
+
+ul.ui-helper-reset {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  li:not(:last-child) {
+    margin-right: 1rem;
+  }
+}

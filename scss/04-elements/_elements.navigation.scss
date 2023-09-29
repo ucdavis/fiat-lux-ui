@@ -1,0 +1,33 @@
+/* ==========================================================================
+   #NAVIGATION
+   ========================================================================== */
+
+nav {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+
+  background-color: $color-primary;
+  color: $color-white;
+  font-size: $font-size-nav;
+  font-weight: $weight-bold;
+  text-transform: uppercase;
+
+  a,
+  a:focus,
+  a:visited
+  {
+    color: white;
+    text-decoration: none;
+  }
+
+  > div {
+    > div,
+    > a {
+      cursor: pointer;
+      text-align: center;
+      font-weight: $weight-bold;
+      line-height: 3.25rem;
+    }
+  }
+}

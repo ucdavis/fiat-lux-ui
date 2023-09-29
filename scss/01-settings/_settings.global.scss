@@ -1,0 +1,102 @@
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+
+/* ==========================================================================
+   #GLOBAL
+   ========================================================================== */
+
+/* #BRAND
+   ========================================================================== */
+
+/* Icon */
+$brand-nav-icon:                url("../img/logo/uc-logo-gold.svg");
+$brand-nav-icon-secondary:      url("../img/icon/palm-tree.svg");
+$brand-footer-icon:             url("../img/logo/aggie-logo-white.svg");
+
+/* Color */
+
+$brand-color:                    #022851; // Dark
+$brand-color-2:                  #FFBF00; // Light
+
+/* Font */
+
+/**
+ * Includes a local font. Accepts a user defined name and file path.
+ */
+
+@mixin font($font-family, $font-path) {
+  @font-face {
+    font-family: $font-family;
+    src: url($font-path+'.eot');
+    src:
+      url($font-path+'.eot?#iefix') format('embedded-opentype'),
+      // url($font-path+'.woff') format('woff'),
+      url($font-path+'.ttf') format('truetype'),
+      url($font-path+'.otf') format('opentype'),
+  url($font-path+'.svg#'+$font-family) format('svg')
+    ;
+    font-weight: normal;
+    font-style: normal;
+  }
+}
+
+@include font('Proxima Nova', '../font/proxima-nova/Proxima Nova Regular');
+@include font('Proxima Nova Light', '../font/proxima-nova/Proxima Nova Light');
+@include font('Proxima Nova Semibold', '../font/proxima-nova/Proxima Nova Semibold');
+@include font('Proxima Nova Extrabold', '../font/proxima-nova/Proxima Nova Extrabold');
+@include font('Ryman-Eco', '../font/ryman-eco/RymanEco-Regular');
+@include font('Freight', '../font/freight/Freight-Regular');
+
+$brand-font:                     'Proxima Nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$brand-font-light:               'Proxima Nova Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$brand-font-semibold:            'Proxima Nova Semibold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$brand-font-extrabold:           'Proxima Nova Extrabold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+$brand-font-secondary:           'Ryman-Eco', Georgia, serif;
+$brand-font-tertiary:             'Freight', Georgia, serif;
+
+/* #BASE
+   ========================================================================== */
+
+/* Font */
+
+$base-font-size:                 19px;
+$base-line-height:               1.6;
+
+/* Spacing */
+
+$base-spacing-unit-factor-xl:     1.75;
+$base-spacing-unit-factor-large:  1.5;
+$base-spacing-unit-factor-medium: 1.0;
+$base-spacing-unit-factor-small:  0.5;
+$base-spacing-unit-factor-xs:     0.25;
+$base-spacing-unit-factor-xxs:    0.125;
+
+$base-spacing-unit:               $base-line-height + rem;
+$base-spacing-unit-xl:            $base-line-height * $base-spacing-unit-factor-xl + rem;
+$base-spacing-unit-large:         $base-line-height * $base-spacing-unit-factor-large + rem;
+$base-spacing-unit-medium:        $base-line-height * $base-spacing-unit-factor-medium + rem;
+$base-spacing-unit-small:         $base-line-height * $base-spacing-unit-factor-small + rem;
+$base-spacing-unit-xs:            $base-line-height * $base-spacing-unit-factor-xs + rem;
+$base-spacing-unit-xxs:           $base-line-height * $base-spacing-unit-factor-xxs + rem;
+
+/* Borders */
+
+$base-border-width:              0.125em;
+$base-border-width-small:        0.0625em;
+$base-border-radius-large:       0.25em;
+$base-border-radius:             0.125em;
+$base-border-radius-small:       0.0625em;
+$base-border-radius-round:       50%;
+
+/* Shadows */
+
+$base-box-shadow:                0 0 1em rgba(34, 34, 34, 0.125);
+$base-box-shadow-inset:          0 0 0.25em rgba(34, 34, 34, 0.125) inset;
+$base-box-shadow-error:          0 0 0.5em rgba(255, 65, 54, 0.25);
+$base-box-shadow-highlight:      0 0 0.5em rgba(0, 169, 151, 0.25);
+$base-box-blue-highlight:        0 0 0.25em lighten($brand-color, 60%);
+
+/* Transitions */
+$base-transition-default:       all 0.2s linear;
+$base-transition-opacity:       opacity 0.25s ease-in;
+$base-transition-color:         color, background-color 0.25s;

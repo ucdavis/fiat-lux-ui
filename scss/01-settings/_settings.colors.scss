@@ -1,0 +1,124 @@
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+
+/* ==========================================================================
+   #COLORS
+   ========================================================================== */
+
+/* Brand */
+
+/* Primary */
+/* Dark */
+$color-primary-dark:            darken($brand-color, 5%);
+$color-primary:                 $brand-color;
+$color-primary-light:           lighten($brand-color, 5%);
+
+$color-primary-90:              #14447A;
+$color-primary-80:              #13639E;
+$color-primary-70:              #73ABDD;
+$color-primary-60:              #B0D0ED;
+$color-primary-50:              #CCE0F3;
+$color-primary-40:              #DBEAF7;
+$color-primary-30:              #EBF3FA;
+$color-primary-20:              #F7FAFD;
+
+/* Light */
+$color-primary-2-dark:  darken($brand-color-2, 5%);
+$color-primary-2:       $brand-color-2;
+$color-primary-2-light: lighten($brand-color-2, 5%);
+
+$color-primary-2-90:    #FFC519;
+$color-primary-2-80:    #FFD24C;
+$color-primary-2-70:    #FFDF80;
+$color-primary-2-60:    #FFECB2;
+$color-primary-2-50:    #FDE9AC;
+$color-primary-2-40:    #FFF4D2;
+$color-primary-2-30:    #FFF9E6;
+$color-primary-2-20:    #FFFBED;
+
+/* Secondary */
+$color-rec-pool:        #6FCFEB;
+$color-tahoe:           #00B2E3;
+$color-gunrock:         #0047BA;
+$color-bodega:          #003A5D;
+$color-rain:            #03F9E6;
+$color-arboretum:       #00C4B3;
+$color-putah-creek:     #008EAA;
+$color-delta:           #00524C;
+$color-farmers-market:  #AADA91;
+$color-sage:            #6CCA98;
+$color-quad:            #3DAE2B;
+$color-redwood:         #266041;
+$color-golden-state:    #FFFF3B;
+$color-sunflower:       #FFDC00;
+$color-poppy:           #F18A00;
+$color-california:      #8A532F;
+$color-rose:            #FF8189;
+$color-strawberry:      #F93549;
+$color-double-decker:   #C10230;
+$color-merlot:          #79242F;
+$color-thiebaud-icing:  #F095CD;
+$color-redbud:          #C6007E;
+$color-pinot:           #76236C;
+$color-cabernet:        #481268;
+
+/* Unary */
+$color-black:                 #000;
+$color-gray-90:               #191919;
+$color-gray-80:               #333333;
+$color-gray-70:               #4C4C4C;
+$color-gray-60:               #666666;
+$color-gray-50:               #7F7F7F;
+$color-gray-40:               #999999;
+$color-gray-30:               #B2B2B2;
+$color-gray-20:               #CCCCCC;
+$color-gray-10:               #E5E5E5;
+$color-white:                 #FFF;
+
+/* Hyperlinks */
+$color-hyperlink:             #1A6295;
+$color-hyperlink-hover:       #47BFE4;
+$color-hyperlink-active:      #085267;
+$color-hyperlink-visited:     #6F2866;
+$color-hyperlink-focus:       $color-hyperlink-hover;
+
+/* Dropdowns */
+$color-dropdown-bg:           #FFFBED;
+
+/* Social */
+$color-facebook:              #3B5998;
+$color-linkedin:              #0077B5;
+$color-twitter:               #1DA1F2;
+$color-youtube:               #F00;
+
+/* Buttons: Default */
+$color-button:                lighten($color-gray-10, 5%);
+$color-button-border:         $color-primary-60;
+
+/* Messages */
+$color-message-text-light:                    $color-gray-50;
+$color-message-text-medium:                   $color-gray-70;
+$color-message-border:                        $color-primary-60;
+$color-message-speech-bubble-background:      $color-white;
+$color-message-speech-bubble-background-alt:  $color-primary-30;
+
+/* Utility */
+
+$color-error:                 #FF4136;
+$color-error-dark:            darken($color-error, 20%);
+$color-error-light:           lighten($color-error, 20%);
+$color-warning:               #FF851B;
+$color-warning-dark:          darken($color-warning, 12.5%);
+$color-warning-light:         lighten($color-warning, 20%);
+$color-highlight:             #FFDC00;
+$color-success:               #2ECC40;
+$color-success-dark:          darken($color-success, 15%);
+$color-success-light:         lighten($color-success, 20%);
+$color-information:           #0074D9;
+$color-information-dark:      darken($color-information, 20%);
+$color-information-light:     lighten($color-information, 20%);
+
+/* Utility: Accessibility */
+//$color-error:                 #cd2026;
+//$color-warning:               darken(#ff851b, 20%);
+//$color-success:               #2e8540;
+//$color-information:           #0071bc;

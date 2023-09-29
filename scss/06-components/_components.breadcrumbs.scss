@@ -1,0 +1,42 @@
+/* ==========================================================================
+   #BREADCRUMBS
+   ========================================================================== */
+
+.c-breadcrumbs {
+  display: flex;
+  overflow-x: auto;
+}
+
+/* Item */
+
+.c-breadcrumbs__item {
+  color: $color-primary;
+  display: flex;
+  flex: 0 1 auto;
+  font-size: 0.875rem; /* 14 / 19 */
+  white-space: nowrap;
+
+  &:not(:last-child)::after {
+    color: $color-primary;
+    content: '>';
+    flex: 0 1 auto;
+    padding-left: $base-spacing-unit-small;
+    padding-right: $base-spacing-unit-small;
+  }
+}
+
+/* Link */
+
+.c-breadcrumbs__link {
+  border-bottom: 0.0625em solid transparent;
+  color: $color-hyperlink;
+  flex: 0 1 auto;
+  text-decoration: none;
+  transition: border-bottom-color 0.25s, color 0.25s;
+
+  &:focus,
+  &:hover {
+    border-bottom-color: $color-hyperlink-hover;
+    color: $color-hyperlink-hover;
+  }
+}

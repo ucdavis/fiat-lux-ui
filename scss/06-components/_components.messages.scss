@@ -1,0 +1,136 @@
+/* ==========================================================================
+   #MESSAGE
+   ========================================================================== */
+
+/* HELPERS */
+
+@mixin speech-bubble($side: left, $offset-direction: top, $color-border: $color-message-border) {
+
+  border: ($message-width-factor / 2) + px solid $color-border;
+  border-radius: ($message-width-factor * 3) + px;
+  position: relative;
+  margin-#{$side}: $message-size + ($message-width-factor / 2);
+  box-shadow: $base-box-shadow;
+  margin-#{opposite-direction($side)}: ($message-width-factor / 2) + px;
+  margin-bottom: ($message-width-factor / 2) + px;
+  padding: 1ex 1rem;
+  background: $color-message-speech-bubble-background;
+
+  &:after, &:before {
+    content: "";
+    position: absolute;
+  }
+
+  &:after {
+    #{$offset-direction}: $message-offset;
+
+    border: $message-size solid transparent;
+    border-#{opposite-direction($side)}: $message-size solid $color-white;
+    #{$side}: -$message-size;
+    border-#{$side}: none;
+  }
+
+  &:before {
+    #{$offset-direction}: $message-offset - $message-width-factor;
+
+    border: ($message-size + $message-width-factor) solid transparent;
+    border-#{opposite-direction($side)}: ($message-size + $message-width-factor) solid $color-border;
+    #{$side}: -($message-size + $message-width-factor);
+    border-#{$side}: none;
+  }
+}
+
+@function opposite-direction($direction) {
+  $opposite-direction: center;
+
+  @if $direction == top {
+    $opposite-direction: bottom;
+  }
+  @if $direction == bottom {
+    $opposite-direction: top;
+  }
+  @if $direction == left {
+    $opposite-direction: right;
+  }
+  @if $direction == right {
+    $opposite-direction: left;
+  }
+
+  @return $opposite-direction;
+}
+
+/* STRUCTURE */
+
+.c-message {
+  display: inline-block;
+  margin: ($message-width-factor + ex) 1rem;
+  width: 100%;
+
+  .c-message__heading {
+    font-weight: $weight-semibold;
+
+    .c-message__date {
+      font-size: 90%;
+      color: $color-message-text-light;
+    }
+  }
+
+  .c-message__content {
+    color: $color-message-text-medium;
+    margin: 0;
+  }
+
+  .c-message__avatar {
+    border-radius: 50%;
+    border: ($message-width-factor / 2) + px solid $color-message-border;
+    box-shadow: $base-box-shadow;
+    float: left;
+    margin-right: 0.5rem;
+    height: fit-content;
+  }
+
+  .c-message__speech-bubble {
+    float: left;
+
+    &.c-message__speech-bubble--left {
+      @include speech-bubble;
+      max-width: 90%;
+    }
+
+    &.c-message__speech-bubble--top {
+
+      @include speech-bubble(top, left);
+      clear: both;
+      margin-left: 0;
+      margin-top: ($message-width-factor + ex);
+    }
+
+    .c-message__heading {
+      margin: 0;
+    }
+  }
+}
+
+.c-message-group {
+  .c-message:nth-child(even) {
+    .c-message__speech-bubble {
+      @include speech-bubble(left, top, $color-primary-2);
+    }
+  }
+}
+
+@media all and (max-width: $bp-medium) {
+  .c-message {
+
+    .c-message__speech-bubble {
+
+      &.c-message__speech-bubble--left {
+        @include speech-bubble(top, left);
+        clear: both;
+        margin-left: 0;
+        margin-top: ($message-width-factor + ex);
+        max-width: 100%;
+      }
+    }
+  }
+}

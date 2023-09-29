@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #CONTAINERS
+   ========================================================================== */
+
+.c-container {
+  padding: $base-spacing-unit;
+
+  &.c-container--dark {
+    color: $color-white;
+    background-color: $color-primary;
+
+    h1, h2, h3, h4, h5, h6 {
+      color: $color-white;
+    }
+
+    a {
+      color: $color-white;
+
+      &:active,
+      &:focus {
+        color: $color-hyperlink-active;
+      }
+
+      &:hover {
+        color: $color-hyperlink-hover;
+      }
+
+      &:visited {
+        color: $color-white;
+
+        &:hover {
+          color: $color-hyperlink-hover;
+        }
+      }
+    }
+
+    figure {
+      figcaption {
+        color: $color-gray-20;
+      }
+    }
+  }
+}

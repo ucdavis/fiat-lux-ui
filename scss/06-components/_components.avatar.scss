@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #AVATAR
+   ========================================================================== */
+.c-avatar {
+  outline: $base-border-radius solid $color-primary;
+  outline-offset: -$base-spacing-unit-xs;
+  border-radius: $base-border-radius-round;
+  padding: $base-spacing-unit-xs;
+
+  &.c-avatar--full-width {
+    width: 100%;
+
+    &.c-avatar--max-width-lg {
+      width: 12.5rem;
+    }
+  }
+}

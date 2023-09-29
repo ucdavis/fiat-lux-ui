@@ -1,0 +1,146 @@
+/* ==========================================================================
+   #VISIBILITY
+   ========================================================================== */
+
+/**
+ * Visibility helper classes from HTML5 Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate
+ */
+
+/**
+ * Hide visually and from screen readers
+ */
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-fade-in {
+  @include fade-in;
+}
+
+.u-fade-out {
+  @include fade-out;
+}
+
+@media screen and (max-width: $bp-small) {
+  .u-fade-in--bp-small {
+    @include fade-in;
+  }
+
+  .u-fade-out--bp-small {
+    @include fade-out;
+  }
+}
+
+@media screen and (max-width: $bp-medium) {
+  .u-fade-in--bp-medium {
+    @include fade-in;
+  }
+
+  .u-fade-out--bp-medium {
+    @include fade-out;
+  }
+}
+
+@media screen and (max-width: $bp-large) {
+  .u-fade-in--bp-large {
+    @include fade-in;
+  }
+
+  .u-fade-out--bp-large {
+    @include fade-out;
+  }
+}
+
+@media all and (max-width: $bp-xl) {
+  .u-fade-in--bp-xl {
+    @include fade-in;
+  }
+
+  .u-fade-out--bp-xl {
+    @include fade-out;
+  }
+}
+
+/**
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.u-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap; /* 1 */
+  width: 1px;
+
+  /*
+   * Extends the .visuallyhidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+
+  &.focusable &:active,
+  &.focusable &:focus {
+    clip: auto;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+}
+
+/**
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.u-invisible {
+  visibility: hidden;
+}
+
+/* Filters */
+
+.u-filter-blur {
+
+  &:before {
+    //-webkit-backdrop-filter: blur(3px); /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
+    //backdrop-filter: blur(3px); /* Supported in Chrome 76 */
+
+    animation: blur-in  0.5s forwards;
+
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%; height: 100%;
+    top: 0;
+    z-index: 1;
+  }
+}
+
+/* Let's define an animation: */
+@keyframes blur-in {
+  from {
+    backdrop-filter: blur(0px);
+  }
+  to {
+    backdrop-filter: blur(3px);
+  }
+}
+
+.u-filter-exception {
+  position: relative;
+  z-index: 9999 !important;
+}

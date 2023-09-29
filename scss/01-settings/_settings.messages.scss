@@ -1,0 +1,14 @@
+/* ==========================================================================
+   #MESSAGES
+   ========================================================================== */
+
+/* SIZING */
+$message-offset-factor:   16;
+$message-offset:          $message-offset-factor + px;
+$message-size:            ($message-offset-factor / 2) + px;
+
+/* MESSAGE WIDTH */
+/* Note: Primarily determines border width, but also adjusts spacing to compensate */
+$message-width-factor:            2;
+$message-width-factor-bold:       3;
+$message-width-factor-extrabold:  4;

@@ -1,0 +1,25 @@
+/* ==========================================================================
+   #LINKS
+   ========================================================================== */
+
+a {
+  color: $color-hyperlink;
+  //transition: $base-transition-default;
+
+  &:active,
+  &:focus {
+    color: $color-hyperlink-active;
+  }
+
+  &:hover {
+    color: $color-hyperlink-hover;
+  }
+
+  &:visited {
+    color: $color-hyperlink;
+
+    &:hover {
+      color: $color-hyperlink-hover;
+    }
+  }
+}

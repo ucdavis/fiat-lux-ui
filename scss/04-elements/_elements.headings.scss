@@ -1,0 +1,38 @@
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $brand-font-extrabold;
+}
+
+h1 {
+  @include font-size($font-size-h1, 1.25);
+  color: $color-primary;
+}
+
+h2 {
+  @include font-size($font-size-h2, 1.25);
+  color: $color-primary-80;
+}
+
+h3 {
+  @include font-size($font-size-h3, 1.25);
+  color: $color-gray-60;
+}
+
+h4 {
+  @include font-size($font-size-h4, 1.25);
+  color: $color-primary;
+}
+
+h5 {
+  @include font-size($font-size-h5, 1.25);
+  color: $color-primary;
+}
+
+h6 {
+  @include font-size($font-size-h6, 1.25);
+  color: $color-primary;
+  text-transform: uppercase;
+}

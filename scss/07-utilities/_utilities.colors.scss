@@ -1,0 +1,153 @@
+/* stylelint-disable block-opening-brace-space-before */
+
+/* ==========================================================================
+   #COLORS
+   ========================================================================== */
+
+/* #BACKGROUND
+   ========================================================================== */
+
+/* Brand */
+
+.u-bg-color-primary-dark            { background-color: $color-primary-dark !important; }
+.u-bg-color-primary                 { background-color: $color-primary !important; }
+.u-bg-color-primary-light           { background-color: $color-primary-light !important; }
+.u-bg-color-primary-90              { background-color: $color-primary-90 !important; }
+.u-bg-color-primary-80              { background-color: $color-primary-80 !important; }
+.u-bg-color-primary-70              { background-color: $color-primary-70 !important; }
+.u-bg-color-primary-60              { background-color: $color-primary-60 !important; }
+.u-bg-color-primary-50              { background-color: $color-primary-50 !important; }
+.u-bg-color-primary-40              { background-color: $color-primary-40 !important; }
+.u-bg-color-primary-30              { background-color: $color-primary-30 !important; }
+.u-bg-color-primary-20              { background-color: $color-primary-20 !important; }
+
+.u-bg-color-primary-2-dark  { background-color: $color-primary-2-dark !important; }
+.u-bg-color-primary-2       { background-color: $color-primary-2 !important; }
+.u-bg-color-primary-2-light { background-color: $color-primary-2-light !important; }
+.u-bg-color-primary-2-90    { background-color: $color-primary-2-90 !important; }
+.u-bg-color-primary-2-80    { background-color: $color-primary-2-80 !important; }
+.u-bg-color-primary-2-70    { background-color: $color-primary-2-70 !important; }
+.u-bg-color-primary-2-60    { background-color: $color-primary-2-60 !important; }
+.u-bg-color-primary-2-50    { background-color: $color-primary-2-50 !important; }
+.u-bg-color-primary-2-40    { background-color: $color-primary-2-40 !important; }
+.u-bg-color-primary-2-30    { background-color: $color-primary-2-30 !important; }
+.u-bg-color-primary-2-20    { background-color: $color-primary-2-20 !important; }
+
+/* Neutral */
+
+.u-bg-color-black                 { background-color: $color-black !important; }
+.u-bg-color-gray-90               { background-color: $color-gray-90 !important; }
+.u-bg-color-gray-80               { background-color: $color-gray-80 !important; }
+.u-bg-color-gray-70               { background-color: $color-gray-70 !important; }
+.u-bg-color-gray-60               { background-color: $color-gray-60 !important; }
+.u-bg-color-gray-50               { background-color: $color-gray-50 !important; }
+.u-bg-color-gray-40               { background-color: $color-gray-40 !important; }
+.u-bg-color-gray-30               { background-color: $color-gray-30 !important; }
+.u-bg-color-gray-20               { background-color: $color-gray-20 !important; }
+.u-bg-color-gray-10               { background-color: $color-gray-10 !important; }
+.u-bg-color-white                 { background-color: $color-white !important; }
+
+/* Secondary */
+.u-bg-color-rec-pool              { background-color: $color-rec-pool !important; }
+.u-bg-color-tahoe                 { background-color: $color-tahoe !important; }
+.u-bg-color-gunrock               { background-color: $color-gunrock !important; }
+.u-bg-color-bodega                { background-color: $color-bodega !important; }
+.u-bg-color-rain                  { background-color: $color-rain !important; }
+.u-bg-color-arboretum             { background-color: $color-arboretum !important; }
+.u-bg-color-putah-creek           { background-color: $color-putah-creek !important; }
+.u-bg-color-delta                 { background-color: $color-delta !important; }
+.u-bg-color-farmers-market        { background-color: $color-farmers-market !important; }
+.u-bg-color-sage                  { background-color: $color-sage !important; }
+.u-bg-color-quad                  { background-color: $color-quad !important; }
+.u-bg-color-redwood               { background-color: $color-redwood !important; }
+.u-bg-color-golden-state          { background-color: $color-golden-state !important; }
+.u-bg-color-sunflower             { background-color: $color-sunflower !important; }
+.u-bg-color-poppy                 { background-color: $color-poppy !important; }
+.u-bg-color-california            { background-color: $color-california !important; }
+.u-bg-color-rose                  { background-color: $color-rose !important; }
+.u-bg-color-strawberry            { background-color: $color-strawberry !important; }
+.u-bg-color-double-decker         { background-color: $color-double-decker !important; }
+.u-bg-color-merlot                { background-color: $color-merlot !important; }
+.u-bg-color-thiebaud-icing        { background-color: $color-thiebaud-icing !important; }
+.u-bg-color-redbud                { background-color: $color-redbud !important; }
+.u-bg-color-pinot                 { background-color: $color-pinot !important; }
+.u-bg-color-cabernet              { background-color: $color-cabernet !important; }
+
+/* Social */
+
+.u-bg-color-facebook              { background-color: $color-facebook !important; }
+.u-bg-color-linkedin              { background-color: $color-linkedin !important; }
+.u-bg-color-twitter               { background-color: $color-twitter !important; }
+.u-bg-color-youtube               { background-color: $color-youtube !important; }
+
+/* Utility */
+
+.u-bg-color-error                 { background-color: $color-error !important; }
+.u-bg-color-warning               { background-color: $color-warning !important; }
+.u-bg-color-highlight             { background-color: $color-highlight !important; }
+.u-bg-color-success               { background-color: $color-success !important; }
+.u-bg-color-information           { background-color: $color-information !important; }
+
+/* #FOREGROUND
+   ========================================================================== */
+
+/* Brand */
+
+.u-color-primary-dark             { color: $color-primary-dark !important; }
+.u-color-primary                  { color: $color-primary !important; }
+.u-color-primary-light            { color: $color-primary-light !important; }
+.u-color-primary-2-dark           { color: $color-primary-2-dark !important; }
+.u-color-primary-2                { color: $color-primary-2 !important; }
+.u-color-primary-2-light          { color: $color-primary-2-light !important; }
+
+/* Neutral */
+
+.u-color-black                    { color: $color-black !important; }
+.u-color-gray-90                  { color: $color-gray-90 !important; }
+.u-color-gray-80                  { color: $color-gray-80 !important; }
+.u-color-gray-50                  { color: $color-gray-50 !important; }
+.u-color-gray-20                  { color: $color-gray-20 !important; }
+.u-color-gray-10                  { color: $color-gray-10 !important; }
+.u-color-gray-05                  { color: $color-gray-10 !important; }
+.u-color-white                    { color: $color-white !important; }
+
+/* Secondary */
+.u-color-rec-pool                 { color: $color-rec-pool !important; }
+.u-color-tahoe                    { color: $color-tahoe !important; }
+.u-color-gunrock                  { color: $color-gunrock !important; }
+.u-color-bodega                   { color: $color-bodega !important; }
+.u-color-rain                     { color: $color-rain !important; }
+.u-color-arboretum                { color: $color-arboretum !important; }
+.u-color-putah-creek              { color: $color-putah-creek !important; }
+.u-color-delta                    { color: $color-delta !important; }
+.u-color-farmers-market           { color: $color-farmers-market !important; }
+.u-color-sage                     { color: $color-sage !important; }
+.u-color-quad                     { color: $color-quad !important; }
+.u-color-redwood                  { color: $color-redwood !important; }
+.u-color-golden-state             { color: $color-golden-state !important; }
+.u-color-sunflower                { color: $color-sunflower !important; }
+.u-color-poppy                    { color: $color-poppy !important; }
+.u-color-california               { color: $color-california !important; }
+.u-color-rose                     { color: $color-rose !important; }
+.u-color-strawberry               { color: $color-strawberry !important; }
+.u-color-double-decker            { color: $color-double-decker !important; }
+.u-color-merlot                   { color: $color-merlot !important; }
+.u-color-thiebaud-icing           { color: $color-thiebaud-icing !important; }
+.u-color-redbud                   { color: $color-redbud !important; }
+.u-color-pinot                    { color: $color-pinot !important; }
+.u-color-cabernet                 { color: $color-cabernet !important; }
+
+/* Social */
+
+.u-color-facebook                 { color: $color-facebook !important; }
+.u-color-linkedin                 { color: $color-linkedin !important; }
+.u-color-twitter                  { color: $color-twitter !important; }
+.u-color-youtube                  { color: $color-youtube !important; }
+
+/* Utility */
+
+.u-color-error                    { color: $color-error !important; }
+.u-color-warning                  { color: $color-warning !important; }
+.u-color-highlight                { color: $color-highlight !important; }
+.u-color-success                  { color: $color-success !important; }
+.u-color-information              { color: $color-information !important; }

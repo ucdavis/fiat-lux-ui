@@ -1,0 +1,40 @@
+/* ==========================================================================
+   #DROPDOWNS
+   ========================================================================== */
+
+.c-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+
+  color: $color-primary;
+  background-color: $color-dropdown-bg;
+  box-shadow: $base-box-shadow;
+
+  @include fade-out;
+
+  &:hover {
+    .c-navigation__dropdown {
+      @include fade-in;
+    }
+  }
+
+  &.c-dropdown-menu {
+    font-family: $font;
+    right: 0;
+    top: $base-spacing-unit-xl;
+
+    .c-dropdown-menu__item {
+      color: $color-primary;
+      padding: $base-spacing-unit-xs $base-spacing-unit-small;
+      line-height: $base-line-height * 1.5;
+      text-align: start;
+      text-transform: capitalize;
+      transition: $base-transition-color;
+
+      &:hover {
+        background-color: $color-primary-2;
+      }
+    }
+  }
+}

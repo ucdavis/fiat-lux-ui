@@ -1,0 +1,41 @@
+/* ==========================================================================
+   #QUOTES
+   ========================================================================== */
+
+/* Inline */
+
+q {
+  font-style: italic;
+  quotes: '‘' '’' '“' '”';
+
+  &::after {
+    content: close-quote;
+  }
+
+  &::before {
+    content: open-quote;
+  }
+}
+
+/* Block */
+
+blockquote {
+  border-left: $base-border-width solid $color-primary;
+  padding-left: $base-spacing-unit;
+
+  q {
+    quotes: '‘' '’';
+  }
+
+  q::after {
+    content: close-quote;
+  }
+
+  q::before {
+    content: open-quote;
+  }
+
+  cite {
+    display: block;
+  }
+}
