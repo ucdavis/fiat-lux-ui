@@ -1,0 +1,5377 @@
+@charset "UTF-8";
+/* ==========================================================================
+   #MAIN
+   ========================================================================== */
+/**
+ * TABLE OF CONTENTS
+ *
+ * 01. SETTINGS
+ * Global..............Unique brand identity values.
+ * Colors..............The color palette.
+ * Fonts...............Font family, sizing and weights.
+ * Icons...............Icon sizing.
+ * Messages............Message sizing.
+ * Responsive..........Breakpoints for media queries.
+ *
+ * 02. TOOLS
+ * Mixins..............Functions for DRY code.
+ *
+ * 03. GENERIC
+ * Normalize.css.......Render all elements more consistently.
+ * Reset...............A tiny reset.
+ * Box Sizing..........Default box sizing of all elements.
+ * Shared..............Rules that apply to multiple selectors.
+ *
+ * 04. ELEMENTS
+ * Page................The defaults of the document.
+ * Headings............Setup of h1 to h6.
+ * Type................Basic typographic elements.
+ * Links...............The default anchor style.
+ * Lists...............Styles for lists.
+ * Forms...............Basic form elements.
+ * Figures.............Represent self-contained content.
+ * Images..............Ensure images are fluid.
+ * Quotes..............Cater for block and inline quotes.
+ * Tables..............Tabular data styles.
+ * Progress............Hides progress elements in favor of custom visuals.
+ * Horizontal Rule.....Styles for page breaks.
+ *
+ *
+ * 05. OBJECTS
+ * Wrapper.............Content width constraints.
+ * Grid................Basic grid layout.
+ * Lists...............Custom list styles.
+ * Media...............An image with descriptive contents.
+ *
+ * 06. COMPONENTS
+ * Navigation..........Responsive menus for site navigation.
+ * Alerts..............Provides feedback to the interface.
+ * Badges..............Highlight a piece of information.
+ * Breadcrumbs.........Displays the hierarchy between content.
+ * Containers..........Stylized containers for content.
+ * Panels..............Containers for data.
+ * Forms...............Form control styling and layout.
+ * Buttons.............Button styles.
+ * Button Groups.......Grouping of related buttons.
+ * Avatar..............User profile images.
+ * Message.............Messages and posts from users.
+ * Loader..............Loader icon styles.
+ * Progress............Progress bars and trackers for metrics.
+ * Pagination..........Controls to navigate pages of data.
+ * Footer..............Page footer styles.
+ *
+ * 07. UTILITIES
+ * Print...............Default styles from HTML5 Boilerplate.
+ * Colors..............Background and foreground color overrides.
+ * Clearfix............Provides a class for the clearfix mixin.
+ * Floats..............Pull a child element to the left or right.
+ * Headings............Maintain heading hierarchy, but change font sizing.
+ * Spacing.............Set the margin or padding on an element.
+ * Visibility..........Control the visibility of elements.
+ * Widths..............Specify the width of an element.
+ *
+ * 08. OVERRIDES
+ * jQuery...............Overrides for yet deprecated jQuery and jQuery UI elements.
+ */
+/* #SETTINGS
+   ========================================================================== */
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+/* ==========================================================================
+   #GLOBAL
+   ========================================================================== */
+/* #BRAND
+   ========================================================================== */
+/* Icon */
+/* Color */
+/* Font */
+/**
+ * Includes a local font. Accepts a user defined name and file path.
+ */
+@font-face {
+  font-family: "Proxima Nova";
+  src: url("../font/proxima-nova/Proxima Nova Regular.eot");
+  src: url("../font/proxima-nova/Proxima Nova Regular.eot?#iefix") format("embedded-opentype"), url("../font/proxima-nova/Proxima Nova Regular.ttf") format("truetype"), url("../font/proxima-nova/Proxima Nova Regular.otf") format("opentype"), url("../font/proxima-nova/Proxima Nova Regular.svg#Proxima Nova") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Light";
+  src: url("../font/proxima-nova/Proxima Nova Light.eot");
+  src: url("../font/proxima-nova/Proxima Nova Light.eot?#iefix") format("embedded-opentype"), url("../font/proxima-nova/Proxima Nova Light.ttf") format("truetype"), url("../font/proxima-nova/Proxima Nova Light.otf") format("opentype"), url("../font/proxima-nova/Proxima Nova Light.svg#Proxima Nova Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Semibold";
+  src: url("../font/proxima-nova/Proxima Nova Semibold.eot");
+  src: url("../font/proxima-nova/Proxima Nova Semibold.eot?#iefix") format("embedded-opentype"), url("../font/proxima-nova/Proxima Nova Semibold.ttf") format("truetype"), url("../font/proxima-nova/Proxima Nova Semibold.otf") format("opentype"), url("../font/proxima-nova/Proxima Nova Semibold.svg#Proxima Nova Semibold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Proxima Nova Extrabold";
+  src: url("../font/proxima-nova/Proxima Nova Extrabold.eot");
+  src: url("../font/proxima-nova/Proxima Nova Extrabold.eot?#iefix") format("embedded-opentype"), url("../font/proxima-nova/Proxima Nova Extrabold.ttf") format("truetype"), url("../font/proxima-nova/Proxima Nova Extrabold.otf") format("opentype"), url("../font/proxima-nova/Proxima Nova Extrabold.svg#Proxima Nova Extrabold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ryman-Eco";
+  src: url("../font/ryman-eco/RymanEco-Regular.eot");
+  src: url("../font/ryman-eco/RymanEco-Regular.eot?#iefix") format("embedded-opentype"), url("../font/ryman-eco/RymanEco-Regular.ttf") format("truetype"), url("../font/ryman-eco/RymanEco-Regular.otf") format("opentype"), url("../font/ryman-eco/RymanEco-Regular.svg#Ryman-Eco") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Freight";
+  src: url("../font/freight/Freight-Regular.eot");
+  src: url("../font/freight/Freight-Regular.eot?#iefix") format("embedded-opentype"), url("../font/freight/Freight-Regular.ttf") format("truetype"), url("../font/freight/Freight-Regular.otf") format("opentype"), url("../font/freight/Freight-Regular.svg#Freight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* #BASE
+   ========================================================================== */
+/* Font */
+/* Spacing */
+/* Borders */
+/* Shadows */
+/* Transitions */
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+/* ==========================================================================
+   #COLORS
+   ========================================================================== */
+/* Brand */
+/* Primary */
+/* Dark */
+/* Light */
+/* Secondary */
+/* Unary */
+/* Hyperlinks */
+/* Dropdowns */
+/* Social */
+/* Buttons: Default */
+/* Messages */
+/* Utility */
+/* Utility: Accessibility */
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+/* ==========================================================================
+   #FONTS
+   ========================================================================== */
+/* Family */
+/* SIZE */
+/* Navigation */
+/* 16 / 19 */
+/* Headings */
+/* 56 / 19 */
+/* 47 / 19 */
+/* 39 / 19 */
+/* 32 / 19 */
+/* 27 / 19 */
+/* 22 / 19 */
+/* Labels */
+/* 27 / 19 */
+/* 24 / 19 */
+/* 22 / 19 */
+/* Progress */
+/* 32 / 19 */
+/* WEIGHT */
+/* ==========================================================================
+   #ICONS
+   ========================================================================== */
+/* 80 / 19 */
+/* 64 / 19 */
+/* 8 / 19 */
+/* 80 / 19 */
+/* 64 / 19 */
+/* 8 / 19 */
+/* 38 / 19 */
+/* 14 / 19 */
+/* 64 / 19 */
+/* ==========================================================================
+   #MESSAGES
+   ========================================================================== */
+/* SIZING */
+/* MESSAGE WIDTH */
+/* Note: Primarily determines border width, but also adjusts spacing to compensate */
+/* stylelint-disable scss/dollar-variable-colon-space-after */
+/* ==========================================================================
+   #RESPONSIVE
+   ========================================================================== */
+/* Breakpoints */
+/*  576 / 19 */
+/*  768 / 19 */
+/*  992 / 19 */
+/* 1200 / 19 */
+/* #TOOLS
+   ========================================================================== */
+/* ==========================================================================
+   #MIXINS
+   ========================================================================== */
+/**
+ * Clearfix: contain floats.
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+/**
+ * Set font size with a relative line height.
+ *
+ * The `$font-size` argument should be specified in `rem` units.
+ * The `$line-height` argument, if specified, should be unitless.
+ */
+/**
+ * Remove the default styles from lists.
+ */
+/* Fade In / Out */
+/* #GENERIC
+   ========================================================================== */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* stylelint-disable selector-list-comma-newline-after */
+/* ==========================================================================
+   #RESET
+   ========================================================================== */
+/* Remove margins and padding. */
+body,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, dd, ol, ul,
+figure,
+hr,
+fieldset, legend {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove trailing margins from nested lists. */
+li > ol,
+li > ul {
+  margin-bottom: 0;
+}
+
+/**
+ * Remove the gap between audio, canvas, iframes, images, videos and the bottom
+ * of their containers: https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/**
+ * 1. Remove default border on fieldsets.
+ * 2. Reset Chrome and Firefox behaviour which sets a `min-width: min-content;`
+ *    on fieldsets.
+ */
+fieldset {
+  border: 0; /* [1] */
+  min-width: 0; /* [2] */
+}
+
+/**
+ * Remove default table spacing.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ==========================================================================
+   #BOX SIZING
+   ========================================================================== */
+/**
+ * A more sensible default box sizing:
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+/* stylelint-disable selector-list-comma-newline-after */
+/* ==========================================================================
+   #SHARED
+   ========================================================================== */
+html,
+body {
+  height: 100%;
+}
+
+address,
+h1, h2, h3, h4, h5, h6,
+blockquote, p, pre,
+dl, ol, ul,
+figure,
+hr,
+table {
+  margin-bottom: 1.6rem;
+}
+
+fieldset,
+legend {
+  margin-bottom: 0.8rem;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+th,
+td {
+  padding: 0.8rem 1.6rem;
+}
+
+/* #ELEMENTS
+   ========================================================================== */
+/* ==========================================================================
+   #PAGE
+   ========================================================================== */
+/**
+ * The page-level setup.
+ */
+html {
+  color: #000;
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Proxima Nova Extrabold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 2.94rem;
+  line-height: 1.25;
+  color: #022851;
+}
+
+h2 {
+  font-size: 2.47rem;
+  line-height: 1.25;
+  color: #13639E;
+}
+
+h3 {
+  font-size: 2.05rem;
+  line-height: 1.25;
+  color: #666666;
+}
+
+h4 {
+  font-size: 1.68rem;
+  line-height: 1.25;
+  color: #022851;
+}
+
+h5 {
+  font-size: 1.42rem;
+  line-height: 1.25;
+  color: #022851;
+}
+
+h6 {
+  font-size: 1.15rem;
+  line-height: 1.25;
+  color: #022851;
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   #TYPE
+   ========================================================================== */
+/* Horizontal Rule */
+hr {
+  border: 0;
+  border-top: 0.125em solid #022851;
+  display: block;
+}
+
+/* Mark */
+mark {
+  background-color: #FFDC00;
+}
+
+/* Paragraph */
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   #LINKS
+   ========================================================================== */
+a {
+  color: #1A6295;
+}
+a:active, a:focus {
+  color: #085267;
+}
+a:hover {
+  color: #47BFE4;
+}
+a:visited {
+  color: #1A6295;
+}
+a:visited:hover {
+  color: #47BFE4;
+}
+
+/* stylelint-disable selector-list-comma-newline-after */
+/* ==========================================================================
+   #LISTS
+   ========================================================================== */
+dd, ol, ul {
+  margin-left: 1.6rem;
+}
+
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+/* Label */
+label {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  /* Checkbox or Radio Button */
+}
+label [type=checkbox],
+label [type=radio] {
+  margin-right: 0.4rem;
+}
+
+/* Select */
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 1.5rem;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath stroke='%23022851' d='M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7rem top 50%, 0 0;
+  background-size: 1rem auto, 100%;
+}
+select::-ms-expand {
+  display: none;
+}
+
+/* Legend */
+legend {
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   #FIGURES
+   ========================================================================== */
+figure figcaption {
+  color: #7F7F7F;
+  display: block;
+  font-size: 0.875rem;
+  margin-top: 0.8rem;
+}
+
+/* stylelint-disable selector-no-qualifying-type */
+/* ==========================================================================
+   #IMAGES
+   ========================================================================== */
+/**
+ * 1. Offset `alt` text from surrounding copy.
+ * 2. Fluid images for responsive purposes.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+img {
+  font-style: italic; /* [1] */
+  max-width: 100%; /* [2] */
+  vertical-align: middle; /* [3] */
+  /**
+   * If a `width` and/or `height` attribute has been explicitly defined, let’s
+   * not make the image fluid.
+   */
+}
+img[height], img[width] {
+  max-width: none;
+}
+
+/* ==========================================================================
+   #QUOTES
+   ========================================================================== */
+/* Inline */
+q {
+  font-style: italic;
+  quotes: "‘" "’" "“" "”";
+}
+q::after {
+  content: close-quote;
+}
+q::before {
+  content: open-quote;
+}
+
+/* Block */
+blockquote {
+  border-left: 0.125em solid #022851;
+  padding-left: 1.6rem;
+}
+blockquote q {
+  quotes: "‘" "’";
+}
+blockquote q::after {
+  content: close-quote;
+}
+blockquote q::before {
+  content: open-quote;
+}
+blockquote cite {
+  display: block;
+}
+
+/* ==========================================================================
+   #TABLES
+   ========================================================================== */
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+table caption {
+  caption-side: bottom;
+  color: #7F7F7F;
+  font-size: 0.875rem;
+  margin-top: 0.8rem;
+}
+table thead {
+  border-bottom: 0.125em solid #FFBF00;
+}
+table td {
+  border-bottom: 0.0625em solid #CCCCCC;
+}
+
+/* ==========================================================================
+   #NAVIGATION
+   ========================================================================== */
+nav {
+  display: inline-flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #022851;
+  color: #FFF;
+  font-size: 0.842rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+nav a,
+nav a:focus,
+nav a:visited {
+  color: white;
+  text-decoration: none;
+}
+nav > div > div,
+nav > div > a {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  line-height: 3.25rem;
+}
+
+/* ==========================================================================
+   #PROGRESS
+   ========================================================================== */
+progress {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+/* ==========================================================================
+   #HORIZONTAL RULE
+   ========================================================================== */
+hr {
+  border: 0;
+  height: 1px;
+  background: #999999;
+  background-image: linear-gradient(to right, #CCCCCC, #999999, #CCCCCC);
+  margin: 1.6rem 0;
+}
+
+/* #OBJECTS
+   ========================================================================== */
+/* ==========================================================================
+   #WRAPPERS
+   ========================================================================== */
+/* Center the content within a reasonably wide container. */
+.o-wrapper {
+  margin: 1.6rem 0.8rem;
+  max-width: 75em; /* 1200 / 19 */
+}
+
+/**
+ * Small
+ */
+.o-wrapper--small {
+  max-width: 30em; /* 480 / 19 */
+}
+
+/**
+ * Medium
+ */
+.o-wrapper--medium {
+  max-width: 40em; /* 640 / 19 */
+}
+
+@media all and (min-width: 48em) {
+  .o-wrapper {
+    margin: 1.6rem auto;
+  }
+}
+/* ==========================================================================
+   #GRID
+   ========================================================================== */
+.o-grid {
+  clear: both;
+  width: 100%;
+}
+.o-grid + .o-grid {
+  margin-top: 1.6rem;
+}
+
+/* Row */
+.o-grid__row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -1.6rem;
+  margin-top: -1.6rem;
+}
+.o-grid__row + .o-grid__row {
+  margin-top: 0;
+}
+
+/* Column */
+.o-grid__col {
+  flex-grow: 1;
+  padding-left: 1.6rem;
+  padding-top: 1.6rem;
+}
+
+/* ==========================================================================
+   #LIST
+   ========================================================================== */
+.o-list {
+  list-style: none;
+  margin: 0;
+}
+
+/**
+ * Inline
+ */
+.o-list--inline li {
+  display: inline-block;
+}
+
+/* ==========================================================================
+   #MEDIA
+   ========================================================================== */
+/**
+ * The media object is an image to the left, with descriptive content to the right:
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ */
+.o-media {
+  display: flex;
+}
+
+/* Body */
+.o-media__body {
+  flex: 1;
+}
+.o-media__body > :last-child {
+  margin-bottom: 0;
+}
+
+/* Image */
+.o-media__img {
+  margin-right: 1.6rem;
+}
+.o-media__img > img {
+  display: block;
+}
+
+/* #COMPONENTS
+   ========================================================================== */
+/* ==========================================================================
+   #NAVIGATION
+   ========================================================================== */
+.c-navigation {
+  display: flex;
+  flex-direction: column;
+}
+.c-navigation .c-navigation__menu {
+  flex-direction: column;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--options {
+  background-color: #FFF;
+  position: absolute;
+  top: 3.25rem;
+  width: 100%;
+  z-index: 1;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item {
+  text-align: left;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__primary {
+  display: flex;
+  justify-content: space-between;
+  background-color: #CCE0F3;
+  margin-top: 0.125rem;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__primary a {
+  color: #022851;
+  padding: 0 0.8rem;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__primary:hover {
+  background-color: #FFBF00;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:not(.c-navigation__item-icon-option) .c-navigation__primary i {
+  align-self: center;
+  font-size: 1.25rem;
+  padding: 1rem;
+  text-align: right;
+  background-color: #022851;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item.c-navigation__item-icon-option .c-navigation__primary i {
+  color: #022851;
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item.c-navigation__item-icon-option .c-navigation__primary i:last-child:not(.fa-magnifying-glass) {
+  align-self: center;
+  text-align: right;
+  color: #FFF;
+  background-color: #022851;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__dropdown {
+  position: relative;
+  right: unset;
+  top: unset;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--branding {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__logo,
+.c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__home {
+  display: inline-flex;
+  align-self: center;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__logo:before,
+.c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__home:before {
+  padding: 0 1.6rem;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__logo {
+  display: none;
+  font-size: 1.25rem;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__logo:before {
+  content: url("../img/logo/uc-logo-gold.svg");
+  padding: 0 1.6rem;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__mobile {
+  cursor: pointer;
+  padding: 0.8rem;
+  font-size: 1.5rem;
+}
+.c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__home {
+  font-family: "Proxima Nova Extrabold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.2rem;
+  padding: 0 0.8rem;
+  margin: 0;
+}
+@media all and (min-width: 75em) {
+  .c-navigation {
+    flex-direction: row;
+  }
+  .c-navigation .c-navigation__menu {
+    display: inline-flex;
+    flex-direction: row;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--branding {
+    flex-direction: row;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__logo {
+    display: block;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__mobile {
+    display: none;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--branding .c-navigation__home {
+    padding: 0;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options {
+    background-color: #022851;
+    position: relative;
+    top: 0;
+    width: unset;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item {
+    display: flex;
+    margin-left: 1rem;
+    white-space: nowrap;
+    position: relative;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:hover {
+    color: #022851;
+    background-color: #FFBF00;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:hover:before, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:hover:not(:last-child):after {
+    color: #022851;
+    background-color: #FFBF00;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:hover .c-navigation__primary {
+    color: #022851;
+    background-color: #FFBF00;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:hover .c-navigation__primary a {
+    color: #022851;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:hover a {
+    color: #022851;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:hover .c-navigation__dropdown {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+    height: unset;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:before, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:not(:last-child):after {
+    width: 1rem;
+    height: 3.25rem;
+    content: "";
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:before {
+    margin-right: 1rem;
+    margin-left: -1rem;
+    -webkit-clip-path: polygon(93% 0, 110% 0, 110% 102%, 0% 102%);
+    clip-path: polygon(93% 0, 110% 0, 110% 102%, 0% 102%);
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:not(:last-child):after {
+    z-index: 1;
+    margin-right: -1rem;
+    margin-left: 1rem;
+    -webkit-clip-path: polygon(-2px -2px, 100% -2px, 7% 102%, -2px 100%);
+    clip-path: polygon(-2px -2px, 100% -2px, 7% 102%, -2px 100%);
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item.c-navigation__item--search, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item.c-navigation__item--user {
+    text-transform: capitalize;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item.c-navigation__item--search i, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item.c-navigation__item--user i {
+    position: relative;
+    font-size: 1.2rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    padding-left: 0.8rem;
+    margin-top: 0.8rem;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(2):hover, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(2):hover:before, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(2):hover:after, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(1):hover, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(1):hover:before, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(1):hover:after {
+    color: #022851;
+    background-color: #FFBF00;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(2):hover i, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(2):hover:before i, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(2):hover:after i, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(1):hover i, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(1):hover:before i, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(1):hover:after i {
+    color: #FFF;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(2), .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(2):before, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(2):after {
+    background-color: #14447A;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(1), .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(1):before, .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:nth-last-child(1):after {
+    background-color: #13639E;
+    padding-right: 0.8rem;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__primary {
+    background-color: unset;
+    margin-top: unset;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__primary .c-navigation__mobile-action {
+    display: none;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:not(.c-navigation__item-icon-option) .c-navigation__primary a {
+    color: #FFF;
+    padding: 0;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item:not(.c-navigation__item-icon-option):hover .c-navigation__primary a {
+    color: #022851;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item.c-navigation__item-icon-option .c-navigation__primary {
+    background-color: unset;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item.c-navigation__item-icon-option .c-navigation__primary i {
+    color: #FFF;
+    font-size: 1.2rem;
+    padding: unset;
+    padding-left: 0.8rem;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item.c-navigation__item-icon-option:hover .c-navigation__primary i {
+    color: #022851;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__dropdown {
+    margin-left: -1rem;
+    position: absolute;
+    top: 3.25rem;
+    left: 0;
+    width: fit-content;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__dropdown.c-navigation__dropdown--reverse {
+    left: auto;
+    right: 0;
+    text-align: right;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__dropdown a,
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__dropdown div,
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__dropdown span {
+    padding: 0 0.8rem;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__dropdown div {
+    cursor: auto;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__dropdown a:hover {
+    color: #022851;
+    background-color: #FFBF00;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__dropdown img {
+    max-width: 2.8rem;
+  }
+  .c-navigation .c-navigation__menu.c-navigation__menu--options .c-navigation__item .c-navigation__username {
+    font-size: 1.15rem;
+  }
+}
+
+/* ==========================================================================
+   #AVATAR
+   ========================================================================== */
+.c-avatar {
+  outline: 0.125em solid #022851;
+  outline-offset: -0.4rem;
+  border-radius: 50%;
+  padding: 0.4rem;
+}
+.c-avatar.c-avatar--full-width {
+  width: 100%;
+}
+.c-avatar.c-avatar--full-width.c-avatar--max-width-lg {
+  width: 12.5rem;
+}
+
+/* ==========================================================================
+   #ALERTS
+   ========================================================================== */
+.c-alert {
+  background-color: #0074D9;
+  border-radius: 0.0625em;
+  border-top: 0.125em solid #003d73;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  color: #FFF;
+  margin-bottom: 1.6rem;
+  padding: 0.8rem 2.4rem 0.8rem 0.8rem;
+  position: relative;
+}
+
+/* Body */
+.c-alert__body a {
+  color: #FFF;
+  font-weight: 700;
+}
+.c-alert__body a:focus, .c-alert__body a:hover {
+  color: #FFF;
+}
+.c-alert__body ul {
+  margin-bottom: 0;
+}
+.c-alert__body p {
+  margin-bottom: 0;
+}
+.c-alert__body p + p,
+.c-alert__body p + ul {
+  margin-top: 0.8rem;
+}
+.c-alert__body .c-alert__icon.c-alert__icon--large {
+  font-size: 2.4rem;
+}
+
+/* Dismiss */
+.c-alert__dismiss {
+  background-color: transparent;
+  border: 0;
+  color: #40a6ff;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  right: 0.4rem;
+  top: 0.4rem;
+  transition: color, background-color 0.25s;
+}
+.c-alert__dismiss:focus, .c-alert__dismiss:hover {
+  color: #FFF;
+  outline: none;
+}
+
+/**
+ * Success
+ */
+.c-alert--success {
+  background-color: #2ECC40;
+  border-top-color: #208e2c;
+  /* Dismiss */
+}
+.c-alert--success .c-alert__dismiss {
+  color: #7ee289;
+}
+.c-alert--success .c-alert__dismiss:focus,
+.c-alert--success .c-alert__dismiss:hover {
+  color: #FFF;
+}
+
+/**
+ * Warning
+ */
+.c-alert--warning {
+  background-color: #FF851B;
+  border-top-color: #da6500;
+  /* Dismiss */
+}
+.c-alert--warning .c-alert__dismiss {
+  color: #ffbc81;
+}
+.c-alert--warning .c-alert__dismiss:focus,
+.c-alert--warning .c-alert__dismiss:hover {
+  color: #FFF;
+}
+
+/**
+ * Error
+ */
+.c-alert--error {
+  background-color: #FF4136;
+  border-top-color: #cf0b00;
+  /* Dismiss */
+}
+.c-alert--error .c-alert__dismiss {
+  color: #ffa19c;
+}
+.c-alert--error .c-alert__dismiss:focus,
+.c-alert--error .c-alert__dismiss:hover {
+  color: #FFF;
+}
+
+/* ==========================================================================
+   #BADGES
+   ========================================================================== */
+.c-badge {
+  background-color: #0074D9;
+  border-radius: 0.25em;
+  color: #FFF;
+  display: inline-block;
+  font-size: 0.625rem; /* 10 / 19 */
+  font-weight: 700;
+  padding: 0.125em 0.5em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.25s;
+}
+
+/* Link */
+.c-badge__link {
+  color: #FFF;
+  text-decoration: none;
+}
+
+/**
+ * Success
+ */
+.c-badge--success {
+  background-color: #2ECC40;
+}
+
+/**
+ * Warning
+ */
+.c-badge--warning {
+  background-color: #FF851B;
+}
+
+/**
+ * Error
+ */
+.c-badge--error {
+  background-color: #FF4136;
+}
+
+/* ==========================================================================
+   #BREADCRUMBS
+   ========================================================================== */
+.c-breadcrumbs {
+  display: flex;
+  overflow-x: auto;
+}
+
+/* Item */
+.c-breadcrumbs__item {
+  color: #022851;
+  display: flex;
+  flex: 0 1 auto;
+  font-size: 0.875rem; /* 14 / 19 */
+  white-space: nowrap;
+}
+.c-breadcrumbs__item:not(:last-child)::after {
+  color: #022851;
+  content: ">";
+  flex: 0 1 auto;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+/* Link */
+.c-breadcrumbs__link {
+  border-bottom: 0.0625em solid transparent;
+  color: #1A6295;
+  flex: 0 1 auto;
+  text-decoration: none;
+  transition: border-bottom-color 0.25s, color 0.25s;
+}
+.c-breadcrumbs__link:focus, .c-breadcrumbs__link:hover {
+  border-bottom-color: #47BFE4;
+  color: #47BFE4;
+}
+
+/* ==========================================================================
+   #CONTAINERS
+   ========================================================================== */
+.c-container {
+  padding: 1.6rem;
+}
+.c-container.c-container--dark {
+  color: #FFF;
+  background-color: #022851;
+}
+.c-container.c-container--dark h1, .c-container.c-container--dark h2, .c-container.c-container--dark h3, .c-container.c-container--dark h4, .c-container.c-container--dark h5, .c-container.c-container--dark h6 {
+  color: #FFF;
+}
+.c-container.c-container--dark a {
+  color: #FFF;
+}
+.c-container.c-container--dark a:active, .c-container.c-container--dark a:focus {
+  color: #085267;
+}
+.c-container.c-container--dark a:hover {
+  color: #47BFE4;
+}
+.c-container.c-container--dark a:visited {
+  color: #FFF;
+}
+.c-container.c-container--dark a:visited:hover {
+  color: #47BFE4;
+}
+.c-container.c-container--dark figure figcaption {
+  color: #CCCCCC;
+}
+
+/* ==========================================================================
+   #FORMS
+   ========================================================================== */
+/**
+ * Inline
+ */
+.c-form--inline {
+  display: flex;
+}
+
+/* Group */
+.c-form-group:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+/**
+ * Checkbox or Radio Button
+ */
+.c-form-group--check label {
+  display: block;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+.c-form-group--check label + label {
+  margin-top: 0.8rem;
+}
+.c-form-group--check input:not([type=text], [type=file], [type=form]) {
+  accent-color: #13639E;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: 0.2s all linear;
+  position: relative;
+  top: 5px;
+}
+
+/**
+ * Inline
+ */
+.c-form-group--inline legend {
+  margin-bottom: 0;
+}
+.c-form-group--inline label {
+  display: inline-block;
+}
+.c-form-group--inline label:not(:last-child) {
+  margin-right: 0.8rem;
+}
+
+/**
+ * Flat
+ */
+.c-form-group--flat {
+  margin-bottom: 0;
+}
+
+/* Group */
+.c-form-group {
+  flex: 1;
+}
+.c-form-group input {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.c-form-group + .c-btn {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+/* Control */
+.c-form-control {
+  border: 0.0625em solid #CCCCCC;
+  border-radius: 0.125em;
+  box-shadow: 0 0 0.25em rgba(34, 34, 34, 0.125) inset;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  height: calc(19px * 1.6 + (0.0625em * 2) + (0.4rem * 2));
+  line-height: 1.6;
+  padding: 0.4rem 0.8rem;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  width: 100%;
+  /**
+   * Error
+   */
+}
+.c-form-control:focus, .c-form-control:hover {
+  background-color: #F7FAFD;
+  border-color: #73ABDD;
+  box-shadow: 0 0 0.25em #89c0fc;
+  outline: 0;
+}
+.c-form-control[disabled] {
+  background-color: #E5E5E5;
+  box-shadow: none;
+}
+.c-form-control[disabled]:focus, .c-form-control[disabled]:hover {
+  border-color: #CCCCCC;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.c-form-control.is-error {
+  background-color: #ffe9ef;
+  border-color: #FF4136;
+  box-shadow: 0 0 0.5em rgba(255, 65, 54, 0.25);
+  color: #C10230;
+}
+
+/**
+ * File
+ */
+.c-form-control--file {
+  border: 0;
+  box-shadow: none;
+  height: auto;
+  padding: 0;
+  width: auto;
+  /**
+   * Error
+   */
+}
+.c-form-control--file:focus, .c-form-control--file:hover {
+  background-color: #FFF;
+  box-shadow: none;
+}
+.c-form-control--file.is-error {
+  box-shadow: none;
+}
+
+/**
+ * Textarea
+ */
+.c-form-control--textarea {
+  height: auto;
+  resize: vertical;
+}
+
+/* Help */
+.c-form-help {
+  color: #7F7F7F;
+  font-size: 0.75rem; /* 14 / 19 */
+  margin-top: 0.4rem;
+  /**
+   * Error
+   */
+}
+.c-form-help.is-error {
+  color: #FF4136;
+}
+
+@media all and (min-width: 48em) {
+  /**
+   * Inline
+   */
+  .c-form--inline {
+    /* Group */
+  }
+  .c-form--inline .c-form-group {
+    flex: auto;
+  }
+}
+/* ==========================================================================
+   #BUTTONS
+   ========================================================================== */
+/* Link Buttons */
+a.c-btn,
+a:hover.c-btn,
+a:visited.c-btn {
+  color: #022851;
+  padding: 0 1rem;
+  text-decoration: none;
+}
+
+/* Standard Buttons */
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15ch;
+  min-height: 2.5rem;
+  cursor: pointer;
+  border: 0.01rem solid #B0D0ED;
+  background-color: #f2f2f2;
+  font-weight: 700;
+  transition: all 0.2s linear;
+  /* Icon */
+  /**
+   * Disabled
+   */
+}
+.c-btn:before {
+  color: transparent;
+  background-color: transparent;
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-size: 0.75rem;
+  font-weight: 900;
+  opacity: 0;
+  transition: all 0.2s linear;
+  transform: translateX(-200%);
+  width: 0;
+}
+.c-btn:focus, .c-btn:hover {
+  border-color: #FFBF00;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  color: #022851;
+  padding-right: 0.5rem;
+  padding-left: 1rem;
+}
+.c-btn:focus:before, .c-btn:hover:before {
+  color: #022851;
+  opacity: 1;
+  transform: translateX(-45%);
+  width: 0.75rem;
+}
+.c-btn:active {
+  transform: translateY(0);
+}
+.c-btn .c-btn__icon {
+  margin-right: 0.4rem;
+}
+.c-btn[disabled] {
+  background-color: #E5E5E5;
+  border-color: #E5E5E5;
+  color: #7F7F7F;
+  cursor: not-allowed;
+}
+.c-btn[disabled]:before {
+  content: none;
+}
+.c-btn[disabled]:focus, .c-btn[disabled]:hover {
+  background-color: #E5E5E5;
+  box-shadow: none;
+  padding-right: unset;
+  padding-left: unset;
+  transform: translateY(0);
+}
+
+/**
+ * Primary
+ */
+.c-btn--primary {
+  background-color: #022851;
+  border-color: #022851;
+  color: #FFF;
+}
+.c-btn--primary:focus, .c-btn--primary:hover {
+  background-color: #03346a;
+  color: #FFBF00;
+}
+.c-btn--primary:focus:before, .c-btn--primary:hover:before {
+  color: #FFF;
+}
+
+/**
+ * Secondary
+ */
+.c-btn--primary-2 {
+  background-color: #FFBF00;
+  border-color: #FFBF00;
+  color: #022851;
+}
+.c-btn--primary-2:focus, .c-btn--primary-2:hover {
+  background-color: #FFF;
+  color: #022851;
+}
+.c-btn--primary-2:focus::before, .c-btn--primary-2:hover::before {
+  color: #022851;
+}
+
+/**
+ * Block
+ */
+.c-btn--block {
+  display: block;
+  width: 100%;
+}
+
+/**
+ * Small
+ */
+.c-btn--small {
+  min-height: unset;
+  min-width: unset;
+  padding: 0.4rem 0.8rem;
+}
+.c-btn--small:before {
+  content: none;
+}
+.c-btn--small:focus, .c-btn--small:hover, .c-btn--small[disabled]:focus, .c-btn--small[disabled]:hover {
+  padding: 0.4rem 0.8rem;
+}
+
+/* ==========================================================================
+   #BUTTON GROUPS
+   ========================================================================== */
+.c-btn-group {
+  display: flex;
+  flex-direction: column;
+  /* Button */
+}
+.c-btn-group .c-btn {
+  margin: 0.4rem 1.6rem;
+}
+.c-btn-group .c-btn--small {
+  align-self: center;
+}
+
+@media all and (min-width: 48em) {
+  .c-btn-group {
+    flex-direction: row;
+    /* Button */
+    /**
+     * Small
+     */
+  }
+  .c-btn-group:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+  .c-btn-group .c-btn {
+    margin: 0;
+  }
+  .c-btn-group .c-btn:not(:last-child) {
+    margin-right: 0.8rem;
+  }
+  .c-btn-group .c-btn--small:not(:last-child) {
+    margin-right: 0.8rem;
+  }
+}
+/* ==========================================================================
+   #PAGINATION
+   ========================================================================== */
+.c-pagination {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.6rem;
+  /* Meta */
+}
+.c-pagination::before, .c-pagination::after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+.c-pagination::after {
+  clear: both;
+}
+.c-pagination .c-pagination__meta {
+  font-size: 0.875em;
+  margin-right: 0.8rem;
+  vertical-align: middle;
+}
+
+/* Control */
+.c-pagination__control {
+  background-color: #FFF;
+  border: 0.0625em solid #CCCCCC;
+  color: #FFBF00;
+  line-height: 1;
+  padding: 0.4rem 0.8rem;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.25s, transform 0.25s;
+  /**
+   * Previous
+   */
+  /**
+   * Next
+   */
+  /**
+   * Disabled
+   */
+}
+.c-pagination__control::after {
+  border-radius: 0.125em;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.25s;
+  width: 100%;
+  z-index: -1;
+}
+.c-pagination__control:focus, .c-pagination__control:hover {
+  color: #022851;
+  transform: translateY(-0.0625em);
+}
+.c-pagination__control:focus::after, .c-pagination__control:hover::after {
+  opacity: 1;
+}
+.c-pagination__control.c-pagination__control--prev {
+  border-bottom-left-radius: 0.125em;
+  border-top-left-radius: 0.125em;
+}
+.c-pagination__control.c-pagination__control--next {
+  border-bottom-right-radius: 0.125em;
+  border-left-width: 0;
+  border-top-right-radius: 0.125em;
+}
+.c-pagination__control:active {
+  transform: translateY(0);
+}
+.c-pagination__control:active::after {
+  opacity: 0;
+}
+.c-pagination__control.is-disabled {
+  color: #CCCCCC;
+}
+.c-pagination__control.is-disabled:focus, .c-pagination__control.is-disabled:hover {
+  color: #CCCCCC;
+  transform: none;
+}
+.c-pagination__control.is-disabled:focus::after, .c-pagination__control.is-disabled:focus::after {
+  opacity: 0;
+}
+
+/* ==========================================================================
+   #LOADER
+   ========================================================================== */
+/* Dark Version */
+.c-lds-dual-ring, .c-lds-dual-inner-ring {
+  width: 4.211rem;
+  height: 4.211rem;
+}
+.c-lds-dual-ring:after, .c-lds-dual-inner-ring:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  border: 6px solid #022851;
+  border-color: #022851 transparent #022851 transparent;
+}
+
+.c-lds-dual-ring {
+  display: inline-block;
+}
+.c-lds-dual-ring:after {
+  width: 3.368rem;
+  height: 3.368rem;
+  margin: 0.421rem;
+  animation: c-lds-dual-ring 1.2s linear infinite;
+}
+.c-lds-dual-ring.c-lds-dual-ring--dark:after {
+  border: 6px solid #FFF;
+  border-color: #FFF transparent #FFF transparent;
+}
+.c-lds-dual-ring.c-lds-dual-ring--dark .c-lds-dual-inner-ring:after {
+  border: 6px solid #FFF;
+  border-color: #FFF transparent #FFF transparent;
+}
+
+.c-lds-dual-inner-ring {
+  position: absolute;
+}
+.c-lds-dual-inner-ring:after {
+  width: 2.368rem;
+  height: 2.368rem;
+  margin: 0.879rem;
+  animation: c-lds-dual-inner-ring 1.2s linear infinite reverse;
+}
+
+@keyframes c-lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes c-lds-dual-inner-ring {
+  0% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(410deg);
+  }
+}
+/* ==========================================================================
+   #PANELS
+   ========================================================================= */
+.c-panel {
+  background-color: #FFF;
+  border-radius: 0.0625em;
+  border: 0.125em solid #022851;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  margin-bottom: 1.6rem;
+  position: relative;
+  /* STATEFUL */
+  /* EXPAND/COLLAPSE */
+  /* DELETE */
+  /* TABLES */
+}
+.c-panel .c-panel__header {
+  background-color: #14447A;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+}
+.c-panel .c-panel__header .c-panel__title {
+  color: #FFF;
+  padding: 0.8rem 1.6rem;
+}
+.c-panel .c-panel__header .c-panel__actions .c-panel__action {
+  margin-top: 0.25rem;
+  padding: 0.8rem;
+  color: #FFF;
+  cursor: pointer;
+  transition: all 0.2s linear;
+  /* DROPDOWN */
+}
+.c-panel .c-panel__header .c-panel__actions .c-panel__action:hover {
+  color: #E5E5E5;
+}
+.c-panel .c-panel__header .c-panel__actions .c-panel__action.c-panel__action--dropdown:hover .c-dropdown.c-dropdown-menu {
+  z-index: 1;
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+}
+.c-panel .c-panel__header .c-panel__actions .c-panel__action.c-panel__action--dropdown:hover .c-dropdown.c-dropdown-menu > div,
+.c-panel .c-panel__header .c-panel__actions .c-panel__action.c-panel__action--dropdown:hover .c-dropdown.c-dropdown-menu a {
+  text-decoration: none;
+}
+.c-panel .c-panel__tableheader {
+  background-color: #14447A;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1875rem;
+  font-weight: 700;
+}
+.c-panel .c-panel__tableheader .c-panel__title {
+  color: #FFF;
+  padding: 0.8rem;
+}
+.c-panel .c-panel__tableheader .c-panel__actions .c-panel__action {
+  padding: 0.8rem;
+  color: #FFF;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.c-panel .c-panel__tableheader .c-panel__actions .c-panel__action:hover {
+  color: #E5E5E5;
+}
+.c-panel .c-panel__subheader {
+  background-color: #022851;
+  font-weight: 700;
+  color: #FFF;
+}
+.c-panel .c-panel__subheader .c-panel__row {
+  display: flex;
+}
+.c-panel .c-panel__subheader .c-panel__column {
+  padding: 0.8rem;
+}
+.c-panel .c-panel__row {
+  display: flex;
+}
+.c-panel .c-panel__row:nth-child(even) {
+  background-color: #E5E5E5;
+}
+.c-panel .c-panel__row .c-panel__column {
+  padding: 0.8rem;
+}
+.c-panel .c-panel__body, .c-panel .c-panel__footer {
+  opacity: 1;
+  transition: opacity 0.25s ease-in;
+}
+.c-panel .c-panel__body {
+  padding: 0.8rem 1.6rem;
+}
+.c-panel .c-panel__footer {
+  padding: 0.8rem 1.6rem;
+}
+.c-panel.c-panel--stateful {
+  display: flex;
+  flex-direction: row;
+}
+.c-panel.c-panel--stateful .c-panel__state {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #022851;
+  background-color: #E5E5E5;
+  border-right: #022851 solid 0.0625em;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: default;
+}
+.c-panel.c-panel--stateful .c-panel__state > .c-panel__state-icon,
+.c-panel.c-panel--stateful .c-panel__state > .c-panel__state-text {
+  align-self: start;
+  min-width: 2.25rem;
+  padding: 0.65rem 0.25rem;
+}
+.c-panel.c-panel--stateful .c-panel__state > .c-panel__state-icon {
+  display: inline-block;
+  font-size: 1.75rem;
+  vertical-align: bottom;
+}
+.c-panel.c-panel--stateful .c-panel__state.c-panel__state--icon-only > .c-panel__state-text {
+  display: none;
+}
+.c-panel.c-panel--stateful .c-panel__state:not(.c-panel__state--icon-only) > .c-panel__state-icon {
+  display: none;
+}
+.c-panel.c-panel--stateful .c-panel__state:after {
+  content: "";
+  width: 0.8rem;
+  background-color: #CCCCCC;
+}
+.c-panel.c-panel--stateful .c-panel__state.c-panel__state--information {
+  color: #003d73;
+  background-color: #40a6ff;
+}
+.c-panel.c-panel--stateful .c-panel__state.c-panel__state--information:after {
+  background-color: #0074D9;
+}
+.c-panel.c-panel--stateful .c-panel__state.c-panel__state--warning {
+  color: #da6500;
+  background-color: #ffbc81;
+}
+.c-panel.c-panel--stateful .c-panel__state.c-panel__state--warning:after {
+  background-color: #FF851B;
+}
+.c-panel.c-panel--stateful .c-panel__state.c-panel__state--success {
+  color: #208e2c;
+  background-color: #7ee289;
+}
+.c-panel.c-panel--stateful .c-panel__state.c-panel__state--success:after {
+  background-color: #2ECC40;
+}
+.c-panel.c-panel--stateful .c-panel__state.c-panel__state--error {
+  color: #cf0b00;
+  background-color: #ffa19c;
+}
+.c-panel.c-panel--stateful .c-panel__state.c-panel__state--error:after {
+  background-color: #FF4136;
+}
+.c-panel.c-panel--stateful .c-panel__content {
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: 100%;
+}
+.c-panel.c-panel--collapsed.c-panel--stateful .c-panel__state > .c-panel__state-icon {
+  display: flex;
+  align-items: center;
+}
+.c-panel.c-panel--collapsed.c-panel--stateful .c-panel__state > .c-panel__state-text {
+  display: none;
+}
+.c-panel.c-panel--collapsed .c-panel__header .c-panel__actions .c-panel__action._js-c-panels__action--expand-collapse {
+  transform: rotate(90deg);
+}
+.c-panel.c-panel--collapsed .c-panel__body, .c-panel.c-panel--collapsed .c-panel__footer {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.c-panel .c-panel__tablecontent .c-panel__subheader {
+  justify-content: start;
+}
+.c-panel .c-panel__tablecontent .c-panel__subheader .c-panel__column {
+  text-transform: uppercase;
+}
+.c-panel .c-panel__tablecontent .c-panel__row {
+  justify-content: start;
+}
+.c-panel .c-panel__tablecontent .c-panel__row .c-panel__column {
+  min-width: 12.5rem;
+}
+.c-panel .c-panel__tablecontent .c-panel__row .c-panel__column.c-panel__column--sm {
+  min-width: 10rem;
+}
+.c-panel .c-panel__tablecontent .c-panel__row .c-panel__column.c-panel__column--md {
+  min-width: 15rem;
+}
+.c-panel .c-panel__tablecontent .c-panel__row .c-panel__column.c-panel__column--lg {
+  min-width: 20rem;
+}
+.c-panel .c-panel__tablecontent .c-panel__row .c-panel__column .c-panel__mobile-subheader {
+  display: none;
+}
+.c-panel .c-panel__tablecontent.c-panel__tablecontent--always-mobile .c-panel__subheader {
+  display: none;
+}
+.c-panel .c-panel__tablecontent.c-panel__tablecontent--always-mobile .c-panel__row {
+  flex-direction: column;
+}
+.c-panel .c-panel__tablecontent.c-panel__tablecontent--always-mobile .c-panel__row .c-panel__column > .c-panel__mobile-subheader {
+  display: block;
+}
+
+@media all and (max-width: 62em) {
+  .c-panel:not(.c-panel__tablecontent--always-mobile) {
+    /* MOBILE TABLES */
+  }
+  .c-panel:not(.c-panel__tablecontent--always-mobile) .c-panel__tablecontent .c-panel__subheader {
+    display: none;
+  }
+  .c-panel:not(.c-panel__tablecontent--always-mobile) .c-panel__tablecontent .c-panel__row {
+    flex-direction: column;
+  }
+  .c-panel:not(.c-panel__tablecontent--always-mobile) .c-panel__tablecontent .c-panel__row .c-panel__column > .c-panel__mobile-subheader {
+    display: block;
+  }
+}
+/* ==========================================================================
+   #MESSAGE
+   ========================================================================== */
+/* HELPERS */
+/* STRUCTURE */
+.c-message {
+  display: inline-block;
+  margin: 2ex 1rem;
+  width: 100%;
+}
+.c-message .c-message__heading {
+  font-weight: 500;
+}
+.c-message .c-message__heading .c-message__date {
+  font-size: 90%;
+  color: #7F7F7F;
+}
+.c-message .c-message__content {
+  color: #4C4C4C;
+  margin: 0;
+}
+.c-message .c-message__avatar {
+  border-radius: 50%;
+  border: 1px solid #B0D0ED;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  float: left;
+  margin-right: 0.5rem;
+  height: fit-content;
+}
+.c-message .c-message__speech-bubble {
+  float: left;
+}
+.c-message .c-message__speech-bubble.c-message__speech-bubble--left {
+  border: 1px solid #B0D0ED;
+  border-radius: 6px;
+  position: relative;
+  margin-left: 8px1;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  margin-right: 1px;
+  margin-bottom: 1px;
+  padding: 1ex 1rem;
+  background: #FFF;
+  max-width: 90%;
+}
+.c-message .c-message__speech-bubble.c-message__speech-bubble--left:after, .c-message .c-message__speech-bubble.c-message__speech-bubble--left:before {
+  content: "";
+  position: absolute;
+}
+.c-message .c-message__speech-bubble.c-message__speech-bubble--left:after {
+  top: 16px;
+  border: 8px solid transparent;
+  border-right: 8px solid #FFF;
+  left: -8px;
+  border-left: none;
+}
+.c-message .c-message__speech-bubble.c-message__speech-bubble--left:before {
+  top: 16px-2;
+  border: 8px2 solid transparent;
+  border-right: 8px2 solid #B0D0ED;
+  left: -8px2;
+  border-left: none;
+}
+.c-message .c-message__speech-bubble.c-message__speech-bubble--top {
+  border: 1px solid #B0D0ED;
+  border-radius: 6px;
+  position: relative;
+  margin-top: 8px1;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  margin-bottom: 1px;
+  margin-bottom: 1px;
+  padding: 1ex 1rem;
+  background: #FFF;
+  clear: both;
+  margin-left: 0;
+  margin-top: 2ex;
+}
+.c-message .c-message__speech-bubble.c-message__speech-bubble--top:after, .c-message .c-message__speech-bubble.c-message__speech-bubble--top:before {
+  content: "";
+  position: absolute;
+}
+.c-message .c-message__speech-bubble.c-message__speech-bubble--top:after {
+  left: 16px;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #FFF;
+  top: -8px;
+  border-top: none;
+}
+.c-message .c-message__speech-bubble.c-message__speech-bubble--top:before {
+  left: 16px-2;
+  border: 8px2 solid transparent;
+  border-bottom: 8px2 solid #B0D0ED;
+  top: -8px2;
+  border-top: none;
+}
+.c-message .c-message__speech-bubble .c-message__heading {
+  margin: 0;
+}
+
+.c-message-group .c-message:nth-child(even) .c-message__speech-bubble {
+  border: 1px solid #FFBF00;
+  border-radius: 6px;
+  position: relative;
+  margin-left: 8px1;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  margin-right: 1px;
+  margin-bottom: 1px;
+  padding: 1ex 1rem;
+  background: #FFF;
+}
+.c-message-group .c-message:nth-child(even) .c-message__speech-bubble:after, .c-message-group .c-message:nth-child(even) .c-message__speech-bubble:before {
+  content: "";
+  position: absolute;
+}
+.c-message-group .c-message:nth-child(even) .c-message__speech-bubble:after {
+  top: 16px;
+  border: 8px solid transparent;
+  border-right: 8px solid #FFF;
+  left: -8px;
+  border-left: none;
+}
+.c-message-group .c-message:nth-child(even) .c-message__speech-bubble:before {
+  top: 16px-2;
+  border: 8px2 solid transparent;
+  border-right: 8px2 solid #FFBF00;
+  left: -8px2;
+  border-left: none;
+}
+
+@media all and (max-width: 48em) {
+  .c-message .c-message__speech-bubble.c-message__speech-bubble--left {
+    border: 1px solid #B0D0ED;
+    border-radius: 6px;
+    position: relative;
+    margin-top: 8px1;
+    box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+    margin-bottom: 1px;
+    margin-bottom: 1px;
+    padding: 1ex 1rem;
+    background: #FFF;
+    clear: both;
+    margin-left: 0;
+    margin-top: 2ex;
+    max-width: 100%;
+  }
+  .c-message .c-message__speech-bubble.c-message__speech-bubble--left:after, .c-message .c-message__speech-bubble.c-message__speech-bubble--left:before {
+    content: "";
+    position: absolute;
+  }
+  .c-message .c-message__speech-bubble.c-message__speech-bubble--left:after {
+    left: 16px;
+    border: 8px solid transparent;
+    border-bottom: 8px solid #FFF;
+    top: -8px;
+    border-top: none;
+  }
+  .c-message .c-message__speech-bubble.c-message__speech-bubble--left:before {
+    left: 16px-2;
+    border: 8px2 solid transparent;
+    border-bottom: 8px2 solid #B0D0ED;
+    top: -8px2;
+    border-top: none;
+  }
+}
+/* ==========================================================================
+   #PROGRESS BARS & TRACKERS
+   ========================================================================== */
+@property --progress-value {
+  syntax: "<integer>";
+  inherits: false;
+  initial-value: 0;
+}
+.progress-bar {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  /* to center the percentage value */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.progress-bar::before {
+  counter-reset: percentage var(--progress-value);
+  content: counter(percentage) "%";
+}
+.progress-bar.c-progress-bar--large {
+  font-size: 1.68rem;
+  width: 7.5rem;
+  height: 7.5rem;
+  margin: 1.25rem auto;
+}
+
+.progress--0 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--0 2s 1 forwards;
+}
+
+.progress--0::before {
+  animation: progress-animation--0 2s 1 forwards;
+}
+
+@keyframes progress-animation--0 {
+  to {
+    --progress-value: 0;
+  }
+}
+.progress--1 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--1 2s 1 forwards;
+}
+
+.progress--1::before {
+  animation: progress-animation--1 2s 1 forwards;
+}
+
+@keyframes progress-animation--1 {
+  to {
+    --progress-value: 1;
+  }
+}
+.progress--2 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--2 2s 1 forwards;
+}
+
+.progress--2::before {
+  animation: progress-animation--2 2s 1 forwards;
+}
+
+@keyframes progress-animation--2 {
+  to {
+    --progress-value: 2;
+  }
+}
+.progress--3 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--3 2s 1 forwards;
+}
+
+.progress--3::before {
+  animation: progress-animation--3 2s 1 forwards;
+}
+
+@keyframes progress-animation--3 {
+  to {
+    --progress-value: 3;
+  }
+}
+.progress--4 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--4 2s 1 forwards;
+}
+
+.progress--4::before {
+  animation: progress-animation--4 2s 1 forwards;
+}
+
+@keyframes progress-animation--4 {
+  to {
+    --progress-value: 4;
+  }
+}
+.progress--5 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--5 2s 1 forwards;
+}
+
+.progress--5::before {
+  animation: progress-animation--5 2s 1 forwards;
+}
+
+@keyframes progress-animation--5 {
+  to {
+    --progress-value: 5;
+  }
+}
+.progress--6 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--6 2s 1 forwards;
+}
+
+.progress--6::before {
+  animation: progress-animation--6 2s 1 forwards;
+}
+
+@keyframes progress-animation--6 {
+  to {
+    --progress-value: 6;
+  }
+}
+.progress--7 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--7 2s 1 forwards;
+}
+
+.progress--7::before {
+  animation: progress-animation--7 2s 1 forwards;
+}
+
+@keyframes progress-animation--7 {
+  to {
+    --progress-value: 7;
+  }
+}
+.progress--8 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--8 2s 1 forwards;
+}
+
+.progress--8::before {
+  animation: progress-animation--8 2s 1 forwards;
+}
+
+@keyframes progress-animation--8 {
+  to {
+    --progress-value: 8;
+  }
+}
+.progress--9 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--9 2s 1 forwards;
+}
+
+.progress--9::before {
+  animation: progress-animation--9 2s 1 forwards;
+}
+
+@keyframes progress-animation--9 {
+  to {
+    --progress-value: 9;
+  }
+}
+.progress--10 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--10 2s 1 forwards;
+}
+
+.progress--10::before {
+  animation: progress-animation--10 2s 1 forwards;
+}
+
+@keyframes progress-animation--10 {
+  to {
+    --progress-value: 10;
+  }
+}
+.progress--11 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--11 2s 1 forwards;
+}
+
+.progress--11::before {
+  animation: progress-animation--11 2s 1 forwards;
+}
+
+@keyframes progress-animation--11 {
+  to {
+    --progress-value: 11;
+  }
+}
+.progress--12 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--12 2s 1 forwards;
+}
+
+.progress--12::before {
+  animation: progress-animation--12 2s 1 forwards;
+}
+
+@keyframes progress-animation--12 {
+  to {
+    --progress-value: 12;
+  }
+}
+.progress--13 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--13 2s 1 forwards;
+}
+
+.progress--13::before {
+  animation: progress-animation--13 2s 1 forwards;
+}
+
+@keyframes progress-animation--13 {
+  to {
+    --progress-value: 13;
+  }
+}
+.progress--14 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--14 2s 1 forwards;
+}
+
+.progress--14::before {
+  animation: progress-animation--14 2s 1 forwards;
+}
+
+@keyframes progress-animation--14 {
+  to {
+    --progress-value: 14;
+  }
+}
+.progress--15 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--15 2s 1 forwards;
+}
+
+.progress--15::before {
+  animation: progress-animation--15 2s 1 forwards;
+}
+
+@keyframes progress-animation--15 {
+  to {
+    --progress-value: 15;
+  }
+}
+.progress--16 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--16 2s 1 forwards;
+}
+
+.progress--16::before {
+  animation: progress-animation--16 2s 1 forwards;
+}
+
+@keyframes progress-animation--16 {
+  to {
+    --progress-value: 16;
+  }
+}
+.progress--17 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--17 2s 1 forwards;
+}
+
+.progress--17::before {
+  animation: progress-animation--17 2s 1 forwards;
+}
+
+@keyframes progress-animation--17 {
+  to {
+    --progress-value: 17;
+  }
+}
+.progress--18 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--18 2s 1 forwards;
+}
+
+.progress--18::before {
+  animation: progress-animation--18 2s 1 forwards;
+}
+
+@keyframes progress-animation--18 {
+  to {
+    --progress-value: 18;
+  }
+}
+.progress--19 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--19 2s 1 forwards;
+}
+
+.progress--19::before {
+  animation: progress-animation--19 2s 1 forwards;
+}
+
+@keyframes progress-animation--19 {
+  to {
+    --progress-value: 19;
+  }
+}
+.progress--20 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--20 2s 1 forwards;
+}
+
+.progress--20::before {
+  animation: progress-animation--20 2s 1 forwards;
+}
+
+@keyframes progress-animation--20 {
+  to {
+    --progress-value: 20;
+  }
+}
+.progress--21 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--21 2s 1 forwards;
+}
+
+.progress--21::before {
+  animation: progress-animation--21 2s 1 forwards;
+}
+
+@keyframes progress-animation--21 {
+  to {
+    --progress-value: 21;
+  }
+}
+.progress--22 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--22 2s 1 forwards;
+}
+
+.progress--22::before {
+  animation: progress-animation--22 2s 1 forwards;
+}
+
+@keyframes progress-animation--22 {
+  to {
+    --progress-value: 22;
+  }
+}
+.progress--23 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--23 2s 1 forwards;
+}
+
+.progress--23::before {
+  animation: progress-animation--23 2s 1 forwards;
+}
+
+@keyframes progress-animation--23 {
+  to {
+    --progress-value: 23;
+  }
+}
+.progress--24 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--24 2s 1 forwards;
+}
+
+.progress--24::before {
+  animation: progress-animation--24 2s 1 forwards;
+}
+
+@keyframes progress-animation--24 {
+  to {
+    --progress-value: 24;
+  }
+}
+.progress--25 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--25 2s 1 forwards;
+}
+
+.progress--25::before {
+  animation: progress-animation--25 2s 1 forwards;
+}
+
+@keyframes progress-animation--25 {
+  to {
+    --progress-value: 25;
+  }
+}
+.progress--26 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--26 2s 1 forwards;
+}
+
+.progress--26::before {
+  animation: progress-animation--26 2s 1 forwards;
+}
+
+@keyframes progress-animation--26 {
+  to {
+    --progress-value: 26;
+  }
+}
+.progress--27 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--27 2s 1 forwards;
+}
+
+.progress--27::before {
+  animation: progress-animation--27 2s 1 forwards;
+}
+
+@keyframes progress-animation--27 {
+  to {
+    --progress-value: 27;
+  }
+}
+.progress--28 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--28 2s 1 forwards;
+}
+
+.progress--28::before {
+  animation: progress-animation--28 2s 1 forwards;
+}
+
+@keyframes progress-animation--28 {
+  to {
+    --progress-value: 28;
+  }
+}
+.progress--29 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--29 2s 1 forwards;
+}
+
+.progress--29::before {
+  animation: progress-animation--29 2s 1 forwards;
+}
+
+@keyframes progress-animation--29 {
+  to {
+    --progress-value: 29;
+  }
+}
+.progress--30 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--30 2s 1 forwards;
+}
+
+.progress--30::before {
+  animation: progress-animation--30 2s 1 forwards;
+}
+
+@keyframes progress-animation--30 {
+  to {
+    --progress-value: 30;
+  }
+}
+.progress--31 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--31 2s 1 forwards;
+}
+
+.progress--31::before {
+  animation: progress-animation--31 2s 1 forwards;
+}
+
+@keyframes progress-animation--31 {
+  to {
+    --progress-value: 31;
+  }
+}
+.progress--32 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--32 2s 1 forwards;
+}
+
+.progress--32::before {
+  animation: progress-animation--32 2s 1 forwards;
+}
+
+@keyframes progress-animation--32 {
+  to {
+    --progress-value: 32;
+  }
+}
+.progress--33 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--33 2s 1 forwards;
+}
+
+.progress--33::before {
+  animation: progress-animation--33 2s 1 forwards;
+}
+
+@keyframes progress-animation--33 {
+  to {
+    --progress-value: 33;
+  }
+}
+.progress--34 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--34 2s 1 forwards;
+}
+
+.progress--34::before {
+  animation: progress-animation--34 2s 1 forwards;
+}
+
+@keyframes progress-animation--34 {
+  to {
+    --progress-value: 34;
+  }
+}
+.progress--35 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--35 2s 1 forwards;
+}
+
+.progress--35::before {
+  animation: progress-animation--35 2s 1 forwards;
+}
+
+@keyframes progress-animation--35 {
+  to {
+    --progress-value: 35;
+  }
+}
+.progress--36 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--36 2s 1 forwards;
+}
+
+.progress--36::before {
+  animation: progress-animation--36 2s 1 forwards;
+}
+
+@keyframes progress-animation--36 {
+  to {
+    --progress-value: 36;
+  }
+}
+.progress--37 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--37 2s 1 forwards;
+}
+
+.progress--37::before {
+  animation: progress-animation--37 2s 1 forwards;
+}
+
+@keyframes progress-animation--37 {
+  to {
+    --progress-value: 37;
+  }
+}
+.progress--38 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--38 2s 1 forwards;
+}
+
+.progress--38::before {
+  animation: progress-animation--38 2s 1 forwards;
+}
+
+@keyframes progress-animation--38 {
+  to {
+    --progress-value: 38;
+  }
+}
+.progress--39 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--39 2s 1 forwards;
+}
+
+.progress--39::before {
+  animation: progress-animation--39 2s 1 forwards;
+}
+
+@keyframes progress-animation--39 {
+  to {
+    --progress-value: 39;
+  }
+}
+.progress--40 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--40 2s 1 forwards;
+}
+
+.progress--40::before {
+  animation: progress-animation--40 2s 1 forwards;
+}
+
+@keyframes progress-animation--40 {
+  to {
+    --progress-value: 40;
+  }
+}
+.progress--41 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--41 2s 1 forwards;
+}
+
+.progress--41::before {
+  animation: progress-animation--41 2s 1 forwards;
+}
+
+@keyframes progress-animation--41 {
+  to {
+    --progress-value: 41;
+  }
+}
+.progress--42 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--42 2s 1 forwards;
+}
+
+.progress--42::before {
+  animation: progress-animation--42 2s 1 forwards;
+}
+
+@keyframes progress-animation--42 {
+  to {
+    --progress-value: 42;
+  }
+}
+.progress--43 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--43 2s 1 forwards;
+}
+
+.progress--43::before {
+  animation: progress-animation--43 2s 1 forwards;
+}
+
+@keyframes progress-animation--43 {
+  to {
+    --progress-value: 43;
+  }
+}
+.progress--44 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--44 2s 1 forwards;
+}
+
+.progress--44::before {
+  animation: progress-animation--44 2s 1 forwards;
+}
+
+@keyframes progress-animation--44 {
+  to {
+    --progress-value: 44;
+  }
+}
+.progress--45 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--45 2s 1 forwards;
+}
+
+.progress--45::before {
+  animation: progress-animation--45 2s 1 forwards;
+}
+
+@keyframes progress-animation--45 {
+  to {
+    --progress-value: 45;
+  }
+}
+.progress--46 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--46 2s 1 forwards;
+}
+
+.progress--46::before {
+  animation: progress-animation--46 2s 1 forwards;
+}
+
+@keyframes progress-animation--46 {
+  to {
+    --progress-value: 46;
+  }
+}
+.progress--47 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--47 2s 1 forwards;
+}
+
+.progress--47::before {
+  animation: progress-animation--47 2s 1 forwards;
+}
+
+@keyframes progress-animation--47 {
+  to {
+    --progress-value: 47;
+  }
+}
+.progress--48 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--48 2s 1 forwards;
+}
+
+.progress--48::before {
+  animation: progress-animation--48 2s 1 forwards;
+}
+
+@keyframes progress-animation--48 {
+  to {
+    --progress-value: 48;
+  }
+}
+.progress--49 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--49 2s 1 forwards;
+}
+
+.progress--49::before {
+  animation: progress-animation--49 2s 1 forwards;
+}
+
+@keyframes progress-animation--49 {
+  to {
+    --progress-value: 49;
+  }
+}
+.progress--50 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--50 2s 1 forwards;
+}
+
+.progress--50::before {
+  animation: progress-animation--50 2s 1 forwards;
+}
+
+@keyframes progress-animation--50 {
+  to {
+    --progress-value: 50;
+  }
+}
+.progress--51 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--51 2s 1 forwards;
+}
+
+.progress--51::before {
+  animation: progress-animation--51 2s 1 forwards;
+}
+
+@keyframes progress-animation--51 {
+  to {
+    --progress-value: 51;
+  }
+}
+.progress--52 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--52 2s 1 forwards;
+}
+
+.progress--52::before {
+  animation: progress-animation--52 2s 1 forwards;
+}
+
+@keyframes progress-animation--52 {
+  to {
+    --progress-value: 52;
+  }
+}
+.progress--53 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--53 2s 1 forwards;
+}
+
+.progress--53::before {
+  animation: progress-animation--53 2s 1 forwards;
+}
+
+@keyframes progress-animation--53 {
+  to {
+    --progress-value: 53;
+  }
+}
+.progress--54 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--54 2s 1 forwards;
+}
+
+.progress--54::before {
+  animation: progress-animation--54 2s 1 forwards;
+}
+
+@keyframes progress-animation--54 {
+  to {
+    --progress-value: 54;
+  }
+}
+.progress--55 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--55 2s 1 forwards;
+}
+
+.progress--55::before {
+  animation: progress-animation--55 2s 1 forwards;
+}
+
+@keyframes progress-animation--55 {
+  to {
+    --progress-value: 55;
+  }
+}
+.progress--56 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--56 2s 1 forwards;
+}
+
+.progress--56::before {
+  animation: progress-animation--56 2s 1 forwards;
+}
+
+@keyframes progress-animation--56 {
+  to {
+    --progress-value: 56;
+  }
+}
+.progress--57 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--57 2s 1 forwards;
+}
+
+.progress--57::before {
+  animation: progress-animation--57 2s 1 forwards;
+}
+
+@keyframes progress-animation--57 {
+  to {
+    --progress-value: 57;
+  }
+}
+.progress--58 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--58 2s 1 forwards;
+}
+
+.progress--58::before {
+  animation: progress-animation--58 2s 1 forwards;
+}
+
+@keyframes progress-animation--58 {
+  to {
+    --progress-value: 58;
+  }
+}
+.progress--59 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--59 2s 1 forwards;
+}
+
+.progress--59::before {
+  animation: progress-animation--59 2s 1 forwards;
+}
+
+@keyframes progress-animation--59 {
+  to {
+    --progress-value: 59;
+  }
+}
+.progress--60 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--60 2s 1 forwards;
+}
+
+.progress--60::before {
+  animation: progress-animation--60 2s 1 forwards;
+}
+
+@keyframes progress-animation--60 {
+  to {
+    --progress-value: 60;
+  }
+}
+.progress--61 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--61 2s 1 forwards;
+}
+
+.progress--61::before {
+  animation: progress-animation--61 2s 1 forwards;
+}
+
+@keyframes progress-animation--61 {
+  to {
+    --progress-value: 61;
+  }
+}
+.progress--62 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--62 2s 1 forwards;
+}
+
+.progress--62::before {
+  animation: progress-animation--62 2s 1 forwards;
+}
+
+@keyframes progress-animation--62 {
+  to {
+    --progress-value: 62;
+  }
+}
+.progress--63 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--63 2s 1 forwards;
+}
+
+.progress--63::before {
+  animation: progress-animation--63 2s 1 forwards;
+}
+
+@keyframes progress-animation--63 {
+  to {
+    --progress-value: 63;
+  }
+}
+.progress--64 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--64 2s 1 forwards;
+}
+
+.progress--64::before {
+  animation: progress-animation--64 2s 1 forwards;
+}
+
+@keyframes progress-animation--64 {
+  to {
+    --progress-value: 64;
+  }
+}
+.progress--65 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--65 2s 1 forwards;
+}
+
+.progress--65::before {
+  animation: progress-animation--65 2s 1 forwards;
+}
+
+@keyframes progress-animation--65 {
+  to {
+    --progress-value: 65;
+  }
+}
+.progress--66 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--66 2s 1 forwards;
+}
+
+.progress--66::before {
+  animation: progress-animation--66 2s 1 forwards;
+}
+
+@keyframes progress-animation--66 {
+  to {
+    --progress-value: 66;
+  }
+}
+.progress--67 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--67 2s 1 forwards;
+}
+
+.progress--67::before {
+  animation: progress-animation--67 2s 1 forwards;
+}
+
+@keyframes progress-animation--67 {
+  to {
+    --progress-value: 67;
+  }
+}
+.progress--68 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--68 2s 1 forwards;
+}
+
+.progress--68::before {
+  animation: progress-animation--68 2s 1 forwards;
+}
+
+@keyframes progress-animation--68 {
+  to {
+    --progress-value: 68;
+  }
+}
+.progress--69 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--69 2s 1 forwards;
+}
+
+.progress--69::before {
+  animation: progress-animation--69 2s 1 forwards;
+}
+
+@keyframes progress-animation--69 {
+  to {
+    --progress-value: 69;
+  }
+}
+.progress--70 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--70 2s 1 forwards;
+}
+
+.progress--70::before {
+  animation: progress-animation--70 2s 1 forwards;
+}
+
+@keyframes progress-animation--70 {
+  to {
+    --progress-value: 70;
+  }
+}
+.progress--71 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--71 2s 1 forwards;
+}
+
+.progress--71::before {
+  animation: progress-animation--71 2s 1 forwards;
+}
+
+@keyframes progress-animation--71 {
+  to {
+    --progress-value: 71;
+  }
+}
+.progress--72 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--72 2s 1 forwards;
+}
+
+.progress--72::before {
+  animation: progress-animation--72 2s 1 forwards;
+}
+
+@keyframes progress-animation--72 {
+  to {
+    --progress-value: 72;
+  }
+}
+.progress--73 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--73 2s 1 forwards;
+}
+
+.progress--73::before {
+  animation: progress-animation--73 2s 1 forwards;
+}
+
+@keyframes progress-animation--73 {
+  to {
+    --progress-value: 73;
+  }
+}
+.progress--74 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--74 2s 1 forwards;
+}
+
+.progress--74::before {
+  animation: progress-animation--74 2s 1 forwards;
+}
+
+@keyframes progress-animation--74 {
+  to {
+    --progress-value: 74;
+  }
+}
+.progress--75 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--75 2s 1 forwards;
+}
+
+.progress--75::before {
+  animation: progress-animation--75 2s 1 forwards;
+}
+
+@keyframes progress-animation--75 {
+  to {
+    --progress-value: 75;
+  }
+}
+.progress--76 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--76 2s 1 forwards;
+}
+
+.progress--76::before {
+  animation: progress-animation--76 2s 1 forwards;
+}
+
+@keyframes progress-animation--76 {
+  to {
+    --progress-value: 76;
+  }
+}
+.progress--77 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--77 2s 1 forwards;
+}
+
+.progress--77::before {
+  animation: progress-animation--77 2s 1 forwards;
+}
+
+@keyframes progress-animation--77 {
+  to {
+    --progress-value: 77;
+  }
+}
+.progress--78 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--78 2s 1 forwards;
+}
+
+.progress--78::before {
+  animation: progress-animation--78 2s 1 forwards;
+}
+
+@keyframes progress-animation--78 {
+  to {
+    --progress-value: 78;
+  }
+}
+.progress--79 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--79 2s 1 forwards;
+}
+
+.progress--79::before {
+  animation: progress-animation--79 2s 1 forwards;
+}
+
+@keyframes progress-animation--79 {
+  to {
+    --progress-value: 79;
+  }
+}
+.progress--80 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--80 2s 1 forwards;
+}
+
+.progress--80::before {
+  animation: progress-animation--80 2s 1 forwards;
+}
+
+@keyframes progress-animation--80 {
+  to {
+    --progress-value: 80;
+  }
+}
+.progress--81 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--81 2s 1 forwards;
+}
+
+.progress--81::before {
+  animation: progress-animation--81 2s 1 forwards;
+}
+
+@keyframes progress-animation--81 {
+  to {
+    --progress-value: 81;
+  }
+}
+.progress--82 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--82 2s 1 forwards;
+}
+
+.progress--82::before {
+  animation: progress-animation--82 2s 1 forwards;
+}
+
+@keyframes progress-animation--82 {
+  to {
+    --progress-value: 82;
+  }
+}
+.progress--83 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--83 2s 1 forwards;
+}
+
+.progress--83::before {
+  animation: progress-animation--83 2s 1 forwards;
+}
+
+@keyframes progress-animation--83 {
+  to {
+    --progress-value: 83;
+  }
+}
+.progress--84 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--84 2s 1 forwards;
+}
+
+.progress--84::before {
+  animation: progress-animation--84 2s 1 forwards;
+}
+
+@keyframes progress-animation--84 {
+  to {
+    --progress-value: 84;
+  }
+}
+.progress--85 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--85 2s 1 forwards;
+}
+
+.progress--85::before {
+  animation: progress-animation--85 2s 1 forwards;
+}
+
+@keyframes progress-animation--85 {
+  to {
+    --progress-value: 85;
+  }
+}
+.progress--86 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--86 2s 1 forwards;
+}
+
+.progress--86::before {
+  animation: progress-animation--86 2s 1 forwards;
+}
+
+@keyframes progress-animation--86 {
+  to {
+    --progress-value: 86;
+  }
+}
+.progress--87 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--87 2s 1 forwards;
+}
+
+.progress--87::before {
+  animation: progress-animation--87 2s 1 forwards;
+}
+
+@keyframes progress-animation--87 {
+  to {
+    --progress-value: 87;
+  }
+}
+.progress--88 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--88 2s 1 forwards;
+}
+
+.progress--88::before {
+  animation: progress-animation--88 2s 1 forwards;
+}
+
+@keyframes progress-animation--88 {
+  to {
+    --progress-value: 88;
+  }
+}
+.progress--89 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--89 2s 1 forwards;
+}
+
+.progress--89::before {
+  animation: progress-animation--89 2s 1 forwards;
+}
+
+@keyframes progress-animation--89 {
+  to {
+    --progress-value: 89;
+  }
+}
+.progress--90 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--90 2s 1 forwards;
+}
+
+.progress--90::before {
+  animation: progress-animation--90 2s 1 forwards;
+}
+
+@keyframes progress-animation--90 {
+  to {
+    --progress-value: 90;
+  }
+}
+.progress--91 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--91 2s 1 forwards;
+}
+
+.progress--91::before {
+  animation: progress-animation--91 2s 1 forwards;
+}
+
+@keyframes progress-animation--91 {
+  to {
+    --progress-value: 91;
+  }
+}
+.progress--92 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--92 2s 1 forwards;
+}
+
+.progress--92::before {
+  animation: progress-animation--92 2s 1 forwards;
+}
+
+@keyframes progress-animation--92 {
+  to {
+    --progress-value: 92;
+  }
+}
+.progress--93 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--93 2s 1 forwards;
+}
+
+.progress--93::before {
+  animation: progress-animation--93 2s 1 forwards;
+}
+
+@keyframes progress-animation--93 {
+  to {
+    --progress-value: 93;
+  }
+}
+.progress--94 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--94 2s 1 forwards;
+}
+
+.progress--94::before {
+  animation: progress-animation--94 2s 1 forwards;
+}
+
+@keyframes progress-animation--94 {
+  to {
+    --progress-value: 94;
+  }
+}
+.progress--95 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--95 2s 1 forwards;
+}
+
+.progress--95::before {
+  animation: progress-animation--95 2s 1 forwards;
+}
+
+@keyframes progress-animation--95 {
+  to {
+    --progress-value: 95;
+  }
+}
+.progress--96 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--96 2s 1 forwards;
+}
+
+.progress--96::before {
+  animation: progress-animation--96 2s 1 forwards;
+}
+
+@keyframes progress-animation--96 {
+  to {
+    --progress-value: 96;
+  }
+}
+.progress--97 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--97 2s 1 forwards;
+}
+
+.progress--97::before {
+  animation: progress-animation--97 2s 1 forwards;
+}
+
+@keyframes progress-animation--97 {
+  to {
+    --progress-value: 97;
+  }
+}
+.progress--98 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--98 2s 1 forwards;
+}
+
+.progress--98::before {
+  animation: progress-animation--98 2s 1 forwards;
+}
+
+@keyframes progress-animation--98 {
+  to {
+    --progress-value: 98;
+  }
+}
+.progress--99 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--99 2s 1 forwards;
+}
+
+.progress--99::before {
+  animation: progress-animation--99 2s 1 forwards;
+}
+
+@keyframes progress-animation--99 {
+  to {
+    --progress-value: 99;
+  }
+}
+.progress--100 {
+  background: radial-gradient(closest-side, white 90%, transparent 80% 100%), conic-gradient(#2ECC40 calc(var(--progress-value) * 1%), #E5E5E5 0);
+  animation: progress-animation--100 2s 1 forwards;
+}
+
+.progress--100::before {
+  animation: progress-animation--100 2s 1 forwards;
+}
+
+@keyframes progress-animation--100 {
+  to {
+    --progress-value: 100;
+  }
+  from {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  75% {
+    -webkit-transform: scale(0.91);
+    transform: scale(0.91);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  82% {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+  88% {
+    -webkit-transform: scale(0.87);
+    transform: scale(0.87);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+  99% {
+    font-weight: unset;
+  }
+  100% {
+    -webkit-transform: scale(1.25);
+    transform: scale(1.25);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+    font-weight: 900;
+  }
+}
+/* ==========================================================================
+   #DROPDOWNS
+   ========================================================================== */
+.c-dropdown {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  color: #022851;
+  background-color: #FFFBED;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+}
+.c-dropdown:hover .c-navigation__dropdown {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+}
+.c-dropdown.c-dropdown-menu {
+  font-family: "Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  right: 0;
+  top: 2.8rem;
+}
+.c-dropdown.c-dropdown-menu .c-dropdown-menu__item {
+  color: #022851;
+  padding: 0.4rem 0.8rem;
+  line-height: 2.4;
+  text-align: start;
+  text-transform: capitalize;
+  transition: color, background-color 0.25s;
+}
+.c-dropdown.c-dropdown-menu .c-dropdown-menu__item:hover {
+  background-color: #FFBF00;
+}
+
+/* ==========================================================================
+   #STEPS
+   ========================================================================== */
+.c-step {
+  display: inline-block;
+  margin: 1.625rem 0;
+}
+.c-step .c-step__circle, .c-step .c-step__name, .c-step .c-step__detail, .c-step .c-step__status {
+  margin: 0.421rem 0;
+}
+.c-step .c-step__icon {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.c-step .c-step__icon .c-step__circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: #B2B2B2;
+}
+.c-step .c-step__icon .c-step__circle .c-step__circle--icon {
+  color: #FFF;
+  display: inline-block;
+  font-size: 1.75rem;
+  vertical-align: bottom;
+}
+.c-step .c-step__icon .c-step__circle.c-step__circle--complete {
+  background-color: #2ECC40;
+}
+.c-step .c-step__icon .c-step__circle.c-step__circle--progress {
+  background-color: #FFF;
+  border: 0.188rem solid #0074D9;
+}
+.c-step .c-step__icon .c-step__circle.c-step__circle--progress .c-step__circle--icon {
+  color: #0074D9;
+  font-size: 3rem;
+}
+.c-step .c-step__icon .c-step__circle.c-step__circle--denied {
+  background-color: #FF4136;
+}
+.c-step .c-step__icon .c-step__bar {
+  width: 15rem;
+  height: 0.25rem;
+  margin: 0 2rem;
+  border-radius: 1rem;
+  background-color: #B2B2B2;
+}
+.c-step .c-step__icon .c-step__bar.c-step__bar--complete {
+  background-color: #2ECC40;
+}
+.c-step .c-step__icon .c-step__bar.c-step__bar--progress {
+  background-color: #0074D9;
+  background: linear-gradient(to right, #0074D9 50%, #B2B2B2 50%);
+}
+.c-step .c-step__info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.c-step .c-step__info .c-step__name {
+  font-size: 1.42rem;
+}
+.c-step .c-step__info .c-step__detail {
+  width: 15.5rem;
+}
+.c-step .c-step__info .c-step__status {
+  font-weight: 700;
+  padding: 0.031rem 1rem;
+  border-radius: 1rem;
+  background-color: #E5E5E5;
+  color: #4C4C4C;
+}
+.c-step .c-step__info .c-step__status.c-step__status--complete {
+  background-color: #e6f9e8;
+  color: #2ECC40;
+}
+.c-step .c-step__info .c-step__status.c-step__status--progress {
+  background-color: #d9edff;
+  color: #0074D9;
+}
+.c-step .c-step__info .c-step__status.c-step__status--denied {
+  background-color: #ffeae9;
+  color: #FF4136;
+}
+
+@media screen and (max-width: 48em) {
+  .c-step {
+    margin: 0 1.625rem;
+    display: flex;
+    gap: 3rem;
+  }
+  .c-step .c-step__icon {
+    flex-direction: column;
+  }
+  .c-step .c-step__icon .c-step__bar {
+    width: 0.25rem;
+    height: 8rem;
+    margin: 2rem 0;
+  }
+  .c-step .c-step__icon .c-step__bar.c-step__bar--progress {
+    background: linear-gradient(to bottom, #0074D9 50%, #B2B2B2 50%);
+  }
+}
+/* ==========================================================================
+   #FOOTER
+   ========================================================================== */
+.c-footer .c-footer__link-grid {
+  display: flex;
+  flex-direction: column;
+}
+.c-footer .c-footer__link-grid .c-footer__row {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.c-footer .c-footer__link-grid .c-footer__row .c-footer__col {
+  display: flex;
+  flex-direction: column;
+}
+.c-footer .c-footer__link-grid .c-footer__row .c-footer__col .c-footer__label,
+.c-footer .c-footer__link-grid .c-footer__row .c-footer__col .c-footer__link {
+  padding: 0.4rem;
+}
+.c-footer .c-footer__link-grid .c-footer__row .c-footer__col .c-footer__label {
+  margin-bottom: 0.8rem;
+}
+.c-footer .c-footer__link-grid .c-footer__row .c-footer__col .c-footer__link {
+  text-transform: lowercase;
+  text-decoration: none;
+  border-radius: 0.211rem;
+  transition: color, background-color 0.25s;
+}
+.c-footer .c-footer__link-grid .c-footer__row .c-footer__col .c-footer__link:hover {
+  background-color: #14447A;
+  color: #FFF;
+}
+.c-footer .c-footer__link-grid .c-footer__row .c-footer__col:not(first-child) {
+  margin-top: 1.6rem;
+}
+.c-footer .c-footer__logo {
+  display: block;
+  margin: 5.6rem auto;
+  height: 8.4rem;
+}
+.c-footer .c-footer__copyright {
+  text-align: center;
+}
+.c-footer .c-footer__copyright .o-grid__col {
+  padding-top: 0.8rem;
+}
+
+@media screen and (min-width: 48em) {
+  .c-footer .c-footer__link-grid {
+    flex-direction: row;
+  }
+  .c-footer .c-footer__link-grid .c-footer__row:not(last-child) {
+    margin-right: 2.4rem;
+  }
+}
+/* #UTILITIES
+   ========================================================================== */
+/* stylelint-disable */
+/* ==========================================================================
+   #PRINT
+   ========================================================================== */
+/**
+ * Default print styles from HTML5 Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate
+ */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    /* Black prints faster: http://www.sanbeiji.com/archives/953 */
+    color: #000 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]::after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]::after {
+    content: " (" attr(title) ")";
+  }
+  /**
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  a[href^="#"]::after,
+  a[href^="javascript:"]::after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /**
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
+/* stylelint-disable block-opening-brace-space-before */
+/* ==========================================================================
+   #COLORS
+   ========================================================================== */
+/* #BACKGROUND
+   ========================================================================== */
+/* Brand */
+.u-bg-color-primary-dark {
+  background-color: #011c38 !important;
+}
+
+.u-bg-color-primary {
+  background-color: #022851 !important;
+}
+
+.u-bg-color-primary-light {
+  background-color: #03346a !important;
+}
+
+.u-bg-color-primary-90 {
+  background-color: #14447A !important;
+}
+
+.u-bg-color-primary-80 {
+  background-color: #13639E !important;
+}
+
+.u-bg-color-primary-70 {
+  background-color: #73ABDD !important;
+}
+
+.u-bg-color-primary-60 {
+  background-color: #B0D0ED !important;
+}
+
+.u-bg-color-primary-50 {
+  background-color: #CCE0F3 !important;
+}
+
+.u-bg-color-primary-40 {
+  background-color: #DBEAF7 !important;
+}
+
+.u-bg-color-primary-30 {
+  background-color: #EBF3FA !important;
+}
+
+.u-bg-color-primary-20 {
+  background-color: #F7FAFD !important;
+}
+
+.u-bg-color-primary-2-dark {
+  background-color: #e6ac00 !important;
+}
+
+.u-bg-color-primary-2 {
+  background-color: #FFBF00 !important;
+}
+
+.u-bg-color-primary-2-light {
+  background-color: #ffc51a !important;
+}
+
+.u-bg-color-primary-2-90 {
+  background-color: #FFC519 !important;
+}
+
+.u-bg-color-primary-2-80 {
+  background-color: #FFD24C !important;
+}
+
+.u-bg-color-primary-2-70 {
+  background-color: #FFDF80 !important;
+}
+
+.u-bg-color-primary-2-60 {
+  background-color: #FFECB2 !important;
+}
+
+.u-bg-color-primary-2-50 {
+  background-color: #FDE9AC !important;
+}
+
+.u-bg-color-primary-2-40 {
+  background-color: #FFF4D2 !important;
+}
+
+.u-bg-color-primary-2-30 {
+  background-color: #FFF9E6 !important;
+}
+
+.u-bg-color-primary-2-20 {
+  background-color: #FFFBED !important;
+}
+
+/* Neutral */
+.u-bg-color-black {
+  background-color: #000 !important;
+}
+
+.u-bg-color-gray-90 {
+  background-color: #191919 !important;
+}
+
+.u-bg-color-gray-80 {
+  background-color: #333333 !important;
+}
+
+.u-bg-color-gray-70 {
+  background-color: #4C4C4C !important;
+}
+
+.u-bg-color-gray-60 {
+  background-color: #666666 !important;
+}
+
+.u-bg-color-gray-50 {
+  background-color: #7F7F7F !important;
+}
+
+.u-bg-color-gray-40 {
+  background-color: #999999 !important;
+}
+
+.u-bg-color-gray-30 {
+  background-color: #B2B2B2 !important;
+}
+
+.u-bg-color-gray-20 {
+  background-color: #CCCCCC !important;
+}
+
+.u-bg-color-gray-10 {
+  background-color: #E5E5E5 !important;
+}
+
+.u-bg-color-white {
+  background-color: #FFF !important;
+}
+
+/* Secondary */
+.u-bg-color-rec-pool {
+  background-color: #6FCFEB !important;
+}
+
+.u-bg-color-tahoe {
+  background-color: #00B2E3 !important;
+}
+
+.u-bg-color-gunrock {
+  background-color: #0047BA !important;
+}
+
+.u-bg-color-bodega {
+  background-color: #003A5D !important;
+}
+
+.u-bg-color-rain {
+  background-color: #03F9E6 !important;
+}
+
+.u-bg-color-arboretum {
+  background-color: #00C4B3 !important;
+}
+
+.u-bg-color-putah-creek {
+  background-color: #008EAA !important;
+}
+
+.u-bg-color-delta {
+  background-color: #00524C !important;
+}
+
+.u-bg-color-farmers-market {
+  background-color: #AADA91 !important;
+}
+
+.u-bg-color-sage {
+  background-color: #6CCA98 !important;
+}
+
+.u-bg-color-quad {
+  background-color: #3DAE2B !important;
+}
+
+.u-bg-color-redwood {
+  background-color: #266041 !important;
+}
+
+.u-bg-color-golden-state {
+  background-color: #FFFF3B !important;
+}
+
+.u-bg-color-sunflower {
+  background-color: #FFDC00 !important;
+}
+
+.u-bg-color-poppy {
+  background-color: #F18A00 !important;
+}
+
+.u-bg-color-california {
+  background-color: #8A532F !important;
+}
+
+.u-bg-color-rose {
+  background-color: #FF8189 !important;
+}
+
+.u-bg-color-strawberry {
+  background-color: #F93549 !important;
+}
+
+.u-bg-color-double-decker {
+  background-color: #C10230 !important;
+}
+
+.u-bg-color-merlot {
+  background-color: #79242F !important;
+}
+
+.u-bg-color-thiebaud-icing {
+  background-color: #F095CD !important;
+}
+
+.u-bg-color-redbud {
+  background-color: #C6007E !important;
+}
+
+.u-bg-color-pinot {
+  background-color: #76236C !important;
+}
+
+.u-bg-color-cabernet {
+  background-color: #481268 !important;
+}
+
+/* Social */
+.u-bg-color-facebook {
+  background-color: #3B5998 !important;
+}
+
+.u-bg-color-linkedin {
+  background-color: #0077B5 !important;
+}
+
+.u-bg-color-twitter {
+  background-color: #1DA1F2 !important;
+}
+
+.u-bg-color-youtube {
+  background-color: #F00 !important;
+}
+
+/* Utility */
+.u-bg-color-error {
+  background-color: #FF4136 !important;
+}
+
+.u-bg-color-warning {
+  background-color: #FF851B !important;
+}
+
+.u-bg-color-highlight {
+  background-color: #FFDC00 !important;
+}
+
+.u-bg-color-success {
+  background-color: #2ECC40 !important;
+}
+
+.u-bg-color-information {
+  background-color: #0074D9 !important;
+}
+
+/* #FOREGROUND
+   ========================================================================== */
+/* Brand */
+.u-color-primary-dark {
+  color: #011c38 !important;
+}
+
+.u-color-primary {
+  color: #022851 !important;
+}
+
+.u-color-primary-light {
+  color: #03346a !important;
+}
+
+.u-color-primary-2-dark {
+  color: #e6ac00 !important;
+}
+
+.u-color-primary-2 {
+  color: #FFBF00 !important;
+}
+
+.u-color-primary-2-light {
+  color: #ffc51a !important;
+}
+
+/* Neutral */
+.u-color-black {
+  color: #000 !important;
+}
+
+.u-color-gray-90 {
+  color: #191919 !important;
+}
+
+.u-color-gray-80 {
+  color: #333333 !important;
+}
+
+.u-color-gray-50 {
+  color: #7F7F7F !important;
+}
+
+.u-color-gray-20 {
+  color: #CCCCCC !important;
+}
+
+.u-color-gray-10 {
+  color: #E5E5E5 !important;
+}
+
+.u-color-gray-05 {
+  color: #E5E5E5 !important;
+}
+
+.u-color-white {
+  color: #FFF !important;
+}
+
+/* Secondary */
+.u-color-rec-pool {
+  color: #6FCFEB !important;
+}
+
+.u-color-tahoe {
+  color: #00B2E3 !important;
+}
+
+.u-color-gunrock {
+  color: #0047BA !important;
+}
+
+.u-color-bodega {
+  color: #003A5D !important;
+}
+
+.u-color-rain {
+  color: #03F9E6 !important;
+}
+
+.u-color-arboretum {
+  color: #00C4B3 !important;
+}
+
+.u-color-putah-creek {
+  color: #008EAA !important;
+}
+
+.u-color-delta {
+  color: #00524C !important;
+}
+
+.u-color-farmers-market {
+  color: #AADA91 !important;
+}
+
+.u-color-sage {
+  color: #6CCA98 !important;
+}
+
+.u-color-quad {
+  color: #3DAE2B !important;
+}
+
+.u-color-redwood {
+  color: #266041 !important;
+}
+
+.u-color-golden-state {
+  color: #FFFF3B !important;
+}
+
+.u-color-sunflower {
+  color: #FFDC00 !important;
+}
+
+.u-color-poppy {
+  color: #F18A00 !important;
+}
+
+.u-color-california {
+  color: #8A532F !important;
+}
+
+.u-color-rose {
+  color: #FF8189 !important;
+}
+
+.u-color-strawberry {
+  color: #F93549 !important;
+}
+
+.u-color-double-decker {
+  color: #C10230 !important;
+}
+
+.u-color-merlot {
+  color: #79242F !important;
+}
+
+.u-color-thiebaud-icing {
+  color: #F095CD !important;
+}
+
+.u-color-redbud {
+  color: #C6007E !important;
+}
+
+.u-color-pinot {
+  color: #76236C !important;
+}
+
+.u-color-cabernet {
+  color: #481268 !important;
+}
+
+/* Social */
+.u-color-facebook {
+  color: #3B5998 !important;
+}
+
+.u-color-linkedin {
+  color: #0077B5 !important;
+}
+
+.u-color-twitter {
+  color: #1DA1F2 !important;
+}
+
+.u-color-youtube {
+  color: #F00 !important;
+}
+
+/* Utility */
+.u-color-error {
+  color: #FF4136 !important;
+}
+
+.u-color-warning {
+  color: #FF851B !important;
+}
+
+.u-color-highlight {
+  color: #FFDC00 !important;
+}
+
+.u-color-success {
+  color: #2ECC40 !important;
+}
+
+.u-color-information {
+  color: #0074D9 !important;
+}
+
+/* ==========================================================================
+   #CLEARFIX
+   ========================================================================== */
+/* Attach the clearfix mixin to a utility class. */
+.u-clearfix::before, .u-clearfix::after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+.u-clearfix::after {
+  clear: both;
+}
+
+/* -------------------------------------------------------------------------- *\
+   #FLOATS
+\* -------------------------------------------------------------------------- */
+.u-float-left {
+  float: left !important;
+  margin-right: 1em;
+}
+
+.u-float-right {
+  float: right !important;
+  margin-left: 1em;
+}
+
+/* ==========================================================================
+   #HEADINGS
+   ========================================================================== */
+/**
+ * Define classes for all headings so that the appearance can change, but the
+ * semantic meaning will remain as is. e.g.
+ *
+ * <h2 class="u-h1"></h2>
+ *
+ */
+.u-h1 {
+  font-size: 2.94rem;
+  line-height: 1.0884353741 !important;
+}
+
+.u-h2 {
+  font-size: 2.47rem;
+  line-height: 1.2955465587 !important;
+}
+
+.u-h3 {
+  font-size: 2.05rem;
+  line-height: 1.5609756098 !important;
+}
+
+.u-h4 {
+  font-size: 1.68rem;
+  line-height: 1.9047619048 !important;
+}
+
+.u-h5 {
+  font-size: 1.42rem;
+  line-height: 1.1267605634 !important;
+}
+
+.u-h6 {
+  font-size: 1.15rem;
+  line-height: 1.3913043478 !important;
+}
+
+/* stylelint-disable block-opening-brace-space-before */
+/* ==========================================================================
+   #SPACING
+   ========================================================================== */
+/* Margins */
+.u-margin-large {
+  margin: 2.4rem !important;
+}
+
+.u-margin {
+  margin: 1.6rem !important;
+}
+
+.u-margin-small {
+  margin: 0.8rem !important;
+}
+
+.u-margin-bottom-large {
+  margin-bottom: 2.4rem !important;
+}
+
+.u-margin-bottom {
+  margin-bottom: 1.6rem !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 0.8rem !important;
+}
+
+.u-margin-left-large {
+  margin-left: 2.4rem !important;
+}
+
+.u-margin-left {
+  margin-left: 1.6rem !important;
+}
+
+.u-margin-left-small {
+  margin-left: 0.8rem !important;
+}
+
+.u-margin-right-large {
+  margin-right: 2.4rem !important;
+}
+
+.u-margin-right {
+  margin-right: 1.6rem !important;
+}
+
+.u-margin-right-small {
+  margin-right: 0.8rem !important;
+}
+
+.u-margin-top-large {
+  margin-top: 2.4rem !important;
+}
+
+.u-margin-top {
+  margin-top: 1.6rem !important;
+}
+
+.u-margin-top-small {
+  margin-top: 0.8rem !important;
+}
+
+/* Padding */
+.u-padding-large {
+  padding: 2.4rem !important;
+}
+
+.u-padding {
+  padding: 1.6rem !important;
+}
+
+.u-padding-small {
+  padding: 0.8rem !important;
+}
+
+.u-padding-bottom-large {
+  padding-bottom: 2.4rem !important;
+}
+
+.u-padding-bottom {
+  padding-bottom: 1.6rem !important;
+}
+
+.u-padding-bottom-small {
+  padding-bottom: 0.8rem !important;
+}
+
+.u-padding-left-large {
+  padding-left: 2.4rem !important;
+}
+
+.u-padding-left {
+  padding-left: 1.6rem !important;
+}
+
+.u-padding-left-small {
+  padding-left: 0.8rem !important;
+}
+
+.u-padding-right-large {
+  padding-right: 2.4rem !important;
+}
+
+.u-padding-right {
+  padding-right: 1.6rem !important;
+}
+
+.u-padding-right-small {
+  padding-right: 0.8rem !important;
+}
+
+.u-padding-top-large {
+  padding-top: 2.4rem !important;
+}
+
+.u-padding-top {
+  padding-top: 1.6rem !important;
+}
+
+.u-padding-top-small {
+  padding-top: 0.8rem !important;
+}
+
+/* ==========================================================================
+   #TEXT
+   ========================================================================== */
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-capitalize {
+  text-transform: capitalize;
+}
+
+.u-text-weight-normal {
+  font-weight: 400;
+}
+
+.u-text-weight-bold {
+  font-weight: 700;
+}
+
+.u-text-weight-semibold {
+  font-weight: 500;
+}
+
+.u-text-weight-extrabold {
+  font-weight: 900;
+}
+
+.u-text-is-disabled {
+  color: #7F7F7F;
+  box-shadow: none;
+  transition: all 0.2s linear;
+}
+.u-text-is-disabled:focus, .u-text-is-disabled:hover {
+  box-shadow: none;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.u-text-is-grayed-out {
+  color: #7F7F7F;
+}
+
+.u-text-required {
+  color: #FF4136;
+  font-weight: 700;
+}
+
+.u-text-optional {
+  color: #7F7F7F;
+  font-weight: 700;
+}
+
+.u-text-disable-selection {
+  user-select: none;
+}
+
+.u-text-success {
+  color: #2ECC40;
+}
+
+.u-text-success--dark {
+  color: #208e2c;
+}
+
+.u-text-error {
+  color: #FF4136;
+}
+
+.u-text-error--dark {
+  color: #cf0b00;
+}
+
+/* ==========================================================================
+   #VISIBILITY
+   ========================================================================== */
+/**
+ * Visibility helper classes from HTML5 Boilerplate:
+ * https://github.com/h5bp/html5-boilerplate
+ */
+/**
+ * Hide visually and from screen readers
+ */
+.u-hidden {
+  display: none !important;
+}
+
+.u-fade-in {
+  visibility: visible;
+  height: auto;
+  opacity: 1;
+}
+
+.u-fade-out {
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
+}
+
+@media screen and (max-width: 36em) {
+  .u-fade-in--bp-small {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+  }
+  .u-fade-out--bp-small {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 48em) {
+  .u-fade-in--bp-medium {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+  }
+  .u-fade-out--bp-medium {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+  }
+}
+@media screen and (max-width: 62em) {
+  .u-fade-in--bp-large {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+  }
+  .u-fade-out--bp-large {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+  }
+}
+@media all and (max-width: 75em) {
+  .u-fade-in--bp-xl {
+    visibility: visible;
+    height: auto;
+    opacity: 1;
+  }
+  .u-fade-out--bp-xl {
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+  }
+}
+/**
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+.u-visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap; /* 1 */
+  width: 1px;
+  /*
+   * Extends the .visuallyhidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+}
+.u-visuallyhidden.focusable .u-visuallyhidden:active, .u-visuallyhidden.focusable .u-visuallyhidden:focus {
+  clip: auto;
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto;
+}
+
+/**
+ * Hide visually and from screen readers, but maintain layout
+ */
+.u-invisible {
+  visibility: hidden;
+}
+
+/* Filters */
+.u-filter-blur:before {
+  animation: blur-in 0.5s forwards;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+}
+
+/* Let's define an animation: */
+@keyframes blur-in {
+  from {
+    backdrop-filter: blur(0px);
+  }
+  to {
+    backdrop-filter: blur(3px);
+  }
+}
+.u-filter-exception {
+  position: relative;
+  z-index: 9999 !important;
+}
+
+/* stylelint-disable */
+/* ==========================================================================
+   #WIDTHS
+   ========================================================================== */
+/* 1/1 */
+.u-1\/1 {
+  width: 100%;
+}
+
+/* 2/3 */
+.u-2\/3 {
+  width: 66.66%;
+}
+
+/* 1/2 */
+.u-1\/2 {
+  width: 50%;
+}
+
+/* 1/3 */
+.u-1\/3 {
+  width: 33.33%;
+}
+
+/* 1/4 */
+.u-1\/4 {
+  width: 25%;
+}
+
+/* 1/5 */
+.u-1\/5 {
+  width: 20%;
+}
+
+@media all and (min-width: 36em) {
+  .u-3\/4\@sm {
+    width: 75%;
+  }
+  .u-2\/3\@sm {
+    width: 66.66%;
+  }
+  .u-1\/2\@sm {
+    width: 50%;
+  }
+  .u-1\/3\@sm {
+    width: 33.33%;
+  }
+  .u-1\/4\@sm {
+    width: 25%;
+  }
+  .u-1\/5\@sm {
+    width: 20%;
+  }
+}
+@media all and (min-width: 48em) {
+  .u-3\/4\@md {
+    width: 75%;
+  }
+  .u-2\/3\@md {
+    width: 66.66%;
+  }
+  .u-1\/2\@md {
+    width: 50%;
+  }
+  .u-1\/3\@md {
+    width: 33.33%;
+  }
+  .u-1\/4\@md {
+    width: 25%;
+  }
+  .u-1\/5\@md {
+    width: 20%;
+  }
+}
+@media all and (min-width: 62em) {
+  .u-3\/4\@lg {
+    width: 75%;
+  }
+  .u-2\/3\@lg {
+    width: 66.66%;
+  }
+  .u-1\/2\@lg {
+    width: 50%;
+  }
+  .u-1\/3\@lg {
+    width: 33.33%;
+  }
+  .u-1\/4\@lg {
+    width: 25%;
+  }
+  .u-1\/5\@lg {
+    width: 20%;
+  }
+}
+@media all and (min-width: 75em) {
+  .u-3\/4\@xl {
+    width: 75%;
+  }
+  .u-2\/3\@xl {
+    width: 66.66%;
+  }
+  .u-1\/2\@xl {
+    width: 50%;
+  }
+  .u-1\/3\@xl {
+    width: 33.33%;
+  }
+  .u-1\/4\@xl {
+    width: 25%;
+  }
+  .u-1\/5\@xl {
+    width: 20%;
+  }
+}
+/* #OVERRIDES
+   ========================================================================== */
+/* ==========================================================================
+   #JQUERY AND JQUERY UI // TODO Deprecate
+   ========================================================================== */
+.ui-selectmenu {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath stroke='%23022851' d='M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7rem top 50%, 0 0;
+  background-size: 1rem auto, 100%;
+  height: unset !important;
+}
+.ui-selectmenu .ui-selectmenu-status {
+  border: 0.0625em solid #CCCCCC;
+  border-radius: 0.125em;
+  box-shadow: 0 0 0.25em rgba(34, 34, 34, 0.125) inset;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  height: calc(19px * 1.6 + (0.0625em * 2) + (0.4rem * 2));
+  line-height: 1.6;
+  padding: 0.4rem 0.8rem;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  width: 100%;
+  color: #000;
+}
+.ui-selectmenu .ui-selectmenu-status:focus, .ui-selectmenu .ui-selectmenu-status:hover {
+  border-color: #73ABDD;
+  box-shadow: 0 0 0.25em #89c0fc;
+  outline: 0;
+}
+
+.ui-selectmenu-menu {
+  border: 0.0625em solid #CCCCCC;
+  border-radius: 0.125em;
+  box-shadow: 0 0 0.25em rgba(34, 34, 34, 0.125) inset;
+}
+.ui-selectmenu-menu.ui-selectmenu-open li a {
+  color: #000;
+  padding: 0.25rem 1rem 0;
+}
+.ui-selectmenu-menu.ui-selectmenu-open li a:hover {
+  background-color: #1967d2;
+  border-color: #1967d2;
+  color: #FFF;
+}
+
+.ui-multiselect {
+  text-align: left;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 15ch;
+  min-height: 2.5rem;
+  cursor: pointer;
+  border: 0.01rem solid #B0D0ED;
+  background-color: #f2f2f2;
+  font-weight: 700;
+  transition: all 0.2s linear;
+  /* Icon */
+  /**
+   * Disabled
+   */
+}
+.ui-multiselect:focus, .ui-multiselect:hover {
+  border-color: #FFBF00;
+  box-shadow: 0 0 1em rgba(34, 34, 34, 0.125);
+  color: #022851;
+  padding-right: 0.5rem;
+  padding-left: 1rem;
+}
+.ui-multiselect:active {
+  transform: translateY(0);
+}
+.ui-multiselect .c-btn__icon {
+  margin-right: 0.4rem;
+}
+.ui-multiselect[disabled] {
+  background-color: #E5E5E5;
+  border-color: #E5E5E5;
+  color: #7F7F7F;
+  cursor: not-allowed;
+}
+.ui-multiselect[disabled]:before {
+  content: none;
+}
+.ui-multiselect[disabled]:focus, .ui-multiselect[disabled]:hover {
+  background-color: #E5E5E5;
+  box-shadow: none;
+  padding-right: unset;
+  padding-left: unset;
+  transform: translateY(0);
+}
+
+.ui-multiselect span.ui-icon {
+  float: right;
+}
+
+.ui-multiselect-single .ui-multiselect-checkboxes input {
+  position: absolute !important;
+  top: auto !important;
+  left: -9999px;
+}
+
+.ui-multiselect-header {
+  display: inline-flex;
+  width: 100%;
+}
+
+.ui-multiselect-header ul li {
+  float: left;
+  list-style: none;
+  margin-right: auto;
+}
+
+.ui-multiselect-header a {
+  text-decoration: none;
+}
+
+.ui-multiselect-header a:hover {
+  text-decoration: underline;
+}
+
+.ui-multiselect-header span.ui-icon {
+  float: left;
+}
+
+.ui-multiselect-header li.ui-multiselect-close {
+  float: right;
+  text-align: right;
+  padding-right: 0;
+}
+
+.ui-multiselect-menu {
+  display: none;
+  position: absolute;
+  z-index: 10000;
+  text-align: left;
+  background-color: #E5E5E5;
+  border: 0.125em solid #CCCCCC;
+}
+
+.ui-multiselect-menu .ui-widget-header,
+.ui-multiselect-menu .ui-multiselect-checkboxes {
+  padding: 0.5rem;
+}
+
+.ui-multiselect-menu .ui-widget-header {
+  border-bottom: 0.0625em solid #999999;
+  border-radius: 0.125em;
+  background-color: #13639E;
+}
+.ui-multiselect-menu .ui-widget-header a {
+  color: #FFF;
+}
+
+.ui-multiselect-checkboxes {
+  overflow-y: auto;
+  margin: 0;
+}
+
+.ui-multiselect-checkboxes label {
+  cursor: default;
+  display: block;
+  border: 0.1rem solid transparent;
+}
+
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label,
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-content label {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.ui-multiselect-checkboxes label input,
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-label input,
+.ui-multiselect-checkboxes.ui-multiselect-optgroup-selectable.ui-multiselect-optgroup-collapsible li.ui-multiselect-optgroup-content label input {
+  margin-left: 0.5rem;
+  accent-color: #13639E;
+  border-radius: 50%;
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: 0.2s all linear;
+  position: relative;
+  top: 0.2rem;
+}
+
+/* remove label borders in IE6 because IE6 does not support transparency */
+* html .ui-multiselect-checkboxes label {
+  border: none;
+}
+
+.ui-multiselect-checkboxes li.ui-multiselect-optgroup-content label {
+  padding-left: 0.25rem;
+}
+
+.ui-multiselect-checkboxes.ui-multiselect-optgroup-selectable.ui-multiselect-optgroup-collapsible li.ui-multiselect-optgroup-content label {
+  padding-left: 2rem;
+}
+
+.ui-multiselect-checkboxes a.ui-multiselect-optgroup-collapse {
+  text-decoration: none;
+  background-repeat: no-repeat;
+  background-image: url(/resources-core/img/icon/minus-solid.svg);
+  background-position: 0 center;
+  display: none;
+  padding-left: 1rem;
+  margin-right: 0.1rem;
+}
+
+.ui-multiselect-checkboxes.ui-multiselect-optgroup-collapsible a.ui-multiselect-optgroup-collapse {
+  display: inline;
+}
+
+.ui-multiselect-checkboxes .ui-multiselect-optgroup-collapsed a.ui-multiselect-optgroup-collapse {
+  background-image: url(/resources-core/img/icon/plus-solid.svg);
+}
+
+.ui-multiselect-filter {
+  width: 100%;
+}
+
+.ui-multiselect-filter input {
+  border: 0.0625em solid #CCCCCC;
+  border-radius: 0.125em;
+  box-shadow: 0 0 0.25em rgba(34, 34, 34, 0.125) inset;
+  display: block;
+  font-family: inherit;
+  font-size: 19px;
+  height: calc(19px * 1.6 + (0.0625em * 2) + (0.4rem * 2));
+  line-height: 1.6;
+  padding: 0.4rem 0.8rem;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  width: 100%;
+}
+.ui-multiselect-filter input:focus, .ui-multiselect-filter input:hover {
+  background-color: #F7FAFD;
+  border-color: #73ABDD;
+  box-shadow: 0 0 0.25em #89c0fc;
+  outline: 0;
+}
+.ui-multiselect-filter input[disabled] {
+  background-color: #E5E5E5;
+  box-shadow: none;
+}
+.ui-multiselect-filter input[disabled]:focus, .ui-multiselect-filter input[disabled]:hover {
+  border-color: #CCCCCC;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.ui-multiselect-filtered-out {
+  display: none !important;
+}
+
+ul.ui-helper-reset {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+ul.ui-helper-reset li:not(:last-child) {
+  margin-right: 1rem;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,2177 @@
+<html xmlns="http://www.w3.org/1999/xhtml" html="" lang="en">
+
+<head>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link type="text/css" href="css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script type="module" src="/js/main.js"></script>
+
+
+    <title>Fiat Lux UI - Sandbox</title>
+
+    <style>
+        .c-palette {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .c-palette__group {
+            flex: 1 1 100%;
+            flex-direction: row;
+        }
+
+        .c-palette__color {
+            padding: 0.5em;
+        }
+
+        .c-palette__code {
+            background-color: #fff;
+            border-radius: 0.125em;
+            box-shadow: 0 0.125em 0.125em rgba(34, 34, 34, 0.125);
+            display: inline-block;
+            font-size: 0.875rem;
+            padding: 0.125em 0.5em;
+        }
+
+        @media all and (min-width: 48em) {
+            .c-palette__group {
+                flex-basis: 0;
+                flex-direction: column;
+            }
+        }
+    </style>
+    <title>
+
+    </title>
+</head>
+
+<body>
+    <nav role="navigation" class="c-navigation">
+        <div class="c-navigation__menu c-navigation__menu--branding">
+            <a class="c-navigation__logo" href="#" target="_blank"
+                aria-label="UC Davis Home Page"></a>
+            <i id="mobileNavigationMenu"
+                class="c-navigation__mobile fa-solid fa-bars u-fade-in--bp-medium _js-c-navigation-mobile--toggle-display"></i>
+            <a id="ctl00_navigation_HomeLink" class="c-navigation__home" aria-label="OASIS Home Page" href="/home.aspx">
+                OASIS
+            </a>
+        </div>
+
+        <div class="c-navigation__menu c-navigation__menu--options u-fade-out--bp-xl">
+            <!-- NAV ITEMS -->
+
+            <div class="c-navigation__item">
+                <div class="c-navigation__primary">
+                    <a href="#">Student</a>
+                    <i class="fa-solid fa-plus c-navigation__mobile-action _js-c-navigation-mobile-dropdown"></i>
+                </div>
+
+                <div class="c-navigation__dropdown c-dropdown c-dropdown-menu u-fade-out--bp-xl">
+                    <a class="c-dropdown-menu__item" href="#">Academic Record</a>
+                    <a class="c-dropdown-menu__item" href="#">Degree Worksheets</a>
+                    <a class="c-dropdown-menu__item" href="#">Forms &amp; Petitions</a>
+                    <a class="c-dropdown-menu__item" href="#">GPA Charts &amp; Tools</a>
+                </div>
+            </div>
+
+            <div class="c-navigation__item">
+                <div class="c-navigation__primary">
+                    <a href="#">Grades</a>
+                    <i class="fa-solid fa-plus c-navigation__mobile-action _js-c-navigation-mobile-dropdown"></i>
+                </div>
+
+                <div class="c-navigation__dropdown c-dropdown c-dropdown-menu u-fade-out--bp-xl">
+
+                    <a class="c-dropdown-menu__item" href="#">Submit Grade Changes</a>
+                    <a class="c-dropdown-menu__item" href="#">Reports</a>
+                </div>
+            </div>
+
+            <div class="c-navigation__item">
+                <div class="c-navigation__primary">
+                    <a href="#">Reports</a>
+                </div>
+            </div>
+
+            <div class="c-navigation__item">
+                <div class="c-navigation__primary">
+                    <a href="#">Management</a>
+                    <i class="fa-solid fa-plus c-navigation__mobile-action _js-c-navigation-mobile-dropdown"></i>
+                </div>
+
+                <div class="c-navigation__dropdown c-dropdown c-dropdown-menu u-fade-out--bp-xl">
+                    <a class="c-dropdown-menu__item" href="#">OASIS Roles</a>
+                    <a class="c-dropdown-menu__item" href="#">Settings</a>
+                    <a class="c-dropdown-menu__item" href="#">Worksheet Template
+                        Management</a>
+                    <a class="c-dropdown-menu__item" href="#">Bulk Form Requests</a>
+                </div>
+
+
+            </div>
+
+            <div class="c-navigation__item">
+                <div class="c-navigation__primary">
+                    <a href="#">Help</a>
+                    <i class="fa-solid fa-plus c-navigation__mobile-action _js-c-navigation-mobile-dropdown"></i>
+                </div>
+
+                <div class="c-navigation__dropdown c-dropdown c-dropdown-menu u-fade-out--bp-xl">
+
+                    <a class="c-dropdown-menu__item" href="#">Contact Us</a>
+                    <a class="c-dropdown-menu__item" href="#">Appointment Tracking</a>
+                    <a class="c-dropdown-menu__item" href="#">Degree Worksheets</a>
+                    <a class="c-dropdown-menu__item" href="#">Forms &amp; Petitions</a>
+                    <a class="c-dropdown-menu__item" href="#">OASIS Settings</a>
+                    <a class="c-dropdown-menu__item" href="#">Roles, Permissions, &amp; Security</a>
+                    <a class="c-dropdown-menu__item" href="#">Student File</a>
+                    <a class="c-dropdown-menu__item" href="#">Degree Certification</a>
+                </div>
+            </div>
+
+            <!-- END NAV ITEMS -->
+
+            <!-- SEARCH -->
+            <div id="ctl00_navigation_Search"
+                class="c-navigation__item c-navigation__item-icon-option c-navigation__item--search">
+
+                <div class="c-navigation__primary">
+                    <i aria-hidden="true" class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+            </div>
+            <!-- USER -->
+            <div class="c-navigation__item c-navigation__item-icon-option c-navigation__item--user">
+                <div class="c-navigation__primary">
+                    <i aria-hidden="true" class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-plus c-navigation__mobile-action _js-c-navigation-mobile-dropdown"></i>
+                </div>
+                <div
+                    class="c-navigation__dropdown c-navigation__dropdown--reverse c-dropdown c-dropdown-menu u-fade-out--bp-xl">
+                    <div>
+                        <img id="ctl00_navigation_Avatar" class="c-avatar"
+                            src="img/icon/palm-tree.svg" alt="User Avatar" style="border-width:0px;">
+                        <span id="ctl00_navigation_UserName" class="c-navigation__username">Gray, Ashe</span>
+                    </div>
+                    <a id="ctl00_navigation_User_Settings" class="c-dropdown-menu__item">Settings</a>
+                    <a id="ctl00_navigation_User_SignOut" class="c-dropdown-menu__item"
+                        href="https://cas.ucdavis.edu/cas/logout?service=http%3a%2f%2fstudents.dev.ucdavis.edu%2flogout.aspx">Sign
+                        Out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div id="content" class="o-wrapper o-wrapper--medium">
+        <div role="region" aria-label="Content">
+            <div id="sandbox-navigation" class="o-wrapper o-wrapper--medium">
+                <h1 aria-label="Design Sandbox">Design Sandbox</h1>
+                <ol>
+                    <li><a href="#colors">Colors</a></li>
+                    <li><a href="#headings">Typography: Headings</a></li>
+                    <li><a href="#text">Typography: Text</a></li>
+                    <li><a href="#containers">Containers</a></li>
+                    <li><a href="#tables">Tables</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#buttons">Forms: Buttons</a></li>
+                    <li><a href="#grid">Grid</a></li>
+                    <li><a href="#media">Media</a></li>
+                    <li><a href="#panels">Panels</a></li>
+                    <li><a href="#steps">Workflow Steps</a></li>
+                    <li><a href="#alerts">Alerts</a></li>
+                    <li><a href="#inline-navigation">Inline Navigation</a></li>
+                    <li><a href="#progress">Progress</a></li>
+                    <li><a href="#messages">Messages</a></li>
+                    <li><a href="#student-bar">Student Bar</a></li>
+                </ol>
+            </div>
+
+
+            <div id="colors" class="o-wrapper o-wrapper--medium">
+                <h2>Colors</h2>
+                <div class="c-palette">
+
+                    <div class="c-palette__group">
+                        <div class="c-palette__color u-bg-color-primary-dark">
+                            <code class="c-palette__code">$color-primary-dark</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary">
+                            <code class="c-palette__code">$color-primary</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-light">
+                            <code class="c-palette__code">$color-primary-light</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-90">
+                            <code class="c-palette__code">$color-primary-90</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-80">
+                            <code class="c-palette__code">$color-primary-80</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-70">
+                            <code class="c-palette__code">$color-primary-70</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-60">
+                            <code class="c-palette__code">$color-primary-60</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-50">
+                            <code class="c-palette__code">$color-primary-50</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-40">
+                            <code class="c-palette__code">$color-primary-40</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-30">
+                            <code class="c-palette__code">$color-primary-30</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-20">
+                            <code class="c-palette__code">$color-primary-20</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-10">
+                            <code class="c-palette__code">$color-primary-10</code>
+                        </div>
+                    </div>
+
+                    <div class="c-palette__group">
+                        <div class="c-palette__color u-bg-color-primary-2-dark">
+                            <code class="c-palette__code">$color-primary-2-dark</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2">
+                            <code class="c-palette__code">$color-primary-2</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-light">
+                            <code class="c-palette__code">$color-primary-2-light</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-90">
+                            <code class="c-palette__code">$color-primary-2-90</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-80">
+                            <code class="c-palette__code">$color-primary-2-80</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-70">
+                            <code class="c-palette__code">$color-primary-2-70</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-60">
+                            <code class="c-palette__code">$color-primary-2-60</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-50">
+                            <code class="c-palette__code">$color-primary-2-50</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-40">
+                            <code class="c-palette__code">$color-primary-2-40</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-30">
+                            <code class="c-palette__code">$color-primary-2-30</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-20">
+                            <code class="c-palette__code">$color-primary-2-20</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-primary-2-10">
+                            <code class="c-palette__code">$color-primary-2-10</code>
+                        </div>
+                    </div>
+
+                    <div class="c-palette__group">
+                        <div class="c-palette__color u-bg-color-rec-pool">
+                            <code class="c-palette__code">$color-rec-pool</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-tahoe">
+                            <code class="c-palette__code">$color-tahoe</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gunrock">
+                            <code class="c-palette__code">$color-gunrock</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-bodega">
+                            <code class="c-palette__code">$color-bodega</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-rain">
+                            <code class="c-palette__code">$color-rain</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-arboretum">
+                            <code class="c-palette__code">$color-arboretum</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-putah-creek">
+                            <code class="c-palette__code">$color-putah-creek</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-delta">
+                            <code class="c-palette__code">$color-delta</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-farmers-market">
+                            <code class="c-palette__code">$color-farmers-market</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-sage">
+                            <code class="c-palette__code">$color-sage</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-quad">
+                            <code class="c-palette__code">$color-quad</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-redwood">
+                            <code class="c-palette__code">$color-redwood</code>
+                        </div>
+                    </div>
+                    <div class="c-palette__group">
+                        <div class="c-palette__color u-bg-color-golden-state">
+                            <code class="c-palette__code">$color-golden-state</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-sunflower">
+                            <code class="c-palette__code">$color-sunflower</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-poppy">
+                            <code class="c-palette__code">$color-poppy</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-california">
+                            <code class="c-palette__code">$color-california</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-rose">
+                            <code class="c-palette__code">$color-rose</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-strawberry">
+                            <code class="c-palette__code">$color-strawberry</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-double-decker">
+                            <code class="c-palette__code">$color-double-decker</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-merlot">
+                            <code class="c-palette__code">$color-merlot</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-thiebaud-icing">
+                            <code class="c-palette__code">$color-thiebaud-icing</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-redbud">
+                            <code class="c-palette__code">$color-redbud</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-pinot">
+                            <code class="c-palette__code">$color-pinot</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-cabernet">
+                            <code class="c-palette__code">$color-cabernet</code>
+                        </div>
+                    </div>
+
+                    <div class="c-palette__group">
+                        <div class="c-palette__color u-bg-color-black">
+                            <code class="c-palette__code">$color-black</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gray-90">
+                            <code class="c-palette__code">$color-gray-90</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gray-80">
+                            <code class="c-palette__code">$color-gray-80</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gray-70">
+                            <code class="c-palette__code">$color-gray-70</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gray-60">
+                            <code class="c-palette__code">$color-gray-60</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gray-50">
+                            <code class="c-palette__code">$color-gray-50</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gray-40">
+                            <code class="c-palette__code">$color-gray-40</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gray-30">
+                            <code class="c-palette__code">$color-gray-30</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gray-20">
+                            <code class="c-palette__code">$color-gray-20</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-gray-10">
+                            <code class="c-palette__code">$color-gray-10</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-white">
+                            <code class="c-palette__code">$color-white</code>
+                        </div>
+                    </div>
+
+                    <div class="c-palette__group">
+                        <div class="c-palette__color u-bg-color-error">
+                            <code class="c-palette__code">$color-error</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-warning">
+                            <code class="c-palette__code">$color-warning</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-highlight">
+                            <code class="c-palette__code">$color-highlight</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-information">
+                            <code class="c-palette__code">$color-information</code>
+                        </div>
+                        <div class="c-palette__color u-bg-color-success">
+                            <code class="c-palette__code">$color-success</code>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+
+
+            <div id="headings" class="o-wrapper o-wrapper--medium">
+                <h2>Typography: Headings</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+                <h1>Heading 1</h1>
+
+                <h2>Heading 2</h2>
+
+                <h3>Heading 3</h3>
+
+                <h4>Heading 4</h4>
+
+                <h5>Heading 5</h5>
+
+                <h6>Heading 6</h6>
+
+                <p>This concludes the list of Heading examples.</p>
+            </div>
+
+
+            <div id="text" class="o-wrapper o-wrapper--medium">
+                <h2>Typography: Text, Hardlines, Lists, Quotes</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+                <p>
+                    "The
+                    <mark>quick brown fox jumps</mark>
+                    over the lazy dog" is an English-language pangram—a sentence that contains all of the letters of the
+                    alphabet.
+                </p>
+
+                <hr>
+
+                <dl>
+                    <dt><dfn>Bee</dfn>, n.</dt>
+                    <dd>A buzzing insect, known for its role in pollination.</dd>
+                    <dt><dfn>Buzz</dfn>, v.</dt>
+                    <dd>To make a continuous, humming noise, like that made by bees.</dd>
+                </dl>
+
+                <ol>
+                    <li>First ordered list item</li>
+                    <li>
+                        Second ordered list item
+                        <ol>
+                            <li>First nested, ordered list item</li>
+                            <li>Second nested, ordered list item</li>
+                            <li>Third nested, ordered list item</li>
+                        </ol>
+                    </li>
+                    <li>Third ordered list item</li>
+                </ol>
+
+                <ul>
+                    <li>An unordered list item</li>
+                    <li>Another unordered list item</li>
+                    <li>Final unordered list item</li>
+                </ul>
+
+                <ul class="o-list">
+                    <li>An unstyled list item</li>
+                    <li>Another unstyled list item</li>
+                    <li>Final unstyled list item</li>
+                </ul>
+
+                <br>
+
+                <ul class="o-list o-list--inline">
+                    <li class="o-list__item">An inline list item</li>
+                    <li class="o-list__item">Another inline list item</li>
+                    <li class="o-list__item">Final inline list item</li>
+                </ul>
+
+                <br>
+
+                <figure>
+                    <img src="http://via.placeholder.com/350x150" alt="350x150 placeholder image">
+                    <figcaption>This is a placeholder image.</figcaption>
+                </figure>
+
+                <blockquote>
+                    <p>
+                        The HTML <code>&lt;blockquote&gt;</code> Element (or HTML Block Quotation Element) indicates
+                        that the
+                        enclosed text is an extended quotation. Usually, this is rendered visually by indentation (see
+                        Notes
+                        for how to change it). A URL for the source of the quotation may be given using the cite
+                        attribute,
+                        while a text representation of the source can be given using the <code>&lt;cite&gt;</code>
+                        element.
+                    </p>
+
+                    <cite>— <a href="#">MDN</a></cite>
+                </blockquote>
+            </div>
+
+
+            <div id="containers" class="o-wrapper o-wrapper--medium">
+                <h2>Containers</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+
+                <div class="c-container c-container--dark">
+                    <h1>Heading 1</h1>
+
+                    <h2>Heading 2</h2>
+
+                    <h3>Heading 3</h3>
+
+                    <h4>Heading 4</h4>
+
+                    <h5>Heading 5</h5>
+
+                    <h6>Heading 6</h6>
+
+                    <p>
+                        "The
+                        <mark>quick brown fox jumps</mark>
+                        over the lazy dog" is an English-language pangram—a sentence that contains all of the letters of
+                        the alphabet.
+                    </p>
+
+                    <hr>
+
+                    <dl>
+                        <dt><dfn>Bee</dfn>, n.</dt>
+                        <dd>A buzzing insect, known for its role in pollination.</dd>
+                        <dt><dfn>Buzz</dfn>, v.</dt>
+                        <dd>To make a continuous, humming noise, like that made by bees.</dd>
+                    </dl>
+
+                    <ol>
+                        <li>First ordered list item</li>
+                        <li>
+                            Second ordered list item
+                            <ol>
+                                <li>First nested, ordered list item</li>
+                                <li>Second nested, ordered list item</li>
+                                <li>Third nested, ordered list item</li>
+                            </ol>
+                        </li>
+                        <li>Third ordered list item</li>
+                    </ol>
+
+                    <ul>
+                        <li>An unordered list item</li>
+                        <li>Another unordered list item</li>
+                        <li>Final unordered list item</li>
+                    </ul>
+
+                    <ul class="o-list">
+                        <li>An unstyled list item</li>
+                        <li>Another unstyled list item</li>
+                        <li>Final unstyled list item</li>
+                    </ul>
+
+                    <br>
+
+                    <ul class="o-list o-list--inline">
+                        <li class="o-list__item">An inline list item</li>
+                        <li class="o-list__item">Another inline list item</li>
+                        <li class="o-list__item">Final inline list item</li>
+                    </ul>
+
+                    <br>
+
+                    <figure>
+                        <img src="http://via.placeholder.com/350x150" alt="350x150 placeholder image">
+                        <figcaption>This is a placeholder image.</figcaption>
+                    </figure>
+
+                    <blockquote>
+                        <p>
+                            The HTML <code>&lt;blockquote&gt;</code> Element (or HTML Block Quotation Element) indicates
+                            that the
+                            enclosed text is an extended quotation. Usually, this is rendered visually by indentation
+                            (see Notes
+                            for how to change it). A URL for the source of the quotation may be given using the cite
+                            attribute,
+                            while a text representation of the source can be given using the <code>&lt;cite&gt;</code>
+                            element.
+                        </p>
+
+                        <cite>— <a href="#">MDN</a></cite>
+                    </blockquote>
+                </div>
+
+            </div>
+
+
+            <div id="tables" class="o-wrapper o-wrapper--medium">
+                <h2>Tables</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+
+                <table tabindex="0">
+                    <caption>Recent Major Volcanic Eruptions in the Pacific Northwest.</caption>
+
+                    <thead>
+                        <tr>
+                            <th>Volcano Name</th>
+                            <th>Location</th>
+                            <th>Last Major Eruption</th>
+                            <th>Type of Eruption</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>Mt. Lassen</td>
+                            <td>California</td>
+                            <td>1914-17</td>
+                            <td>Explosive Eruption</td>
+                        </tr>
+                        <tr>
+                            <td>Mt. Hood</td>
+                            <td>Oregon</td>
+                            <td>1790s</td>
+                            <td>Pyroclastic flows and Mudflows</td>
+                        </tr>
+                        <tr>
+                            <td>Mt. St. Helens</td>
+                            <td>Washington</td>
+                            <td>1980</td>
+                            <td>Explosive Eruption</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+                <div id="diplomaDistributionDates" class="c-panel">
+                    <div class="c-panel__tableheader ">
+                        <div class="c-panel__title">Diploma Distribution</div>
+                        <div class="c-panel__action">
+
+                        </div>
+                    </div>
+
+                    <div class="c-panel__tablecontent">
+                        <div class="c-panel__subheader">
+                            <div class="c-panel__row">
+                                <div class="c-panel__column">Graduation Term</div>
+                                <div class="c-panel__column">Diploma Distribution</div>
+                            </div>
+                        </div>
+
+                        <div class="c-panel__row">
+                            <div class="c-panel__column">
+                                <label for="summerSession" class="c-panel__mobile-subheader">Graduation Term</label>
+                                <span id="summerSession">Summer Session</span>
+                            </div>
+                            <div class="c-panel__column">
+                                <label for="summerDistribution" class="c-panel__mobile-subheader">Diploma
+                                    Distribution</label>
+                                <span id="summerDistribution">November</span>
+                            </div>
+                        </div>
+
+                        <div class="c-panel__row">
+                            <div class="c-panel__column">
+                                <label for="fallQuarter" class="c-panel__mobile-subheader">Graduation Term</label>
+                                <span id="fallQuarter">Fall Quarter</span>
+                            </div>
+                            <div class="c-panel__column">
+                                <label for="fallDistribution" class="c-panel__mobile-subheader">Diploma
+                                    Distribution</label>
+                                <span id="fallDistribution">March</span>
+                            </div>
+                        </div>
+
+                        <div class="c-panel__row">
+                            <div class="c-panel__column">
+                                <label for="winterQuarter" class="c-panel__mobile-subheader">Graduation Term</label>
+                                <span id="winterQuarter">Winter Quarter</span>
+                            </div>
+                            <div class="c-panel__column">
+                                <label for="winterDistribution" class="c-panel__mobile-subheader">Diploma
+                                    Distribution</label>
+                                <span id="winterDistribution">June</span>
+                            </div>
+                        </div>
+
+                        <div class="c-panel__row">
+                            <div class="c-panel__column">
+                                <label for="springQuarter" class="c-panel__mobile-subheader">Graduation Term</label>
+                                <span id="springQuarter">Spring Quarter</span>
+                            </div>
+                            <div class="c-panel__column">
+                                <label for="springDistribution" class="c-panel__mobile-subheader">Diploma
+                                    Distribution</label>
+                                <span id="springDistribution">September</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="forms" class="o-wrapper o-wrapper--medium">
+                <h2>Forms</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+                <form action="#" method="post">
+                    <div class="c-form-group">
+                        <label for="first_name">First Name</label>
+                        <input class="c-form-control" type="text" id="first_name" name="first_name" required="">
+                    </div>
+
+                    <div class="c-form-group">
+                        <label for="last_name">Last Name</label>
+                        <input class="c-form-control" type="text" id="last_name" name="last_name"
+                            placeholder="Last Name" required="">
+                        <div class="c-form-help">Your public profile only shows your first name.</div>
+                    </div>
+
+                    <div class="c-form-group">
+                        <label for="last_name">Disabled w/ Placeholder</label>
+                        <input class="c-form-control" type="text" id="disabled-with-placeholder" placeholder="Disabled"
+                            name="disabled-with-placeholder" required="" disabled="true">
+                    </div>
+
+                    <div class="c-form-group">
+                        <label for="photo">Photo</label>
+                        <input class="c-form-control c-form-control--file" type="file" id="photo" name="photo"
+                            required="">
+                    </div>
+
+                    <div class="c-form-group">
+                        <label for="email">Email</label>
+                        <input class="c-form-control" type="email" id="email" name="email" required="">
+                    </div>
+
+                    <div class="c-form-group">
+                        <label for="password">Password</label>
+                        <input class="c-form-control" type="password" id="password" name="password" required="">
+                    </div>
+
+                    <div class="c-form-group">
+                        <label for="dob">Date of Birth</label>
+                        <input class="c-form-control" type="date" id="dob" name="dob" required="">
+                    </div>
+
+                    <fieldset class="c-form-group c-form-group--check">
+                        <legend>Subscribe to newsletter?</legend>
+                        <label for="subscribe-1">
+                            <input type="radio" value="1" id="subscribe-1" name="subscribe">
+                            Yes
+                        </label>
+
+                        <label for="subscribe-2">
+                            <input type="radio" value="1" id="subscribe-2" name="subscribe">
+                            No
+                        </label>
+                    </fieldset>
+
+                    <fieldset class="c-form-group c-form-group--check c-form-group--inline">
+                        <legend>Favourite Food</legend>
+                        <label for="food-1">
+                            <input type="checkbox" value="1" id="food-1" name="food">
+                            American
+                        </label>
+
+                        <label for="food-2">
+                            <input type="checkbox" value="1" id="food-2" name="food">
+                            Chinese
+                        </label>
+
+                        <label for="food-3">
+                            <input type="checkbox" value="1" id="food-3" name="food">
+                            French
+                        </label>
+
+                        <label for="food-4">
+                            <input type="checkbox" value="1" id="food-4" name="food">
+                            Italian
+                        </label>
+                    </fieldset>
+
+                    <div class="c-form-group">
+                        <label for="membership">Preferred Language</label>
+                        <select class="c-form-control" id="membership" name="membership" required="">
+                            <option value="">Please select…</option>
+                            <option value="1">Afrikaans</option>
+                            <option value="2">Deutsch</option>
+                            <option value="3">English</option>
+                            <option value="4">Français</option>
+                        </select>
+                    </div>
+
+                    <div class="c-form-group">
+                        <label for="notes">
+                            Notes
+                            <small>(optional)</small>
+                        </label>
+                        <textarea class="c-form-control c-form-control--textarea" id="notes" name="notes"
+                            rows="4"></textarea>
+                    </div>
+
+                    <div class="c-form-group c-form-group--check">
+                        <label for="remember">
+                            <input type="checkbox" value="1" id="remember" name="remember">
+                            Remember me? <a href="#">I’m not sure</a>.
+                        </label>
+                    </div>
+
+                    <br>
+                    <h3>Buttons</h3>
+                    <div id="buttons" class="c-btn-group">
+                        <button class="c-btn c-btn--primary" type="submit" aria-label="Sign up">Sign up</button>
+                        <button class="c-btn c-btn--primary-2" type="button" aria-label="Find out more">Find out
+                            more</button>
+                        <button class="c-btn" type="button" aria-label="Cancel">Cancel</button>
+                        <button class="c-btn" type="button" aria-label="Help" disabled="">Help</button>
+                    </div>
+
+                    <br>
+
+                    <div class="c-btn-group">
+                        <button class="c-btn c-btn--primary c-btn--small" type="submit" aria-label="Sign up">Sign
+                            up</button>
+                        <button class="c-btn c-btn--primary-2 c-btn--small" type="button"
+                            aria-label="Find out more">Find out more</button>
+                        <button class="c-btn c-btn--small" type="button" aria-label="Cancel">Cancel</button>
+                        <button class="c-btn c-btn--small" type="button" aria-label="Help" disabled="">Help</button>
+                    </div>
+                </form>
+                <br>
+                <form class="c-form c-form--inline" action="#" method="post">
+                    <div class="c-form-group">
+                        <label class="u-visuallyhidden" for="search">Search</label>
+                        <input class="c-form-control" type="text" id="searchInput" name="search" placeholder="Search…"
+                            aria-label="Search Input" required="">
+                    </div>
+
+                    <button class="c-btn c-btn--primary c-btn--small" type="submit" aria-label="Search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                </form>
+                <br>
+            </div>
+
+
+            <div id="grid" class="o-wrapper o-wrapper--medium">
+                <h2>Grid</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+                <div class="o-grid">
+                    <div class="o-grid__row">
+                        <div class="o-grid__col u-1/2">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/2</div>
+                        </div>
+                        <div class="o-grid__col u-1/2">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/2</div>
+                        </div>
+                    </div>
+
+                    <div class="o-grid__row">
+                        <div class="o-grid__col u-1/1 u-1/3@md">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/1 u-1/3@md</div>
+                        </div>
+                        <div class="o-grid__col u-1/1 u-1/3@md">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/1 u-1/3@md</div>
+                        </div>
+                        <div class="o-grid__col u-1/1 u-1/3@md">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/1 u-1/3@md</div>
+                        </div>
+                    </div>
+
+                    <div class="o-grid__row">
+                        <div class="o-grid__col u-1/2 u-1/4@lg">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/2 u-1/4@lg</div>
+                        </div>
+                        <div class="o-grid__col u-1/2 u-1/4@lg">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/2 u-1/4@lg</div>
+                        </div>
+                        <div class="o-grid__col u-1/2 u-1/4@lg">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/2 u-1/4@lg</div>
+                        </div>
+                        <div class="o-grid__col u-1/2 u-1/4@lg">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/2 u-1/4@lg</div>
+                        </div>
+                    </div>
+
+                    <div class="o-grid__row">
+                        <div class="o-grid__col u-1/1 u-1/3@md">
+                            <div style="background-color: #ddd; padding: 1em; text-align: center">u-1/1 u-1/3@md</div>
+                        </div>
+                        <div class="o-grid__col u-1/1 u-2/3@md">
+                            <div
+                                style="align-items: center; background-color: #ddd; display: flex; height: 100%; justify-content: center; padding: 1em; text-align: center">
+                                u-1/1 u-2/3@md
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <hr>
+            </div>
+
+
+            <div id="media" class="o-wrapper o-wrapper--medium">
+                <h2>Media</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+                <div class="o-media">
+                    <div class="o-media__img">
+                        <img src="http://via.placeholder.com/75x75" width="75" height="75" alt="">
+                    </div>
+
+                    <div class="o-media__body">
+                        <p>
+                            "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that
+                            contains all of the letters of the alphabet.
+                        </p>
+                    </div>
+                </div>
+
+                <br>
+            </div>
+
+
+            <div id="panels" class="o-wrapper o-wrapper--medium">
+                <h2>Panels</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+
+                <h3>Basic</h3>
+
+                <div class="c-panel">
+                    <div class="c-panel__header">
+                        <div class="c-panel__title">
+                            Title
+                        </div>
+                        <div class="c-panel__action">
+
+                        </div>
+                    </div>
+                    <div class="c-panel__body">
+                        <label>Label</label>
+                        <p>
+                            "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that
+                            contains all of the letters of the alphabet.
+                        </p>
+                    </div>
+                    <div class="c-panel__footer">
+
+                    </div>
+                </div>
+
+                <h3>Stateful</h3>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state">
+                        <span class="c-panel__state-text">
+                            Default
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Stateful
+                            </div>
+                            <div class="c-panel__action">
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--information">
+                        <i class="c-panel__state-icon fa fa-solid fa-question" aria-hidden="true"
+                            aria-label="Information Icon"></i>
+                        <span class="c-panel__state-text">
+                            Info
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Stateful
+                            </div>
+                            <div class="c-panel__action">
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--warning">
+                        <i class="c-panel__state-icon fa fa-solid fa-exclamation-triangle" aria-hidden="true"
+                            aria-label="Warning Icon"></i>
+                        <span class="c-panel__state-text">
+                            Warning
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Stateful
+                            </div>
+                            <div class="c-panel__action">
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--success">
+                        <i class="c-panel__state-icon fa fa-solid fa-check" aria-hidden="true"
+                            aria-label="Success Icon"></i>
+                        <span class="c-panel__state-text">
+                            Success
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Stateful
+                            </div>
+                            <div class="c-panel__action">
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--error">
+                        <i class="c-panel__state-icon fa fa-solid fa-exclamation" aria-hidden="true"
+                            aria-label="Error Icon"></i>
+                        <span class="c-panel__state-text">
+                            Error
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Stateful
+                            </div>
+                            <div class="c-panel__action">
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Stateful: Icon Only</h4>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--information c-panel__state--icon-only">
+                        <i class="c-panel__state-icon fa fa-solid fa-question"></i>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Stateful - Icon Only
+                            </div>
+                            <div class="c-panel__action">
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--warning c-panel__state--icon-only">
+                        <i class="c-panel__state-icon fa fa-solid fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Stateful - Icon Only
+                            </div>
+                            <div class="c-panel__action">
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--success c-panel__state--icon-only">
+                        <i class="c-panel__state-icon fa fa-solid fa-check"></i>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Stateful - Icon Only
+                            </div>
+                            <div class="c-panel__action">
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--error c-panel__state--icon-only">
+                        <i class="c-panel__state-icon fa fa-solid fa-exclamation"></i>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Stateful - Icon Only
+                            </div>
+                            <div class="c-panel__action">
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3>Flexible</h3>
+
+                <div class="o-grid__row">
+                    <div class="o-grid__col u-1/1 u-1/2@md">
+                        <div class="c-panel">
+                            <div class="c-panel__header">
+                                <div class="c-panel__title">
+                                    Close
+                                </div>
+                                <div class="c-panel__actions">
+                                    <i class="c-panel__action fas fa-times _js-c-panels__action--delete"
+                                        aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="c-panel__body">
+                                <label>Label</label>
+                                <p>
+                                    "The quick brown fox jumps over the lazy dog" is an English-language pangram—a
+                                    sentence that contains all of the letters of the alphabet.
+                                </p>
+                            </div>
+                            <div class="c-panel__footer">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="o-grid__col u-1/1 u-1/2@md">
+                        <div class="c-panel">
+                            <div class="c-panel__header">
+                                <div class="c-panel__title">
+                                    Dropdown
+                                </div>
+                                <div class="c-panel__actions">
+                                    <i class="c-panel__action c-panel__action--dropdown fas fa-ellipsis-v"
+                                        aria-hidden="true">
+                                        <div class="c-dropdown c-dropdown-menu">
+                                            <a href="#" class="c-dropdown-menu__item" tabindex="-1">Dropdown Item</a>
+                                            <a href="#" class="c-dropdown-menu__item" tabindex="-1">Dropdown Item</a>
+                                            <a href="#" class="c-dropdown-menu__item" tabindex="-1">Dropdown Item</a>
+                                            <a href="#" class="c-dropdown-menu__item" tabindex="-1">Dropdown Item</a>
+                                            <a href="#" class="c-dropdown-menu__item" tabindex="-1">Dropdown Item</a>
+                                            <a href="#" class="c-dropdown-menu__item" tabindex="-1">Dropdown Item</a>
+                                        </div>
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="c-panel__body">
+                                <label>Label</label>
+                                <p>
+                                    "The quick brown fox jumps over the lazy dog" is an English-language pangram—a
+                                    sentence that contains all of the letters of the alphabet.
+                                </p>
+                            </div>
+                            <div class="c-panel__footer">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h3>Accordion</h3>
+
+                <div class="c-panel">
+                    <div class="c-panel__header">
+                        <div class="c-panel__title">
+                            Expanded
+                        </div>
+                        <div class="c-panel__actions">
+                            <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="c-panel__body">
+                        <label>Label</label>
+                        <p>
+                            "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that
+                            contains all of the letters of the alphabet.
+                        </p>
+                    </div>
+                    <div class="c-panel__footer">
+
+                    </div>
+                </div>
+
+                <div class="c-panel c-panel--collapsed">
+                    <div class="c-panel__header">
+                        <div class="c-panel__title">
+                            Collapsed
+                        </div>
+                        <div class="c-panel__actions">
+                            <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="c-panel__body">
+                        <label>Label</label>
+                        <p>
+                            "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that
+                            contains all of the letters of the alphabet.
+                        </p>
+                    </div>
+                    <div class="c-panel__footer">
+
+                    </div>
+                </div>
+
+
+                <h4>Accordion: Stateful</h4>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state">
+                        <i class="c-panel__state-icon"></i>
+                        <span class="c-panel__state-text">
+                            Default
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--information">
+                        <i class="c-panel__state-icon fa fa-solid fa-question"></i>
+                        <span class="c-panel__state-text">
+                            Info
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--warning">
+                        <i class="c-panel__state-icon fa fa-solid fa-exclamation-triangle"></i>
+                        <span class="c-panel__state-text">
+                            Warning
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--success">
+                        <i class="c-panel__state-icon fa fa-solid fa-check"></i>
+                        <span class="c-panel__state-text">
+                            Success
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--error">
+                        <i class="c-panel__state-icon fa fa-solid fa-exclamation"></i>
+                        <span class="c-panel__state-text">
+                            Error
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <h4>Accordion: Stateful - Icon Only</h4>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state">
+                        <i class="c-panel__state-icon"></i>
+                        <span class="c-panel__state-text">
+                            Default
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--information c-panel__state--icon-only">
+                        <i class="c-panel__state-icon fa fa-solid fa-question"></i>
+                        <span class="c-panel__state-text">
+                            Info
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--warning c-panel__state--icon-only">
+                        <i class="c-panel__state-icon fa fa-solid fa-exclamation-triangle"></i>
+                        <span class="c-panel__state-text">
+                            Warning
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--success c-panel__state--icon-only">
+                        <i class="c-panel__state-icon fa fa-solid fa-check"></i>
+                        <span class="c-panel__state-text">
+                            Success
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="c-panel c-panel--stateful">
+                    <div class="c-panel__state c-panel__state--error c-panel__state--icon-only">
+                        <i class="c-panel__state-icon fa fa-solid fa-exclamation"></i>
+                        <span class="c-panel__state-text">
+                            Error
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__header">
+                            <div class="c-panel__title">
+                                Expanded
+                            </div>
+                            <div class="c-panel__actions">
+                                <i class="c-panel__action fas fa-angle-down _js-c-panels__action--expand-collapse"
+                                    aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="c-panel__body">
+                            <label>Label</label>
+                            <p>
+                                "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence
+                                that contains all of the letters of the alphabet.
+                            </p>
+                        </div>
+                        <div class="c-panel__footer">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div id="steps" class="o-wrapper o-wrapper--medium">
+                <h2>Workflow Steps</h2>
+
+
+                <h3>Default</h3>
+                <div class="c-step">
+                    <div class="c-step__icon">
+                        <div class="c-step__circle"></div>
+                    </div>
+                    <div class="c-step__info">
+                        <label class="c-step__name">Step Name</label>
+                        <p class="c-step__detail">Step Detail</p>
+                        <p class="c-step__status">Status</p>
+                    </div>
+                </div>
+
+
+                <h3>Different Type of Status</h3>
+                <div class="c-step">
+                    <div class="c-step__icon">
+                        <div class="c-step__circle c-step__circle--complete">
+                            <div class="c-step__circle--icon fa fa-solid fa-check"></div>
+                        </div>
+                        <div class="c-step__bar c-step__bar--complete"></div>
+                    </div>
+                    <div class="c-step__info">
+                        <label class="c-step__name">Submission</label>
+                        <p class="c-step__detail">Submitted on 3/29/2023 1:48 PM by CONFIDENTIAL</p>
+                        <p class="c-step__status c-step__status--complete">Completed</p>
+                    </div>
+                </div>
+
+
+                <div class="c-step">
+                    <div class="c-step__icon">
+                        <div class="c-step__circle c-step__circle--denied">
+                            <div class="c-step__circle--icon fa fa-solid fa-exclamation"></div>
+                        </div>
+                    </div>
+                    <div class="c-step__info">
+                        <label class="c-step__name">Record Verification</label>
+                        <p class="c-step__detail">Verification: Gender Change</p>
+                        <p class="c-step__status c-step__status--denied">Denied</p>
+                    </div>
+                </div>
+
+                <br><br>
+
+
+                <div class="c-step">
+                    <div class="c-step__icon">
+                        <div class="c-step__circle c-step__circle--progress">
+                            <div class="c-step__circle--icon fa-solid fa-circle"></div>
+                        </div>
+                        <div class="c-step__bar c-step__bar--progress"></div>
+                    </div>
+                    <div class="c-step__info">
+                        <label class="c-step__name">Student Record Update</label>
+                        <p class="c-step__detail">Office of the University Registrar</p>
+                        <p class="c-step__status c-step__status--progress">In Progress</p>
+                    </div>
+                </div>
+
+
+                <div class="c-step">
+                    <div class="c-step__icon">
+                        <div class="c-step__circle"></div>
+                    </div>
+                    <div class="c-step__info">
+                        <label class="c-step__name">Record Verification</label>
+                        <p class="c-step__detail">Verification: Gender Change</p>
+                        <p class="c-step__status">Pending</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="alerts" class="o-wrapper o-wrapper--medium">
+                <h2>Alerts &amp; Status</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+
+                <div class="c-alert">
+                    <div class="c-alert__body">
+                        <p>
+                            <i class="c-alert__icon fas fa-circle-info" aria-hidden="true"></i>
+                            This is a <a href="#">default</a> alert.
+                        </p>
+                    </div>
+                    <button class="c-alert__dismiss" type="button" aria-label="Dismiss">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+
+                <div class="c-alert c-alert--success">
+                    <div class="c-alert__body">
+                        <p>
+                            <i class="c-alert__icon fas fa-circle-check" aria-hidden="true"></i>
+                            This is a <a href="#">success</a> alert.
+                        </p>
+                    </div>
+                    <button class="c-alert__dismiss" type="button" aria-label="Success">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+
+                <div class="c-alert c-alert--warning">
+                    <div class="c-alert__body">
+                        <p>
+                            <i class="c-alert__icon fas fa-warning" aria-hidden="true"></i>
+                            This is a <a href="#">warning</a> alert.
+                        </p>
+                    </div>
+                    <button class="c-alert__dismiss" type="button" aria-label="Warning">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+
+                <div class="c-alert c-alert--error">
+                    <div class="c-alert__body">
+                        <p>
+                            <i class="c-alert__icon fas fa-circle-exclamation" aria-hidden="true"></i>
+                            This is an <a href="#">error</a> alert.
+                        </p>
+                    </div>
+                    <button class="c-alert__dismiss" type="button" aria-label="Alert">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+
+
+                <span class="c-badge">Default</span>
+                <span class="c-badge c-badge--success">Success</span>
+                <span class="c-badge c-badge--warning">Warning</span>
+                <span class="c-badge c-badge--error">Error</span>
+                <br><br>
+                <div class="c-lds-dual-ring"></div>
+                <div class="c-lds-dual-ring">
+                    <div class="c-lds-dual-inner-ring"></div>
+                </div>
+
+                <div class="c-container c-container--dark">
+                    <div class="c-lds-dual-ring c-lds-dual-ring--dark"></div>
+                    <div class="c-lds-dual-ring c-lds-dual-ring--dark">
+                        <div class="c-lds-dual-inner-ring"></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="inline-navigation" class="o-wrapper o-wrapper--medium">
+                <h2>Inline Navigation</h2>
+                <a href="#sandbox-navigation"> Back to top</a>
+
+                <div class="c-breadcrumbs">
+                    <div class="c-breadcrumbs__item">
+                        <a class="c-breadcrumbs__link" href="#">Home Page</a>
+                    </div>
+                    <div class="c-breadcrumbs__item">
+                        <a class="c-breadcrumbs__link" href="#">Section 1</a>
+                    </div>
+                    <div class="c-breadcrumbs__item">
+                        <a class="c-breadcrumbs__link" href="#">Item 1</a>
+                    </div>
+                    <div class="c-breadcrumbs__item">Current Item</div>
+                </div>
+
+                <br>
+
+                <div class="c-pagination">
+                    <div class="c-pagination__meta">
+                        <strong>1</strong>–<strong>20</strong> of
+                        <strong>100</strong>
+                    </div>
+                    <a class="c-pagination__control c-pagination__control--prev is-disabled" href="sandbox.aspx">
+                        <i class="fas fa-angle-left" aria-hidden="true"></i>
+                        <span class="u-visuallyhidden">Previous</span>
+                    </a>
+                    <a class="c-pagination__control c-pagination__control--next" href="sandbox.aspx">
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                        <span class="u-visuallyhidden">Next</span>
+                    </a>
+                </div>
+                <br/>
+            </div>
+
+
+            <div id="progress" class="o-wrapper o-wrapper--medium">
+                <h2>Control: Progress</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+                <div class="o-wrapper o-grid">
+                    <div class="o-grid__row">
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--10">
+                                <progress id="progressBar10" min="0" max="100" value="10"></progress>
+                            </div>
+                        </div>
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--20">
+                                <progress id="progressBar20" min="0" max="100" value="20"></progress>
+                            </div>
+                        </div>
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--30">
+                                <progress id="progressBar30" min="0" max="100" value="30"></progress>
+                            </div>
+                        </div>
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--40">
+                                <progress id="progressBar40" min="0" max="100" value="40"></progress>
+                            </div>
+                        </div>
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--50">
+                                <progress id="progressBar50" min="0" max="100" value="50"></progress>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="o-grid__row">
+
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--60">
+                                <progress id="progressBar60" min="0" max="100" value="60"></progress>
+                            </div>
+                        </div>
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--70">
+                                <progress id="progressBar70" min="0" max="100" value="70"></progress>
+                            </div>
+                        </div>
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--80">
+                                <progress id="progressBar80" min="0" max="100" value="80"></progress>
+                            </div>
+                        </div>
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--90">
+                                <progress id="progressBar90" min="0" max="100" value="90"></progress>
+                            </div>
+                        </div>
+
+                        <div class="o-grid__col u-1/2 u-1/5@md">
+                            <div class="progress-bar progress--100">
+                                <progress id="progressBar100" min="0" max="100" value="100"></progress>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="messages" class="o-wrapper o-wrapper--medium">
+                <h2>MESSAGE</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+
+                <div class="c-message-group">
+
+
+                    <div class="c-message">
+                        <img class="c-message__avatar" src="img/icon/palm-tree.svg" alt="User Avatar">
+                        <div class="c-message__speech-bubble c-message__speech-bubble--left">
+                            <p class="c-message__heading">
+                                Juan-Ramon J.
+                                <span class="c-message__date">
+                                    08/22/2023 @ 12:15 PM PT
+                                </span>
+                            </p>
+                            <blockquote class="c-message__content">
+                                "Let's schedule a meeting so we can discuss your fourth-year."
+                            </blockquote>
+                        </div>
+                    </div>
+
+
+                    <div class="c-message">
+                        <img class="c-message__avatar" src="img/icon/palm-tree.svg" alt="User Avatar">
+                        <div class="c-message__speech-bubble c-message__speech-bubble--left">
+                            <p class="c-message__heading">
+                                Jessica T.
+                                <span class="c-message__date">
+                                    08/22/2023 @ 3:00 PM PT
+                                </span>
+                            </p>
+                            <blockquote class="c-message__content">
+                                "Sounds good to me!"
+                            </blockquote>
+                        </div>
+                    </div>
+
+                </div>
+
+                <hr>
+
+
+                <div class="c-message">
+                    <img class="c-message__avatar" src="img/icon/palm-tree.svg" alt="User Avatar">
+                    <div class="c-message__speech-bubble c-message__speech-bubble--top">
+                        <p class="c-message__heading">
+                            Juan-Ramon J.
+                            <span class="c-message__date">
+                                08/22/2023 @ 12:15 PM PT
+                            </span>
+                        </p>
+                        <blockquote class="c-message__content">
+                            "Let's schedule a meeting so we can discuss your fourth-year."
+                        </blockquote>
+                    </div>
+                </div>
+
+                <hr>
+
+
+                <div class="c-message">
+                    <img class="c-message__avatar" src="img/icon/palm-tree.svg" alt="User Avatar">
+                    <div class="c-message__speech-bubble c-message__speech-bubble--left">
+                        <p class="c-message__heading">
+                            Carl S.
+                            <span class="c-message__date">
+                                08/22/2023 @ 12:15 PM PT
+                            </span>
+                        </p>
+                        <blockquote class="c-message__content">
+                            Look again at that dot. That's here. That's home. That's us. On it everyone you love,
+                            everyone you know,
+                            everyone you ever heard of, every human being who ever was, lived out their lives. The
+                            aggregate of our
+                            joy and suffering, thousands of confident religions, ideologies, and economic doctrines,
+                            every hunter and
+                            forager, every hero and coward, every creator and destroyer of civilization, every king and
+                            peasant, every
+                            young couple in love, every mother and father, hopeful child, inventor and explorer, every
+                            teacher of morals,
+                            every corrupt politician, every "superstar," every "supreme leader," every saint and sinner
+                            in the history
+                            of our species lived there--on a mote of dust suspended in a sunbeam.
+
+                            The Earth is a very small stage in a vast cosmic arena. Think of the rivers of blood spilled
+                            by all those
+                            generals and emperors so that, in glory and triumph, they could become the momentary masters
+                            of a fraction
+                            of a dot. Think of the endless cruelties visited by the inhabitants of one corner of this
+                            pixel on the
+                            scarcely distinguishable inhabitants of some other corner, how frequent their
+                            misunderstandings, how eager
+                            they are to kill one another, how fervent their hatreds.
+
+                            Our posturings, our imagined self-importance, the delusion that we have some privileged
+                            position in the
+                            Universe, are challenged by this point of pale light. Our planet is a lonely speck in the
+                            great enveloping
+                            cosmic dark. In our obscurity, in all this vastness, there is no hint that help will come
+                            from elsewhere
+                            to save us from ourselves.
+
+                            The Earth is the only world known so far to harbor life. There is nowhere else, at least in
+                            the near future,
+                            to which our species could migrate. Visit, yes. Settle, not yet. Like it or not, for the
+                            moment the Earth
+                            is where we make our stand.
+
+                            It has been said that astronomy is a humbling and character-building experience. There is
+                            perhaps no
+                            better demonstration of the folly of human conceits than this distant image of our tiny
+                            world. To me,
+                            it underscores our responsibility to deal more kindly with one another, and to preserve and
+                            cherish the
+                            pale blue dot, the only home we've ever known.
+                        </blockquote>
+                    </div>
+                </div>
+
+
+                <div class="c-message">
+                    <img class="c-message__avatar" src="img/icon/palm-tree.svg" alt="User Avatar">
+                    <div class="c-message__speech-bubble c-message__speech-bubble--top">
+                        <p class="c-message__heading">
+                            John K.
+                            <span class="c-message__date">
+                                09/12/1962 @ 10:00 AM PT
+                            </span>
+                        </p>
+                        <blockquote class="c-message__content">
+                            There is no strife, no prejudice, no national conflict in outer space as yet. Its hazards
+                            are hostile
+                            to us all. Its conquest deserves the best of all mankind, and its opportunity for peaceful
+                            cooperation
+                            many never come again. But why, some say, the moon? Why choose this as our goal? And they
+                            may well ask
+                            why climb the highest mountain? Why, 35 years ago, fly the Atlantic? Why does Rice play
+                            Texas?
+
+                            We choose to go to the moon. We choose to go to the moon in this decade and do the other
+                            things, not
+                            because they are easy, but because they are hard, because that goal will serve to organize
+                            and measure
+                            the best of our energies and skills, because that challenge is one that we are willing to
+                            accept, one we
+                            are unwilling to postpone, and one which we intend to win, and the others, too.
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+
+            <div id="student-bar" class="o-wrapper o-wrapper--medium">
+                <h2>Control: Student Bar</h2>
+                <a href="#sandbox-navigation">&gt; Back to top</a>
+
+                <div id="cStudentBar" class="c-panel c-panel--stateful c-panel--user">
+                    <div class="c-panel__state c-panel__state--success">
+                        <i class="c-panel__state-icon fa fa-solid fa-check" aria-hidden="true"
+                            aria-label="Success Icon"></i>
+                        <span class="c-panel__state-text">
+                            Active
+                        </span>
+                    </div>
+                    <div class="c-panel__content">
+                        <div class="c-panel__body">
+                            <div class="o-grid">
+                                <div class="o-grid__row">
+                                    <div class="o-grid__col u-1/1 u-2/3@md">
+                                        <div class="o-grid__row">
+                                            <div class="o-grid__col u-1/1 u-1/2@md u-text-center">
+                                                <img id="Avatar"
+                                                    class="c-avatar c-avatar--full-width c-avatar--max-width-lg"
+                                                    src="img/icon/palm-tree.svg" alt="User Avatar">
+                                            </div>
+                                            <div class="o-grid__col u-1/1 u-1/2@md">
+                                                <label for="StudentBar">Ashe Gray</label>
+                                                <div>Fourth-Year</div>
+                                                <div>1234567890</div>
+                                                <div>Computer Science</div>
+                                                <a href="student@ucdavis.edu" type="email">student@ucdavis.edu</a>
+                                                <div>Academic Standing</div>
+                                                <div>Active Spring 2023</div>
+                                            </div>
+                                        </div>
+                                        <div class="o-grid__row">
+                                            <div class="o-grid__col u-1/1">
+                                                <label for="academicLevel" class="u-hidden">Academic Level</label>
+                                                <select class="c-form-control" name="academicLevel" id="academicLevel">
+                                                    <option value="undergraduate">Undergraduate Level</option>
+                                                    <option value="graduate">Graduate Level</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="o-grid__col u-1/1 u-1/3@md">
+                                        <div id="studentBarProgress"
+                                            class="progress-bar c-progress-bar--large progress--100">
+                                            <progress id="progressBar" min="0" max="100" value="100"></progress>
+                                        </div>
+                                        <div class="u-text-center">
+                                            <span for="studentBarProgress">Program Progress</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+    <div id="footer" role="region" aria-label="footer">
+
+        <div class="c-container c-container--dark c-footer">
+
+            <div class="o-wrapper o-wrapper--medium c-footer__link-grid">
+                <div class="c-footer__row">
+                    <div class="c-footer__col">
+                        <h2 class="c-footer__label">OASIS</h2>
+                        <a class="c-footer__link" href="#" aria-label="OASIS Home Page">Home</a>
+                    </div>
+                </div>
+                <div class="c-footer__row">
+                    <div class="c-footer__col">
+                        <h2 class="c-footer__label">AAS</h2>
+                        <a class="c-footer__link" href="#" aria-label="Advising Appointment System Home Page">Home</a>
+                        <a class="c-footer__link" href="#">Schedule Appointment</a>
+                        <a class="c-footer__link" href="#">Administration</a>
+                    </div>
+                </div>
+            </div>
+
+            <img class="c-footer__logo" aria-label="UC Davis Aggies Logo" alt="UC Davis Aggies Logo"
+                src="img/logo/aggie-logo-white.svg">
+
+            <div class="o-wrapper o-wrapper--medium c-footer__copyright o-grid">
+                <div class="o-grid__row">
+                    <p class="o-grid__col u-1/1">
+                        <a href="https://www.ucdavis.edu/">University of California, Davis</a>
+                        <br>
+                        One Shields Avenue
+                        <br>
+                        Davis, CA 95616
+                        <br>
+                        <a href="tel:530-752-1011" aria-label="530-752-1011">530-752-1011</a>
+                    </p>
+                </div>
+                <div class="o-grid__row">
+                    <a class="o-grid__col u-1/1 u-1/2@md u-1/4@lg"
+                        href="http://ucdavis.edu/about/campus-safety/help/contact">Questions or comments?</a>
+                    <a class="o-grid__col u-1/1 u-1/2@md u-1/4@lg"
+                        href="http://ucdavis.edu/help/privacy-accessibility.html">Privacy &amp; Accessibility</a>
+                    <a class="o-grid__col u-1/1 u-1/2@md u-1/4@lg"
+                        href="https://diversity.ucdavis.edu/principles-community">Principles of Community</a>
+                    <a class="o-grid__col u-1/1 u-1/2@md u-1/4@lg"
+                        href="http://www.universityofcalifornia.edu/">University of California</a>
+                </div>
+                <div class="o-grid__row">
+                    <p class="o-grid__col u-1/1">
+                        Copyright © The Regents of the University of California, Davis campus. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
