@@ -5,7 +5,7 @@
 export let _components_Panels = (function () {
     const setup = () => {
 
-        const panels = document.querySelectorAll("._js-c-panels__action--expand-collapse");
+        const panels_expandCollapse = document.querySelectorAll("._js-c-panels__action--expand-collapse");
         const panels_delete = document.querySelectorAll("._js-c-panels__action--delete");
 
 
@@ -18,7 +18,7 @@ export let _components_Panels = (function () {
             }
         }
 
-        addEventListenerList(panels, "click", expandCollapse);
+        addEventListenerList(panels_expandCollapse, "click", expandCollapse);
         addEventListenerList(panels_delete, "click", deletePanel);
 
     };

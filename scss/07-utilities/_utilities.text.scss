@@ -72,3 +72,10 @@
 .u-text-error--dark {
   color: $color-error-dark;
 }
+
+.u-text-subtitle {
+  color: $color-gray-70;
+  font-size: $font-size-h5;
+  font-weight: $weight-extrabold;
+  text-transform: uppercase;
+}

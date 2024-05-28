@@ -14,6 +14,7 @@
   background-size: 1rem auto, 100%;
 
   height: unset !important;
+  width: 100% !important;
 
   .ui-selectmenu-status {
 
@@ -42,6 +43,7 @@
 }
 
 .ui-selectmenu-menu {
+  background-color: $color-white;
   border: $base-border-width-small solid $color-gray-20;
   border-radius: $base-border-radius;
   box-shadow: $base-box-shadow-inset;
@@ -339,4 +341,129 @@ ul.ui-helper-reset {
   li:not(:last-child) {
     margin-right: 1rem;
   }
+}
+
+// DATE-PICKER ================================================================
+
+.ui-datepicker-trigger {
+  display: none;
+}
+
+.ui-datepicker {
+  background-color: $color-white;
+  border: $base-border-width-small solid $color-gray-20;
+  box-shadow: $base-box-shadow;
+
+  .ui-datepicker-header {
+    padding: 1rem;
+    a {
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+
+    .ui-datepicker-title {
+
+      select.ui-datepicker-month,
+      select.ui-datepicker-year {
+        cursor: pointer;
+        padding: 0.25rem;
+        min-width: 5rem;
+      }
+
+      select.ui-datepicker-month {
+        margin-right: 1rem;
+      }
+    }
+  }
+}
+
+
+// CHOSEN INPUT DROPDOWN
+.c-form-group {
+  .chosen-container.chosen-container-single {
+    border: $base-border-width-small solid $color-gray-20;
+    border-radius: $base-border-radius;
+    box-shadow: $base-box-shadow-inset;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    height: calc(#{$base-font-size} * #{$base-line-height} + (#{$base-border-width-small} * 2) + (#{$base-spacing-unit-xs} * 2));
+    line-height: $base-line-height;
+    padding: $base-spacing-unit-xs $base-spacing-unit-small;
+    transition: border-color 0.25s, box-shadow 0.25s;
+    width: 100%;
+
+    &:focus,
+    &:hover {
+      background-color: $color-primary-20;
+      border-color: $color-primary-70;
+      box-shadow: $base-box-blue-highlight;
+      outline: 0;
+    }
+
+    .chosen-single.chosen-default,
+    .chosen-single {
+      background: unset;
+      color: unset;
+      border: none;
+      box-shadow: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      appearance: none;
+
+      padding: unset;
+      line-height: unset;
+
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='1em' viewBox='0 0 448 512'%3E%3C!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --%3E%3Cpath stroke='%23022851' d='M201.4 342.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 274.7 86.6 137.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat, repeat;
+      background-position: right 0 top 50%, 0 0;
+      background-size: 1rem auto, 100%;
+
+      > div {
+        display: none;
+      }
+
+      &:focus,
+      &:hover {
+        background-color: $color-primary-20;
+        outline: 0;
+      }
+    }
+  }
+}
+
+// REPORT: FORM OPTIONS LIST
+
+.edit-box {
+  display: none;
+  position: absolute;
+  border: solid 1px gray;
+  padding: 5px;
+  background-color: white;
+  box-shadow: 4px 4px 4px #bbbbbb;
+}
+
+ul.form-options-list {
+  border: $base-border-width-small solid $color-gray-20;
+  border-radius: $base-border-radius;
+  background-color: $color-gray-10;
+  display: block;
+  font-family: inherit;
+  font-size: inherit;
+  height: calc(#{$base-font-size} * #{$base-line-height} + (#{$base-border-width-small} * 2) + (#{$base-spacing-unit-xs} * 2));
+  line-height: $base-line-height;
+  list-style-type: none;
+  margin: 0 0 1rem 0;
+  padding: $base-spacing-unit-xs $base-spacing-unit-small;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+ul.form-options-list li .actionIcon {
+  color: $color-primary;
+  float: right;
+}
+
+#userSearch {
+  display: flex;
+  padding: 1rem;
 }

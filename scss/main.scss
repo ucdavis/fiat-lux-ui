@@ -57,6 +57,7 @@
  * Message.............Messages and posts from users.
  * Loader..............Loader icon styles.
  * Progress............Progress bars and trackers for metrics.
+ * Modal...............For pop up functionality.
  * Pagination..........Controls to navigate pages of data.
  * Footer..............Page footer styles.
  *
@@ -133,13 +134,14 @@
 @import '06-components/components.forms';
 @import '06-components/components.buttons';
 @import '06-components/components.button-groups';
-@import '06-components/components.pagination';
 @import '06-components/components.loader';
 @import '06-components/components.panels';
 @import '06-components/components.messages';
 @import '06-components/components.progress';
 @import '06-components/_components.dropdowns';
 @import '06-components/components.steps';
+@import '06-components/components.modal';
+@import '06-components/components.pagination';
 @import '06-components/components.footer';
 
 /* #UTILITIES
@@ -159,3 +161,4 @@
    ========================================================================== */
 
 @import '08-overrides/overrides.jquery';
+@import '08-overrides/overrides.apidetails';

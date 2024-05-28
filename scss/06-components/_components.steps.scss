@@ -1,9 +1,10 @@
 /* ==========================================================================
    #STEPS
    ========================================================================== */
-.c-step {
-   display: inline-block;
-   margin: 1.625rem 0;
+.c-step, .c-step__horizontal {
+   display: flex;
+   margin: 0 1.625rem;
+   gap: 3rem;
 
    .c-step__circle, .c-step__name, .c-step__detail, .c-step__status {
       margin: 0.421rem 0;
@@ -11,7 +12,7 @@
     
    .c-step__icon {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
 
       .c-step__circle {
@@ -22,7 +23,7 @@
          width: $icon-size-step;
          height: $icon-size-step;
          border-radius: 50%;
-         background-color: $color-gray-30; 
+         background-color: $color-gray-30;
 
          .c-step__circle--icon {
             color: $color-white;
@@ -51,9 +52,9 @@
       }
       
       .c-step__bar {
-         width: 15rem;
-         height: 0.25rem;
-         margin: 0 2rem;
+         width: 0.25rem;
+         height: 8rem;
+         margin: 2rem 0;
          border-radius: 1rem;
          background-color: $color-gray-30; 
 
@@ -63,10 +64,9 @@
       
          &.c-step__bar--progress {
             background-color: $color-information;
-            background: linear-gradient(to right, $color-information 50%, $color-gray-30 50%);
+            background: linear-gradient(to bottom, $color-information 50%, $color-gray-30 50%);
          }
       }
-
    }
    .c-step__info {
       display: flex;
@@ -106,24 +106,21 @@
    }
 }
 
-@media screen and (max-width: $bp-medium) {
-   .c-step {
-      margin: 0 1.625rem;
-      display: flex;
-      gap: 3rem;
+.c-step__horizontal {
+   display: inline-block;
+   margin: 1.625rem 0;
 
-      .c-step__icon {
-         flex-direction: column;
-   
-         .c-step__bar {
-            width: 0.25rem;
-            height: 8rem;
-            margin: 2rem 0;
+   .c-step__icon {
+      flex-direction: row;
 
-            &.c-step__bar--progress {
-               background: linear-gradient(to bottom, $color-information 50%, $color-gray-30 50%);
-            }
+      .c-step__bar {
+         width: 15rem;
+         height: 0.25rem;
+         margin: 0 2rem;
+
+         &.c-step__bar--progress {
+            background: linear-gradient(to right, $color-information 50%, $color-gray-30 50%);
          }
       }
-   }  
+   }
 }

@@ -1,0 +1,15 @@
+.past-attempt {
+  margin: 0 1rem 0 2rem;
+
+  &:nth-child(odd) {
+    background-color: $color-gray-30;
+  }
+
+  &:nth-child(even) {
+    background-color: $color-gray-20;
+  }
+
+  &:last-child {
+    margin-bottom: 1rem;
+  }
+}

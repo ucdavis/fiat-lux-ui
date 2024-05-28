@@ -43,6 +43,8 @@ _components_Panels.Setup();
 import {_components_Navigation} from "./04-components/_components-navigation.js";
 _components_Navigation.Setup();
 
+import {_components_Modal} from "./04-components/_components-modal.js";
+
 /* #PUBLIC
    ========================================================================== */
 export let OASIS = (function () {
@@ -63,12 +65,19 @@ export let OASIS = (function () {
         _tools_Functions.UnblurBackground();
     }
 
+    // === MODAL ===
+    const modalSetup = (modal, openInput, closeInput) => {
+        _components_Modal.Setup(modal, openInput, closeInput);
+    }
+
+    // == EXPORT ===
     return {
         Name: "js/main.js",
         FocusElement: focusElement,
         UnfocusElement: unfocusElement,
         BlurBackground: blurBackground,
-        UnblurBackground: unblurBackground
+        UnblurBackground: unblurBackground,
+        ModalSetup: modalSetup
     };
 })();
 

@@ -68,8 +68,6 @@
     background-color: $color-primary-90;
     display: flex;
     justify-content: space-between;
-
-    font-size: 1.1875rem;
     font-weight: $weight-bold;
 
     .c-panel__title {
@@ -217,12 +215,6 @@
         }
       }
     }
-
-    .c-panel__content {
-      width: -moz-available;
-      width: -webkit-fill-available;
-      width: 100%;
-    }
   }
 
   /* EXPAND/COLLAPSE */
@@ -271,36 +263,58 @@
 
   /* TABLES */
   .c-panel__tablecontent {
+     overflow: auto;
+     box-sizing: content-box;
+
+    .c-panel__subheader,
+    .c-panel__row {
+      width: 100%;
+    }
 
     .c-panel__subheader {
       justify-content: start;
-
-      .c-panel__column {
-        text-transform: uppercase;
-      }
     }
 
     .c-panel__row {
       justify-content: start;
 
       .c-panel__column {
-        min-width: 12.5rem;
+        min-width: 10rem;
+
+        // .c-panel__column--min-width-2, ..., .c-panel__column--min-width-15
+        @for $i from 2 through 15 {
+          &.c-panel__column--min-width-#{$i} {
+            min-width: #{$i}rem;
+          }
+        }
+
+        &.c-panel__column--xxs {
+          min-width: 2.5rem;
+        }
+
+        &.c-panel__column--xs {
+          min-width: 5rem;
+        }
 
         &.c-panel__column--sm {
-          min-width: 10rem;
+          min-width: 7.5rem;
         }
 
         &.c-panel__column--md {
-          min-width: 15rem;
+          min-width: 12.5rem;
         }
 
         &.c-panel__column--lg {
-          min-width: 20rem;
+          min-width: 15rem;
         }
 
         .c-panel__mobile-subheader {
           display: none;
         }
+      }
+
+      &.c-panel__row--total {
+        background-color: $color-gray-30;
       }
     }
 
@@ -328,6 +342,7 @@
   .c-panel:not(.c-panel__tablecontent--always-mobile) {
     /* MOBILE TABLES */
     .c-panel__tablecontent {
+      overflow: hidden;
 
       .c-panel__subheader {
         display: none;
@@ -335,6 +350,7 @@
 
       .c-panel__row {
         flex-direction: column;
+        width: 100%;
 
         .c-panel__column {
 

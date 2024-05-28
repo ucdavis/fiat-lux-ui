@@ -143,6 +143,38 @@ a:visited {
 }
 
 /**
+ * Search
+ */
+
+.c-btn--search {
+
+  background-color: $color-primary;
+  border-color: $color-primary;
+  color: $color-white;
+  min-width: unset;
+  padding: 0.5rem;
+
+  &:before {
+    content: "";
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $color-primary-light;
+    color: $color-primary-2;
+    border-color: $color-primary-2;
+    box-shadow: $base-box-shadow;
+    padding: 0.5rem;
+
+    &:before {
+      color: $color-white;
+      transform: unset;
+      width: unset;
+    }
+  }
+}
+
+/**
  * Small
  */
 
